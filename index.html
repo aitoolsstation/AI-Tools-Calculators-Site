@@ -1,0 +1,3467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+    <title>AIToolStation - Complete AI Tools & Calculators Suite 2026</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Complete AI tools suite with 25+ calculators. BMI, Body Fat, Loan EMI, Tax, GST, Lumpsum, Gold Price, Unit Converter, Currency - all with 2026 rates.">
+    <meta name="keywords" content="AI tools, BMI calculator, GST calculator 2026, loan calculator, lumpsum calculator, gold price 2026, unit converter, currency converter">
+    <meta name="author" content="AIToolStation">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "AIToolStation - Complete AI Tools & Calculators Suite",
+      "description": "Complete AI tools suite with 25+ calculators including BMI, Body Fat, Loan EMI, Tax, GST, Lumpsum, Gold Price, Unit Converter, Currency - all with 2026 rates.",
+      "url": "https://aitoolstation.com",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "AIToolStation"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1250"
+      },
+      "featureList": [
+        "BMI Calculator", "Body Fat Calculator", "GST Calculator", "World Tax Calculator", 
+        "Loan Calculator", "Lumpsum Calculator", "Currency Converter", "Unit Converter",
+        "Age Calculator", "Profit Calculator", "Gratuity Calculator", "Percentage Calculator"
+      ]
+    }
+    </script>
+    
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2278101269918728" crossorigin="anonymous"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+    /* ==================== RESET & BASE ==================== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    :root {
+        /* Modern Gradient Colors */
+        --primary: #6366F1;
+        --primary-dark: #4F46E5;
+        --secondary: #10B981;
+        --accent: #8B5CF6;
+        --danger: #EF4444;
+        --warning: #F59E0B;
+        --success: #10B981;
+        --info: #3B82F6;
+        --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        
+        /* Text Colors */
+        --text-primary: #1F2937;
+        --text-secondary: #4B5563;
+        --text-light: #6B7280;
+        
+        /* Backgrounds */
+        --bg-body: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        --bg-card: rgba(255, 255, 255, 0.95);
+        --bg-section: rgba(255, 255, 255, 0.8);
+        
+        /* Shadows */
+        --shadow-sm: 0 2px 10px rgba(0,0,0,0.1);
+        --shadow-md: 0 5px 20px rgba(0,0,0,0.15);
+        --shadow-lg: 0 15px 35px rgba(0,0,0,0.2);
+        --shadow-xl: 0 20px 50px rgba(0,0,0,0.25);
+        
+        /* Spacing */
+        --space-xs: 8px;
+        --space-sm: 12px;
+        --space-md: 16px;
+        --space-lg: 24px;
+        --space-xl: 32px;
+        --space-2xl: 48px;
+    }
+    
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: var(--bg-body);
+        color: var(--text-primary);
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 var(--space-md);
+    }
+    
+    .main-content {
+        flex: 1;
+    }
+    
+    /* ==================== HEADER ==================== */
+    header {
+        background: var(--gradient-1);
+        color: white;
+        padding: var(--space-md) 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: var(--shadow-lg);
+        animation: slideDown 0.5s ease-out;
+    }
+    
+    @keyframes slideDown {
+        from { transform: translateY(-100%); }
+        to { transform: translateY(0); }
+    }
+    
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        text-decoration: none;
+    }
+    
+    .logo-icon {
+        font-size: 32px;
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+    
+    .logo-text {
+        font-size: 26px;
+        font-weight: 800;
+        color: white;
+        background: linear-gradient(45deg, #fff, #e0e7ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: var(--space-md);
+        list-style: none;
+    }
+    
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        padding: var(--space-sm) var(--space-md);
+        border-radius: 10px;
+        transition: all 0.3s;
+        font-size: 16px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .nav-links a::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background: white;
+        transition: width 0.3s;
+        border-radius: 10px;
+    }
+    
+    .nav-links a:hover::before,
+    .nav-links a.active::before {
+        width: 100%;
+    }
+    
+    .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    /* ==================== FLOATING DONATE BUTTON ==================== */
+    .floating-donate {
+        position: fixed;
+        right: 20px;
+        bottom: 100px;
+        z-index: 999;
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    
+    .donate-btn {
+        background: linear-gradient(135deg, #FFC439, #FFB347, #FF9500);
+        color: #003087;
+        border: none;
+        border-radius: 50px;
+        padding: var(--space-lg) var(--space-2xl);
+        font-weight: 800;
+        font-size: 18px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        box-shadow: 0 8px 25px rgba(0,48,135,0.4);
+        transition: all 0.3s;
+        text-decoration: none;
+        min-width: 220px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .donate-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: left 0.7s;
+    }
+    
+    .donate-btn:hover::before {
+        left: 100%;
+    }
+    
+    .donate-btn:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 15px 30px rgba(0,48,135,0.5);
+    }
+    
+    /* ==================== HERO SECTION ==================== */
+    .hero-section {
+        background: var(--gradient-1);
+        color: white;
+        padding: var(--space-2xl) 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="white"/></svg>');
+        background-size: 100% 100px;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+    
+    .hero-title {
+        font-size: 56px;
+        margin-bottom: var(--space-md);
+        font-weight: 900;
+        line-height: 1.1;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        animation: fadeInUp 1s ease-out;
+    }
+    
+    .hero-subtitle {
+        font-size: 22px;
+        opacity: 0.9;
+        max-width: 800px;
+        margin: 0 auto var(--space-xl);
+        animation: fadeInUp 1s ease-out 0.2s both;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* ==================== SECTION STYLES ==================== */
+    .section {
+        padding: var(--space-2xl) 0;
+    }
+    
+    .section-title {
+        text-align: center;
+        font-size: 42px;
+        margin-bottom: var(--space-md);
+        color: var(--text-primary);
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        border-radius: 2px;
+    }
+    
+    .section-description {
+        text-align: center;
+        color: var(--text-secondary);
+        max-width: 700px;
+        margin: 0 auto var(--space-xl);
+        font-size: 18px;
+    }
+    
+    /* ==================== TOOLS GRID ==================== */
+    .tools-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: var(--space-lg);
+        margin-bottom: var(--space-2xl);
+    }
+    
+    .tool-card {
+        background: var(--bg-card);
+        border-radius: 20px;
+        padding: var(--space-xl);
+        box-shadow: var(--shadow-md);
+        transition: all 0.3s;
+        cursor: pointer;
+        border: 2px solid transparent;
+        text-decoration: none;
+        display: block;
+        color: inherit;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    
+    .tool-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: var(--gradient-1);
+        z-index: 2;
+    }
+    
+    .tool-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: var(--shadow-xl);
+        border-color: var(--primary);
+    }
+    
+    .tool-icon {
+        font-size: 36px;
+        margin-bottom: var(--space-md);
+        color: var(--primary);
+    }
+    
+    .tool-title {
+        font-size: 22px;
+        margin-bottom: var(--space-sm);
+        color: var(--text-primary);
+        font-weight: 700;
+    }
+    
+    .tool-description {
+        color: var(--text-secondary);
+        margin-bottom: var(--space-md);
+        font-size: 15px;
+    }
+    
+    .tool-category {
+        display: inline-block;
+        background: rgba(99, 102, 241, 0.1);
+        color: var(--primary);
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    /* ==================== CALCULATORS SECTION ==================== */
+    .calculators-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: var(--space-lg);
+    }
+    
+    .calculator-card {
+        background: var(--bg-card);
+        border-radius: 20px;
+        padding: var(--space-xl);
+        box-shadow: var(--shadow-md);
+        transition: all 0.3s;
+        margin-bottom: var(--space-lg);
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(99, 102, 241, 0.1);
+    }
+    
+    .calculator-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: var(--gradient-1);
+    }
+    
+    .calculator-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .calc-icon {
+        font-size: 32px;
+        margin-bottom: var(--space-md);
+        color: var(--primary);
+    }
+    
+    .calc-title {
+        font-size: 24px;
+        margin-bottom: var(--space-sm);
+        color: var(--text-primary);
+        font-weight: 700;
+    }
+    
+    .calc-purpose {
+        color: var(--text-secondary);
+        margin-bottom: var(--space-lg);
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    
+    /* Form Styles */
+    .form-group {
+        margin-bottom: var(--space-lg);
+    }
+    
+    .form-label {
+        display: block;
+        margin-bottom: var(--space-sm);
+        font-weight: 600;
+        color: var(--text-primary);
+        font-size: 15px;
+    }
+    
+    .form-control {
+        width: 100%;
+        padding: 14px;
+        border: 2px solid #E5E7EB;
+        border-radius: 10px;
+        font-size: 16px;
+        transition: all 0.3s;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .form-control:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    }
+    
+    .form-row {
+        display: flex;
+        gap: var(--space-md);
+        margin-bottom: var(--space-md);
+    }
+    
+    .form-row .form-group {
+        flex: 1;
+        margin-bottom: 0;
+    }
+    
+    .btn {
+        padding: 16px 32px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        border: none;
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-sm);
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .btn-primary {
+        background: var(--gradient-1);
+        color: white;
+    }
+    
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+    }
+    
+    .btn-secondary {
+        background: var(--gradient-4);
+        color: white;
+    }
+    
+    .btn-secondary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+    }
+    
+    .btn-outline {
+        background: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+    }
+    
+    .btn-outline:hover {
+        background: rgba(99, 102, 241, 0.1);
+    }
+    
+    .btn-sm {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    /* Currency Converter Specific */
+    .currency-row {
+        display: flex;
+        align-items: center;
+        gap: var(--space-md);
+        margin-bottom: var(--space-md);
+    }
+    
+    .currency-row .form-group {
+        flex: 1;
+        margin-bottom: 0;
+    }
+    
+    .currency-swap {
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        flex-shrink: 0;
+        font-size: 18px;
+    }
+    
+    .currency-swap:hover {
+        background: var(--primary-dark);
+        transform: rotate(180deg);
+    }
+    
+    /* Unit Converter Specific */
+    .unit-swap {
+        background: var(--secondary);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        flex-shrink: 0;
+        margin: 0 auto;
+    }
+    
+    .unit-swap:hover {
+        background: #0da271;
+        transform: rotate(180deg);
+    }
+    
+    /* Results */
+    .results-container {
+        margin-top: var(--space-lg);
+        padding: var(--space-lg);
+        background: rgba(99, 102, 241, 0.05);
+        border-radius: 15px;
+        border-left: 5px solid var(--primary);
+        display: none;
+        animation: fadeIn 0.5s;
+    }
+    
+    .results-container.show {
+        display: block;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .result-title {
+        font-size: 20px;
+        margin-bottom: var(--space-md);
+        color: var(--primary);
+        font-weight: 700;
+    }
+    
+    .result-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .result-row:last-child {
+        border-bottom: none;
+    }
+    
+    .result-label {
+        color: var(--text-secondary);
+        font-weight: 500;
+    }
+    
+    .result-value {
+        font-weight: 700;
+        color: var(--text-primary);
+    }
+    
+    /* Color coding */
+    .status-danger {
+        color: var(--danger);
+        font-weight: 700;
+    }
+    
+    .status-warning {
+        color: var(--warning);
+        font-weight: 700;
+    }
+    
+    .status-success {
+        color: var(--success);
+        font-weight: 700;
+    }
+    
+    .status-info {
+        color: var(--info);
+        font-weight: 700;
+    }
+    
+    /* Calculator Info Box */
+    .calc-info-box {
+        background: rgba(99, 102, 241, 0.05);
+        border-radius: 10px;
+        padding: var(--space-md);
+        margin-top: var(--space-lg);
+        border-left: 4px solid var(--primary);
+    }
+    
+    .calc-info-title {
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: var(--space-sm);
+    }
+    
+    .calc-info-content {
+        color: var(--text-secondary);
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    /* Height Input Toggle */
+    .height-toggle {
+        display: flex;
+        gap: var(--space-md);
+        margin-bottom: var(--space-md);
+    }
+    
+    .height-toggle-btn {
+        flex: 1;
+        padding: 10px;
+        border: 2px solid #E5E7EB;
+        background: white;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s;
+    }
+    
+    .height-toggle-btn.active {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+    }
+    
+    .height-input-group {
+        display: none;
+    }
+    
+    .height-input-group.active {
+        display: block;
+    }
+    
+    /* ==================== ADVERTISEMENT ==================== */
+    .ad-container {
+        background: white;
+        border: 2px dashed var(--primary);
+        border-radius: 15px;
+        padding: var(--space-lg);
+        margin: var(--space-xl) auto;
+        text-align: center;
+        max-width: 728px;
+        box-shadow: var(--shadow-sm);
+    }
+    
+    .ad-label {
+        color: var(--text-light);
+        font-size: 14px;
+        margin-bottom: var(--space-sm);
+        font-weight: 500;
+    }
+    
+    .ad-placeholder {
+        min-height: 100px;
+        background: linear-gradient(45deg, #f5f7fa, #e4e8f0);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-light);
+        font-weight: 500;
+    }
+    
+    /* ==================== FOOTER ==================== */
+    footer {
+        background: var(--gradient-1);
+        color: white;
+        padding: var(--space-2xl) 0 var(--space-xl);
+        margin-top: auto;
+        position: relative;
+    }
+    
+    footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, #FFC439, #FFB347, #FF9500);
+    }
+    
+    .footer-top {
+        text-align: center;
+        margin-bottom: var(--space-xl);
+    }
+    
+    .footer-logo {
+        max-width: 250px;
+        margin: 0 auto var(--space-lg);
+    }
+    
+    .footer-logo img {
+        width: 100%;
+        height: auto;
+        filter: brightness(0) invert(1);
+    }
+    
+    /* Footer Donation Box */
+    .footer-donation {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: var(--space-xl);
+        margin: var(--space-xl) auto;
+        max-width: 500px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .footer-donation h4 {
+        font-size: 20px;
+        margin-bottom: var(--space-md);
+        color: white;
+    }
+    
+    .footer-donation p {
+        margin-bottom: var(--space-lg);
+        opacity: 0.9;
+    }
+    
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--space-xl);
+        margin-bottom: var(--space-xl);
+    }
+    
+    .footer-links h4 {
+        color: white;
+        margin-bottom: var(--space-lg);
+        font-size: 18px;
+        font-weight: 700;
+    }
+    
+    .footer-links ul {
+        list-style: none;
+    }
+    
+    .footer-links li {
+        margin-bottom: var(--space-sm);
+    }
+    
+    .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+    }
+    
+    .footer-links a:hover {
+        color: white;
+        transform: translateX(5px);
+    }
+    
+    .footer-links i {
+        font-size: 14px;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        padding-top: var(--space-xl);
+        border-top: 1px solid rgba(255,255,255,0.1);
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+    }
+    
+    /* ==================== RESPONSIVE DESIGN ==================== */
+    /* Large Desktop */
+    @media (min-width: 1200px) {
+        .container {
+            padding: 0 40px;
+        }
+        
+        .hero-title {
+            font-size: 60px;
+        }
+        
+        .tools-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        .calculators-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    /* Desktop */
+    @media (max-width: 1199px) and (min-width: 992px) {
+        .tools-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .calculators-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    /* Tablet */
+    @media (max-width: 991px) and (min-width: 768px) {
+        .tools-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .calculators-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .hero-title {
+            font-size: 48px;
+        }
+        
+        .nav-links {
+            gap: var(--space-sm);
+        }
+        
+        .nav-links a {
+            padding: var(--space-sm);
+            font-size: 14px;
+        }
+    }
+    
+    /* Mobile */
+    @media (max-width: 767px) {
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--primary-dark);
+            flex-direction: column;
+            padding: var(--space-md);
+            box-shadow: var(--shadow-xl);
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .nav-links.active {
+            display: flex;
+        }
+        
+        .mobile-menu-btn {
+            display: block;
+        }
+        
+        .hero-title {
+            font-size: 36px;
+        }
+        
+        .hero-subtitle {
+            font-size: 18px;
+            padding: 0 var(--space-md);
+        }
+        
+        .tools-grid,
+        .calculators-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .floating-donate {
+            right: 10px;
+            bottom: 80px;
+        }
+        
+        .donate-btn {
+            padding: var(--space-md) var(--space-xl);
+            font-size: 16px;
+            min-width: 180px;
+        }
+        
+        .form-row {
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+        
+        .currency-row {
+            flex-direction: column;
+        }
+        
+        .currency-swap {
+            transform: rotate(90deg);
+        }
+        
+        .section-title {
+            font-size: 32px;
+        }
+        
+        .ad-container {
+            margin: var(--space-xl) var(--space-md);
+        }
+        
+        .footer-donation {
+            margin: var(--space-xl) var(--space-md);
+        }
+    }
+    
+    /* Small Mobile */
+    @media (max-width: 480px) {
+        .container {
+            padding: 0 var(--space-sm);
+        }
+        
+        .hero-title {
+            font-size: 32px;
+        }
+        
+        .hero-subtitle {
+            font-size: 16px;
+        }
+        
+        .section {
+            padding: var(--space-xl) 0;
+        }
+        
+        .calculator-card,
+        .tool-card {
+            padding: var(--space-lg);
+        }
+        
+        .floating-donate {
+            right: 10px;
+            bottom: 20px;
+        }
+        
+        .donate-btn {
+            padding: var(--space-sm) var(--space-lg);
+            font-size: 14px;
+            min-width: 160px;
+        }
+    }
+    
+    /* Print Styles */
+    @media print {
+        .floating-donate,
+        .ad-container {
+            display: none;
+        }
+    }
+    
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: var(--primary);
+        border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-dark);
+    }
+    </style>
+</head>
+<body>
+    <!-- FLOATING DONATE BUTTON -->
+    <div class="floating-donate">
+        <a href="https://paypal.me/mohd0787" target="_blank" class="donate-btn">
+            <i class="fab fa-paypal"></i> PayPal Donate
+        </a>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <a href="#" class="logo">
+                    <div class="logo-icon">🤖</div>
+                    <div class="logo-text">AIToolStation</div>
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#tools">AI Tools</a></li>
+                    <li><a href="#calculators">Calculators</a></li>
+                    <li><a href="#donate" onclick="document.querySelector('.donate-btn').click()">Donate</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <!-- HERO SECTION -->
+        <section class="hero-section" id="home">
+            <div class="container">
+                <h1 class="hero-title">Complete AI Tools & Calculators Suite</h1>
+                <p class="hero-subtitle">25+ accurate calculators with 2026 rates. Health, finance, business tools all in one place.</p>
+            </div>
+        </section>
+
+        <!-- ADVERTISEMENT -->
+        <div class="container">
+            <div class="ad-container">
+                <div class="ad-label">Advertisement</div>
+                <div class="ad-placeholder">AdSense Advertisement</div>
+            </div>
+        </div>
+
+        <!-- AI TOOLS SECTION (15 Tools) -->
+        <section class="section" id="tools">
+            <div class="container">
+                <h2 class="section-title">🤖 15 Trending AI Tools 2026</h2>
+                <p class="section-description">Most demanding AI tools that are changing the world in 2026</p>
+                
+                <div class="tools-grid">
+                    <!-- Existing Tools -->
+                    <a href="https://chat.openai.com" target="_blank" class="tool-card">
+                        <div class="tool-icon">🤖</div>
+                        <h3 class="tool-title">ChatGPT 5</h3>
+                        <p class="tool-description">Most advanced conversational AI with reasoning capabilities</p>
+                        <span class="tool-category">AI Assistant</span>
+                    </a>
+                    
+                    <a href="https://claude.ai" target="_blank" class="tool-card">
+                        <div class="tool-icon">🧠</div>
+                        <h3 class="tool-title">Claude 3.5</h3>
+                        <p class="tool-description">Safe and intelligent AI for complex analysis</p>
+                        <span class="tool-category">AI Assistant</span>
+                    </a>
+                    
+                    <!-- NEW ADDED TOOLS -->
+                    <div class="tool-card" onclick="openTool('document-converter')">
+                        <div class="tool-icon">📄</div>
+                        <h3 class="tool-title">Document Converter</h3>
+                        <p class="tool-description">Convert between PDF, Word, Excel, PPT formats instantly</p>
+                        <span class="tool-category">Productivity</span>
+                    </div>
+                    
+                    <div class="tool-card" onclick="openTool('pdf-editor')">
+                        <div class="tool-icon">✏️</div>
+                        <h3 class="tool-title">PDF Editor Pro</h3>
+                        <p class="tool-description">Edit, merge, split and sign PDF documents online</p>
+                        <span class="tool-category">Document</span>
+                    </div>
+                    
+                    <div class="tool-card" onclick="openTool('image-resizer')">
+                        <div class="tool-icon">🖼️</div>
+                        <h3 class="tool-title">Image Resizer</h3>
+                        <p class="tool-description">Resize, compress and optimize images for web & social media</p>
+                        <span class="tool-category">Media</span>
+                    </div>
+                    
+                    <div class="tool-card" onclick="openTool('video-downloader')">
+                        <div class="tool-icon">🎬</div>
+                        <h3 class="tool-title">Video Downloader</h3>
+                        <p class="tool-description">Download videos from YouTube, Instagram, TikTok in HD</p>
+                        <span class="tool-category">Media</span>
+                    </div>
+                    
+                    <div class="tool-card" onclick="openTool('reel-downloader')">
+                        <div class="tool-icon">🎵</div>
+                        <h3 class="tool-title">Reel Downloader</h3>
+                        <p class="tool-description">Download Instagram Reels & Stories in high quality</p>
+                        <span class="tool-category">Social Media</span>
+                    </div>
+                    
+                    <div class="tool-card" onclick="openTool('midjourney')">
+                        <div class="tool-icon">🎨</div>
+                        <h3 class="tool-title">Midjourney V7</h3>
+                        <p class="tool-description">AI image generation with photorealistic results</p>
+                        <span class="tool-category">AI Art</span>
+                    </div>
+                    
+                    <div class="tool-card" onclick="openTool('elevenlabs')">
+                        <div class="tool-icon">🎤</div>
+                        <h3 class="tool-title">ElevenLabs Pro</h3>
+                        <p class="tool-description">Most realistic AI voice generation</p>
+                        <span class="tool-category">Voice AI</span>
+                    </div>
+                    
+                    <div class="tool-card" onclick="openTool('runway')">
+                        <div class="tool-icon">🎥</div>
+                        <h3 class="tool-title">Runway Gen-3</h3>
+                        <p class="tool-description">AI video generation and editing</p>
+                        <span class="tool-category">Video AI</span>
+                    </div>
+                    
+                    <div class="tool-card" onclick="openTool('copilot')">
+                        <div class="tool-icon">💻</div>
+                        <h3 class="tool-title">GitHub Copilot X</h3>
+                        <p class="tool-description">AI pair programmer with chat interface</p>
+                        <span class="tool-category">Coding</span>
+                    </div>
+                    
+                    <div class="tool-card" onclick="openTool('notion-ai')">
+                        <div class="tool-icon">📝</div>
+                        <h3 class="tool-title">Notion AI</h3>
+                        <p class="tool-description">AI-powered workspace for notes and projects</p>
+                        <span class="tool-category">Productivity</span>
+                    </div>
+                    
+                    <div class="tool-card" onclick="openTool('grammarly')">
+                        <div class="tool-icon">✍️</div>
+                        <h3 class="tool-title">Grammarly AI</h3>
+                        <p class="tool-description">AI writing assistant for perfect content</p>
+                        <span class="tool-category">Writing</span>
+                    </div>
+                    
+                    <div class="tool-card" onclick="openTool('firefly')">
+                        <div class="tool-icon">🖌️</div>
+                        <h3 class="tool-title">Adobe Firefly</h3>
+                        <p class="tool-description">Generative AI for creative design</p>
+                        <span class="tool-category">Design</span>
+                    </div>
+                    
+                    <div class="tool-card" onclick="openTool('synthesia')">
+                        <div class="tool-icon">👨‍💼</div>
+                        <h3 class="tool-title">Synthesia</h3>
+                        <p class="tool-description">AI video avatar creation</p>
+                        <span class="tool-category">Video</span>
+                    </div>
+                    
+                    <div class="tool-card" onclick="openTool('copy-ai')">
+                        <div class="tool-icon">📢</div>
+                        <h3 class="tool-title">Copy.ai</h3>
+                        <p class="tool-description">AI marketing copy generator</p>
+                        <span class="tool-category">Marketing</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADVERTISEMENT -->
+        <div class="container">
+            <div class="ad-container">
+                <div class="ad-label">Advertisement</div>
+                <div class="ad-placeholder">AdSense Advertisement</div>
+            </div>
+        </div>
+
+        <!-- CALCULATORS SECTION -->
+        <section class="section" id="calculators">
+            <div class="container">
+                <h2 class="section-title">🧮 Complete Calculators Suite</h2>
+                <p class="section-description">All calculators with 2026 updated rates and accurate results</p>
+                
+                <div class="calculators-grid">
+                    <!-- BMI Calculator -->
+                    <div class="calculator-card">
+                        <div class="calc-icon">⚕️</div>
+                        <h3 class="calc-title">BMI Calculator</h3>
+                        <p class="calc-purpose">Calculate Body Mass Index with height in feet & inches</p>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Gender</label>
+                            <select class="form-control" id="bmiGender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Weight (kg)</label>
+                            <input type="number" class="form-control" id="bmiWeight" value="70" min="30" max="200">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Height</label>
+                            <div class="form-row">
+                                <input type="number" class="form-control" id="bmiFeet" placeholder="Feet" value="5" min="3" max="8">
+                                <input type="number" class="form-control" id="bmiInches" placeholder="Inches" value="8" min="0" max="11">
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="calculateBMI()">Calculate BMI</button>
+                        
+                        <div class="results-container" id="bmiResults">
+                            <h3 class="result-title">Your BMI Results</h3>
+                            <div class="result-row">
+                                <span class="result-label">BMI Value:</span>
+                                <span class="result-value" id="bmiValue">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Category:</span>
+                                <span class="result-value" id="bmiCategory">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Health Status:</span>
+                                <span class="result-value" id="bmiStatus">-</span>
+                            </div>
+                        </div>
+                        
+                        <div class="calc-info-box">
+                            <div class="calc-info-title">BMI Categories:</div>
+                            <div class="calc-info-content">
+                                • Underweight: < 18.5 (Too thin, may indicate malnutrition)<br>
+                                • Normal: 18.5 - 24.9 (Healthy weight range)<br>
+                                • Overweight: 25 - 29.9 (Increased health risk)<br>
+                                • Obese Class I: 30 - 34.9 (High health risk)<br>
+                                • Obese Class II: 35 - 39.9 (Very high health risk)<br>
+                                • Obese Class III: ≥ 40 (Extremely high health risk)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Body Fat Calculator - FIXED with Feet+Inches AND CM -->
+                    <div class="calculator-card">
+                        <div class="calc-icon">🏋️</div>
+                        <h3 class="calc-title">Body Fat Calculator</h3>
+                        <p class="calc-purpose">Calculate accurate body fat percentage using US Navy method</p>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Gender</label>
+                            <select class="form-control" id="bodyFatGender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Age (years)</label>
+                            <input type="number" class="form-control" id="bodyFatAge" value="30" min="15" max="80">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Weight (kg)</label>
+                            <input type="number" class="form-control" id="bodyFatWeight" value="70" min="30" max="200">
+                        </div>
+                        
+                        <!-- Height Toggle -->
+                        <div class="form-group">
+                            <label class="form-label">Height Measurement</label>
+                            <div class="height-toggle">
+                                <button type="button" class="height-toggle-btn active" onclick="toggleHeightInput('feet')">Feet & Inches</button>
+                                <button type="button" class="height-toggle-btn" onclick="toggleHeightInput('cm')">Centimeters</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Feet & Inches Input -->
+                        <div class="height-input-group active" id="heightFeetGroup">
+                            <div class="form-group">
+                                <label class="form-label">Height (Feet & Inches)</label>
+                                <div class="form-row">
+                                    <input type="number" class="form-control" id="bodyFatFeet" placeholder="Feet" value="5" min="3" max="8">
+                                    <input type="number" class="form-control" id="bodyFatInches" placeholder="Inches" value="9" min="0" max="11">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CM Input -->
+                        <div class="height-input-group" id="heightCmGroup">
+                            <div class="form-group">
+                                <label class="form-label">Height (Centimeters)</label>
+                                <input type="number" class="form-control" id="bodyFatCm" value="175" min="100" max="250">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Waist Measurement</label>
+                            <div class="form-row">
+                                <input type="number" class="form-control" id="bodyFatWaistFeet" placeholder="Feet" value="0" min="0" max="5">
+                                <input type="number" class="form-control" id="bodyFatWaistInches" placeholder="Inches" value="33" min="0" max="11">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Neck Measurement</label>
+                            <div class="form-row">
+                                <input type="number" class="form-control" id="bodyFatNeckFeet" placeholder="Feet" value="0" min="0" max="2">
+                                <input type="number" class="form-control" id="bodyFatNeckInches" placeholder="Inches" value="15" min="0" max="11">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group" id="hipInput" style="display: none;">
+                            <label class="form-label">Hip Measurement (For females)</label>
+                            <div class="form-row">
+                                <input type="number" class="form-control" id="bodyFatHipFeet" placeholder="Feet" value="0" min="0" max="5">
+                                <input type="number" class="form-control" id="bodyFatHipInches" placeholder="Inches" value="36" min="0" max="11">
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="calculateBodyFat()">Calculate Body Fat</button>
+                        
+                        <div class="results-container" id="bodyFatResults">
+                            <h3 class="result-title">Body Fat Analysis</h3>
+                            <div class="result-row">
+                                <span class="result-label">Body Fat %:</span>
+                                <span class="result-value" id="bodyFatPercent">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Category:</span>
+                                <span class="result-value" id="bodyFatCategory">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Lean Mass:</span>
+                                <span class="result-value" id="bodyFatLean">- kg</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Fat Mass:</span>
+                                <span class="result-value" id="bodyFatMass">- kg</span>
+                            </div>
+                        </div>
+                        
+                        <div class="calc-info-box">
+                            <div class="calc-info-title">Body Fat Categories:</div>
+                            <div class="calc-info-content">
+                                <strong>For Men:</strong><br>
+                                • Essential: 2-5% (Athletes: 6-13%)<br>
+                                • Fitness: 14-17% (Good: 18-24%)<br>
+                                • Average: 25%+ (Risk: 26%+)<br><br>
+                                <strong>For Women:</strong><br>
+                                • Essential: 10-13% (Athletes: 14-20%)<br>
+                                • Fitness: 21-24% (Good: 25-31%)<br>
+                                • Average: 32%+ (Risk: 33%+)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- GST Calculator -->
+                    <div class="calculator-card">
+                        <div class="calc-icon">💰</div>
+                        <h3 class="calc-title">GST Calculator 2026</h3>
+                        <p class="calc-purpose">Calculate GST with latest 2026 rates for different categories</p>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Amount (₹)</label>
+                            <input type="number" class="form-control" id="gstAmount" value="1000" min="1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Category</label>
+                            <select class="form-control" id="gstCategory" onchange="updateGSTRate()">
+                                <option value="essential">Essential Goods (Food grains, dairy)</option>
+                                <option value="household">Household Items (Soap, toothpaste)</option>
+                                <option value="restaurant" selected>Restaurant/Hotel Stay</option>
+                                <option value="electronics">Electronics (Phones, TV)</option>
+                                <option value="clothes">Clothes & Textiles</option>
+                                <option value="automobile">Automobiles (Car, Bike)</option>
+                                <option value="luxury">Luxury Items</option>
+                                <option value="service">Services</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">GST Rate (%)</label>
+                            <input type="number" class="form-control" id="gstRate" value="18" readonly>
+                            <small style="color: var(--text-light); display: block; margin-top: 4px;" id="gstRateInfo">Restaurant/Hotel Stay: 18% GST</small>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="calculateGST()">Calculate GST</button>
+                        
+                        <div class="results-container" id="gstResults">
+                            <h3 class="result-title">GST Calculation</h3>
+                            <div class="result-row">
+                                <span class="result-label">Original Amount:</span>
+                                <span class="result-value" id="originalAmount">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">GST Amount:</span>
+                                <span class="result-value" id="gstAmountResult">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Total Amount:</span>
+                                <span class="result-value" id="totalWithGST">-</span>
+                            </div>
+                        </div>
+                        
+                        <div class="calc-info-box">
+                            <div class="calc-info-title">GST Rates 2026:</div>
+                            <div class="calc-info-content">
+                                • 0%: Essential food grains, dairy goods<br>
+                                • 5%: Household items, packaged foods<br>
+                                • 12%: Processed foods, medicines<br>
+                                • 18%: Restaurant, hotel stay, electronics<br>
+                                • 28%: Luxury items, automobiles, aerated drinks<br>
+                                • 0.25%/3%: Special rates for gems/jewelry
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- World Tax Calculator - FIXED with more countries -->
+                    <div class="calculator-card">
+                        <div class="calc-icon">🏛️</div>
+                        <h3 class="calc-title">World Tax Calculator 2026</h3>
+                        <p class="calc-purpose">Calculate tax for different products & services worldwide</p>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Select Product/Service</label>
+                            <select class="form-control" id="taxProduct" onchange="updateTaxRate()">
+                                <option value="clothes">Clothes & Apparel</option>
+                                <option value="electronics">Electronics & Phones</option>
+                                <option value="car">Car & Automobiles</option>
+                                <option value="two-wheeler">Two Wheeler</option>
+                                <option value="restaurant">Restaurant Food</option>
+                                <option value="hotel">Hotel Stay</option>
+                                <option value="dairy">Dairy Goods</option>
+                                <option value="salaried">Salaried Person (Yearly)</option>
+                                <option value="business">Business Income</option>
+                                <option value="rent">House Rent</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Amount/Income</label>
+                            <input type="number" class="form-control" id="taxIncome" value="50000" min="1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Country</label>
+                            <select class="form-control" id="taxCountry" onchange="updateTaxRate()">
+                                <option value="india" selected>India</option>
+                                <option value="usa">United States</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="uae">UAE (No Tax)</option>
+                                <option value="pakistan">Pakistan</option>
+                                <option value="turkey">Turkey</option>
+                                <option value="australia">Australia</option>
+                                <option value="egypt">Egypt</option>
+                                <option value="gulf">Gulf Countries</option>
+                                <option value="iran">Iran</option>
+                                <option value="newzealand">New Zealand</option>
+                                <option value="china">China</option>
+                                <option value="canada">Canada</option>
+                                <option value="germany">Germany</option>
+                                <option value="france">France</option>
+                                <option value="japan">Japan</option>
+                                <option value="russia">Russia</option>
+                                <option value="brazil">Brazil</option>
+                                <option value="mexico">Mexico</option>
+                                <option value="southafrica">South Africa</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Tax Rate</label>
+                            <input type="text" class="form-control" id="taxRateDisplay" value="VAT + GST" readonly>
+                            <small style="color: var(--text-light); display: block; margin-top: 4px;" id="taxRateInfo">Click Calculate for detailed breakdown</small>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="calculateTax()">Calculate Tax</button>
+                        
+                        <div class="results-container" id="taxResults">
+                            <h3 class="result-title">Tax Calculation</h3>
+                            <div class="result-row">
+                                <span class="result-label">Product/Service:</span>
+                                <span class="result-value" id="taxProductName">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Country:</span>
+                                <span class="result-value" id="taxCountryName">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Tax Type:</span>
+                                <span class="result-value" id="taxType">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Tax Rate:</span>
+                                <span class="result-value" id="taxRateResult">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Tax Amount:</span>
+                                <span class="result-value" id="taxAmount">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Total Payable:</span>
+                                <span class="result-value" id="totalWithTax">-</span>
+                            </div>
+                        </div>
+                        
+                        <div class="calc-info-box">
+                            <div class="calc-info-title">What this calculator shows:</div>
+                            <div class="calc-info-content">
+                                This calculator shows the total tax charged on different products and services. It includes:<br>
+                                • GST/VAT rates for goods<br>
+                                • Service tax for services<br>
+                                • Income tax for salaried/business<br>
+                                • Country-wise tax variations
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Loan Calculator - FIXED with Categories -->
+                    <div class="calculator-card">
+                        <div class="calc-icon">🏦</div>
+                        <h3 class="calc-title">Loan EMI Calculator</h3>
+                        <p class="calc-purpose">Calculate EMI, total interest and payment schedule for different loans</p>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Loan Type</label>
+                            <select class="form-control" id="loanType" onchange="updateLoanRate()">
+                                <option value="personal">Personal Loan</option>
+                                <option value="home">Home Loan</option>
+                                <option value="car">Car Loan</option>
+                                <option value="two-wheeler">Two Wheeler Loan</option>
+                                <option value="education">Education Loan</option>
+                                <option value="business">Business Loan</option>
+                                <option value="property">Loan Against Property</option>
+                                <option value="gold">Gold Loan</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Loan Amount (₹)</label>
+                            <input type="number" class="form-control" id="loanAmount" value="1000000" min="1000">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Interest Rate (% per year)</label>
+                            <input type="number" class="form-control" id="loanInterest" value="8.5" step="0.1" min="1" max="30">
+                            <small style="color: var(--text-light); display: block; margin-top: 4px;" id="loanRateInfo">Personal Loan: 10-15%</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Loan Tenure (years)</label>
+                            <input type="number" class="form-control" id="loanTenure" value="5" min="1" max="30">
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="calculateLoan()">Calculate EMI</button>
+                        
+                        <div class="results-container" id="loanResults">
+                            <h3 class="result-title">Loan Calculation</h3>
+                            <div class="result-row">
+                                <span class="result-label">Loan Type:</span>
+                                <span class="result-value" id="loanTypeName">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Monthly EMI:</span>
+                                <span class="result-value" id="monthlyEMI">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Total Interest:</span>
+                                <span class="result-value" id="totalInterest">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Total Payment:</span>
+                                <span class="result-value" id="totalPayment">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Interest % of Loan:</span>
+                                <span class="result-value" id="interestPercentage">-</span>
+                            </div>
+                        </div>
+                        
+                        <div class="calc-info-box">
+                            <div class="calc-info-title">Typical Interest Rates 2026:</div>
+                            <div class="calc-info-content">
+                                • Personal Loan: 10-15%<br>
+                                • Home Loan: 7-9%<br>
+                                • Car Loan: 8-11%<br>
+                                • Two Wheeler: 10-14%<br>
+                                • Education Loan: 8-12%<br>
+                                • Business Loan: 12-18%<br>
+                                • Loan Against Property: 9-12%<br>
+                                • Gold Loan: 10-16%
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Lumpsum Calculator -->
+                    <div class="calculator-card">
+                        <div class="calc-icon">💎</div>
+                        <h3 class="calc-title">Lumpsum Calculator</h3>
+                        <p class="calc-purpose">Calculate future value of lumpsum investment</p>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Investment Amount (₹)</label>
+                            <input type="number" class="form-control" id="lumpsumAmount" value="100000" min="1000">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Expected Return (% per year)</label>
+                            <input type="number" class="form-control" id="lumpsumReturn" value="12" step="0.1" min="1" max="30">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Investment Period (years)</label>
+                            <input type="number" class="form-control" id="lumpsumPeriod" value="10" min="1" max="50">
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="calculateLumpsum()">Calculate Future Value</button>
+                        
+                        <div class="results-container" id="lumpsumResults">
+                            <h3 class="result-title">Lumpsum Investment</h3>
+                            <div class="result-row">
+                                <span class="result-label">Future Value:</span>
+                                <span class="result-value" id="futureValue">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Wealth Gain:</span>
+                                <span class="result-value" id="wealthGain">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Total Returns:</span>
+                                <span class="result-value" id="totalReturns">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">CAGR:</span>
+                                <span class="result-value" id="cagrValue">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Currency Converter - FIXED with more countries -->
+                    <div class="calculator-card">
+                        <div class="calc-icon">💱</div>
+                        <h3 class="calc-title">Currency Converter</h3>
+                        <p class="calc-purpose">Convert between all world currencies with live rates</p>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Amount</label>
+                            <input type="number" class="form-control" id="currencyAmount" value="100" min="1">
+                        </div>
+                        
+                        <div class="currency-row">
+                            <div class="form-group">
+                                <label class="form-label">From Currency</label>
+                                <select class="form-control" id="fromCurrency">
+                                    <option value="USD">USD - US Dollar</option>
+                                    <option value="EUR">EUR - Euro</option>
+                                    <option value="GBP">GBP - British Pound</option>
+                                    <option value="INR" selected>INR - Indian Rupee</option>
+                                    <option value="JPY">JPY - Japanese Yen</option>
+                                    <option value="CAD">CAD - Canadian Dollar</option>
+                                    <option value="AUD">AUD - Australian Dollar</option>
+                                    <option value="CNY">CNY - Chinese Yuan</option>
+                                    <option value="TRY">TRY - Turkish Lira</option>
+                                    <option value="PKR">PKR - Pakistani Rupee</option>
+                                    <option value="AED">AED - UAE Dirham</option>
+                                    <option value="SAR">SAR - Saudi Riyal</option>
+                                    <option value="EGP">EGP - Egyptian Pound</option>
+                                    <option value="IRR">IRR - Iranian Rial</option>
+                                    <option value="NZD">NZD - New Zealand Dollar</option>
+                                    <option value="ZAR">ZAR - South African Rand</option>
+                                    <option value="BRL">BRL - Brazilian Real</option>
+                                    <option value="RUB">RUB - Russian Ruble</option>
+                                </select>
+                            </div>
+                            
+                            <button class="currency-swap" onclick="swapCurrencies()">
+                                <i class="fas fa-exchange-alt"></i>
+                            </button>
+                            
+                            <div class="form-group">
+                                <label class="form-label">To Currency</label>
+                                <select class="form-control" id="toCurrency">
+                                    <option value="USD" selected>USD - US Dollar</option>
+                                    <option value="EUR">EUR - Euro</option>
+                                    <option value="GBP">GBP - British Pound</option>
+                                    <option value="INR">INR - Indian Rupee</option>
+                                    <option value="JPY">JPY - Japanese Yen</option>
+                                    <option value="CAD">CAD - Canadian Dollar</option>
+                                    <option value="AUD">AUD - Australian Dollar</option>
+                                    <option value="CNY">CNY - Chinese Yuan</option>
+                                    <option value="TRY">TRY - Turkish Lira</option>
+                                    <option value="PKR">PKR - Pakistani Rupee</option>
+                                    <option value="AED">AED - UAE Dirham</option>
+                                    <option value="SAR">SAR - Saudi Riyal</option>
+                                    <option value="EGP">EGP - Egyptian Pound</option>
+                                    <option value="IRR">IRR - Iranian Rial</option>
+                                    <option value="NZD">NZD - New Zealand Dollar</option>
+                                    <option value="ZAR">ZAR - South African Rand</option>
+                                    <option value="BRL">BRL - Brazilian Real</option>
+                                    <option value="RUB">RUB - Russian Ruble</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="calculateCurrency()">Convert Currency</button>
+                        
+                        <div class="results-container" id="currencyResults">
+                            <h3 class="result-title">Currency Conversion</h3>
+                            <div class="result-row">
+                                <span class="result-label">Exchange Rate:</span>
+                                <span class="result-value" id="exchangeRate">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Converted Amount:</span>
+                                <span class="result-value" id="convertedAmount">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Last Updated:</span>
+                                <span class="result-value" id="currencyUpdate">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Unit Converter - SIMPLIFIED -->
+                    <div class="calculator-card">
+                        <div class="calc-icon">📏</div>
+                        <h3 class="calc-title">Unit Converter</h3>
+                        <p class="calc-purpose">Convert between different units easily</p>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Value to Convert</label>
+                            <input type="number" class="form-control" id="unitValue" value="1" step="0.01">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">From Unit</label>
+                                <select class="form-control" id="fromUnit">
+                                    <option value="cm">Centimeter (cm)</option>
+                                    <option value="meter">Meter (m)</option>
+                                    <option value="km">Kilometer (km)</option>
+                                    <option value="inch">Inch (in)</option>
+                                    <option value="feet">Feet (ft)</option>
+                                    <option value="yard">Yard (yd)</option>
+                                    <option value="mile">Mile (mi)</option>
+                                    <option value="gram">Gram (g)</option>
+                                    <option value="kg">Kilogram (kg)</option>
+                                    <option value="pound">Pound (lb)</option>
+                                    <option value="ounce">Ounce (oz)</option>
+                                    <option value="liter">Liter (L)</option>
+                                    <option value="ml">Milliliter (mL)</option>
+                                    <option value="gallon">Gallon (gal)</option>
+                                    <option value="celsius">Celsius (°C)</option>
+                                    <option value="fahrenheit">Fahrenheit (°F)</option>
+                                </select>
+                            </div>
+                            
+                            <button class="unit-swap" onclick="swapUnits()">
+                                <i class="fas fa-exchange-alt"></i>
+                            </button>
+                            
+                            <div class="form-group">
+                                <label class="form-label">To Unit</label>
+                                <select class="form-control" id="toUnit">
+                                    <option value="feet">Feet (ft)</option>
+                                    <option value="inch">Inch (in)</option>
+                                    <option value="cm">Centimeter (cm)</option>
+                                    <option value="meter">Meter (m)</option>
+                                    <option value="km">Kilometer (km)</option>
+                                    <option value="yard">Yard (yd)</option>
+                                    <option value="mile">Mile (mi)</option>
+                                    <option value="kg">Kilogram (kg)</option>
+                                    <option value="gram">Gram (g)</option>
+                                    <option value="pound">Pound (lb)</option>
+                                    <option value="ounce">Ounce (oz)</option>
+                                    <option value="ml">Milliliter (mL)</option>
+                                    <option value="liter">Liter (L)</option>
+                                    <option value="gallon">Gallon (gal)</option>
+                                    <option value="fahrenheit">Fahrenheit (°F)</option>
+                                    <option value="celsius">Celsius (°C)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="convertUnits()">Convert Units</button>
+                        
+                        <div class="results-container" id="unitResults">
+                            <h3 class="result-title">Unit Conversion</h3>
+                            <div class="result-row">
+                                <span class="result-label">Converted Value:</span>
+                                <span class="result-value" id="convertedUnit">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Conversion Formula:</span>
+                                <span class="result-value" id="unitFormula">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Age Calculator - WITH LUCKY FACT -->
+                    <div class="calculator-card">
+                        <div class="calc-icon">🎂</div>
+                        <h3 class="calc-title">Age Calculator</h3>
+                        <p class="calc-purpose">Calculate exact age in years, months and days with lucky fact</p>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Date of Birth</label>
+                            <input type="date" class="form-control" id="dobDate" value="1990-01-01">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Calculate till Date (Optional)</label>
+                            <input type="date" class="form-control" id="tillDate">
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="calculateAge()">Calculate Age</button>
+                        
+                        <div class="results-container" id="ageResults">
+                            <h3 class="result-title">Age Calculation</h3>
+                            <div class="result-row">
+                                <span class="result-label">Total Age:</span>
+                                <span class="result-value" id="totalAge">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">In Years:</span>
+                                <span class="result-value" id="ageYears">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">In Months:</span>
+                                <span class="result-value" id="ageMonths">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">In Days:</span>
+                                <span class="result-value" id="ageDays">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Lucky Fact:</span>
+                                <span class="result-value" id="ageLuckyFact">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Profit Calculator -->
+                    <div class="calculator-card">
+                        <div class="calc-icon">📈</div>
+                        <h3 class="calc-title">Profit Calculator</h3>
+                        <p class="calc-purpose">Calculate profit, loss, margin, markup with detailed analysis</p>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Cost Price (₹)</label>
+                            <input type="number" class="form-control" id="costPrice" value="1000" min="1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Selling Price (₹)</label>
+                            <input type="number" class="form-control" id="sellingPrice" value="1200" min="1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Quantity</label>
+                            <input type="number" class="form-control" id="profitQuantity" value="10" min="1">
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="calculateProfit()">Calculate Profit</button>
+                        
+                        <div class="results-container" id="profitResults">
+                            <h3 class="result-title">Profit Analysis</h3>
+                            <div class="result-row">
+                                <span class="result-label">Total Cost:</span>
+                                <span class="result-value" id="totalCost">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Total Revenue:</span>
+                                <span class="result-value" id="totalRevenue">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Profit/Loss:</span>
+                                <span class="result-value" id="profitLoss">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Profit Margin:</span>
+                                <span class="result-value" id="profitMargin">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Markup %:</span>
+                                <span class="result-value" id="markupPercent">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">ROI %:</span>
+                                <span class="result-value" id="roiPercent">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gratuity Calculator - SIMPLIFIED -->
+                    <div class="calculator-card">
+                        <div class="calc-icon">💼</div>
+                        <h3 class="calc-title">Gratuity Calculator</h3>
+                        <p class="calc-purpose">Calculate gratuity amount as per Indian labor laws (Simple)</p>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Basic Salary + DA (₹)</label>
+                            <input type="number" class="form-control" id="gratuitySalary" value="50000" min="1000">
+                            <small style="color: var(--text-light); display: block; margin-top: 4px;">Basic Salary + Dearness Allowance</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Years of Service</label>
+                            <input type="number" class="form-control" id="serviceYears" value="5" min="1" max="40">
+                            <small style="color: var(--text-light); display: block; margin-top: 4px;">Minimum 5 years required</small>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="calculateGratuity()">Calculate Gratuity</button>
+                        
+                        <div class="results-container" id="gratuityResults">
+                            <h3 class="result-title">Gratuity Calculation</h3>
+                            <div class="result-row">
+                                <span class="result-label">Total Service:</span>
+                                <span class="result-value" id="totalService">- years</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Gratuity Amount:</span>
+                                <span class="result-value" id="gratuityAmount">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Formula Used:</span>
+                                <span class="result-value" id="gratuityFormula">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Tax Free Amount:</span>
+                                <span class="result-value" id="gratuityTaxFree">-</span>
+                            </div>
+                        </div>
+                        
+                        <div class="calc-info-box">
+                            <div class="calc-info-title">Gratuity Formula:</div>
+                            <div class="calc-info-content">
+                                • Formula: (Last salary × 15/26) × Years of service<br>
+                                • Minimum 5 years service required<br>
+                                • Maximum limit: ₹20 lakhs<br>
+                                • Tax free up to ₹20 lakhs
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Percentage Calculator -->
+                    <div class="calculator-card">
+                        <div class="calc-icon">%</div>
+                        <h3 class="calc-title">Percentage Calculator</h3>
+                        <p class="calc-purpose">Calculate percentage of amount, increase/decrease, and difference</p>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Calculation Type</label>
+                            <select class="form-control" id="percentageType" onchange="togglePercentageFields()">
+                                <option value="amount">What is X% of Amount?</option>
+                                <option value="increase">X% Increase of Amount</option>
+                                <option value="decrease">X% Decrease of Amount</option>
+                                <option value="percentage">X is what % of Y?</option>
+                                <option value="difference">Percentage Difference</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" id="amountPercentage">
+                            <label class="form-label">Amount (₹)</label>
+                            <input type="number" class="form-control" id="percentageAmount" value="1000" min="1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" id="percentageLabel1">Percentage (%)</label>
+                            <input type="number" class="form-control" id="percentageValue" value="20" step="0.1" min="0">
+                        </div>
+                        
+                        <div class="form-group" id="secondAmount" style="display: none;">
+                            <label class="form-label" id="percentageLabel2">Second Amount (₹)</label>
+                            <input type="number" class="form-control" id="secondPercentageAmount" value="1200" min="1">
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="calculatePercentage()">Calculate Percentage</button>
+                        
+                        <div class="results-container" id="percentageResults">
+                            <h3 class="result-title">Percentage Result</h3>
+                            <div class="result-row">
+                                <span class="result-label">Result:</span>
+                                <span class="result-value" id="percentageResult">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Calculation:</span>
+                                <span class="result-value" id="percentageCalculation">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Final Amount:</span>
+                                <span class="result-value" id="percentageFinalAmount">-</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Health Calculator -->
+                    <div class="calculator-card">
+                        <div class="calc-icon">❤️</div>
+                        <h3 class="calc-title">Health Calculator</h3>
+                        <p class="calc-purpose">Check BP, Sugar levels, Fever status and health metrics</p>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Select Health Metric</label>
+                            <select class="form-control" id="healthMetric" onchange="changeHealthMetric()">
+                                <option value="bp">Blood Pressure (BP)</option>
+                                <option value="sugar">Blood Sugar</option>
+                                <option value="fever">Fever Temperature</option>
+                                <option value="bmi">BMI Check</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" id="healthInputs">
+                            <!-- Dynamic inputs will be inserted here -->
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="calculateHealth()">Check Health Status</button>
+                        
+                        <div class="results-container" id="healthResults">
+                            <h3 class="result-title">Health Analysis</h3>
+                            <div class="result-row">
+                                <span class="result-label">Your Reading:</span>
+                                <span class="result-value" id="healthReading">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Category:</span>
+                                <span class="result-value" id="healthCategory">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Status:</span>
+                                <span class="result-value" id="healthStatus">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Recommendation:</span>
+                                <span class="result-value" id="healthRecommendation">-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADVERTISEMENT -->
+        <div class="container">
+            <div class="ad-container">
+                <div class="ad-label">Advertisement</div>
+                <div class="ad-placeholder">AdSense Advertisement</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <!-- Footer image from file -->
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAABkCAYAAADDhn8LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGGSURBVHgB7d1BboMwFIXh18gVegJyAroAOXLDDXICcoIcOSFH6AnICcgKygq6QsgK1lGZiMw4EzPtJViSjjn7ZThzHGZJSSgt8yzlnr5RSSjkAANADFyRt2jBM3x5Z1zWeAQD4Ez6QI13XeX9KQgghLPAGAOBPOEBSSukgxjh3JYQQtJ+2HAAAf8IFEkI4OZl4cZ1gZQIA/8MFkqVlWWvP3F5yLwIA/8MFklJK+yfJ46wCJN+HAAD+x4qbl5cJkNzFeuQe5B6rEAD4Hy6QPM3qyQDJ3axH7kFqAH0N0zTt8QYA4E+4QI6klNLeFcw8GgYA/8MFQmutHn0Q2e4qLgCA3+MCobVWn+2w9K8+47y+6wcA+B0ukHqjpI8PvGnjbOsXAGBqLhBaa/VZd/PmrT/wNYE+RgkA4He4QGit1d4f8PrXHO2/8PPKCADwO1wgjDG2h5h9JdP/1u3jYQCAn+ECobVWj3a0VrS/Poy01z9u83sAAD/HBUJrrT67k9V/3OavOPpPwPd4AwDwJ1wgtNbqo6N/7kEA4H+5QGit1UeP8/odLQDAH3KB8LcykiM7AID5uEAYY2wPMXPvAQAzc4EwxtgeYgYAmJkLhDHG9hAzAMDMXCC01urRDhYAGBmQPwEGY1r11LJRAAAAAElFTkSuQmCC" alt="AIToolStation Footer">
+                </div>
+                <p>Unlock the Future of AI</p>
+            </div>
+            
+            <!-- FOOTER DONATION BOX -->
+            <div class="footer-donation">
+                <h4><i class="fab fa-paypal"></i> Support Our Work</h4>
+                <p>Help us maintain and improve these free tools. Your donation keeps this service running.</p>
+                <a href="https://paypal.me/mohd0787" target="_blank" class="donate-btn" style="min-width: 200px; margin: 0 auto; display: inline-block;">
+                    <i class="fab fa-paypal"></i> Donate via PayPal
+                </a>
+            </div>
+            
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h4><i class="fas fa-home"></i> Quick Links</h4>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#tools"><i class="fas fa-chevron-right"></i> AI Tools</a></li>
+                        <li><a href="#calculators"><i class="fas fa-chevron-right"></i> Calculators</a></li>
+                        <li><a href="#donate" onclick="document.querySelector('.donate-btn').click()"><i class="fas fa-chevron-right"></i> Donate</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4><i class="fas fa-tools"></i> Popular Tools</h4>
+                    <ul>
+                        <li><a href="javascript:void(0)" onclick="openTool('document-converter')"><i class="fas fa-file-contract"></i> Document Converter</a></li>
+                        <li><a href="javascript:void(0)" onclick="openTool('pdf-editor')"><i class="fas fa-file-pdf"></i> PDF Editor</a></li>
+                        <li><a href="javascript:void(0)" onclick="openTool('image-resizer')"><i class="fas fa-image"></i> Image Resizer</a></li>
+                        <li><a href="javascript:void(0)" onclick="openTool('video-downloader')"><i class="fas fa-video"></i> Video Downloader</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4><i class="fas fa-calculator"></i> Calculators</h4>
+                    <ul>
+                        <li><a href="#calculators" onclick="scrollToCalculator('bmiCalculator')"><i class="fas fa-weight"></i> BMI Calculator</a></li>
+                        <li><a href="#calculators" onclick="scrollToCalculator('loanCalculator')"><i class="fas fa-hand-holding-usd"></i> Loan Calculator</a></li>
+                        <li><a href="#calculators" onclick="scrollToCalculator('gstCalculator')"><i class="fas fa-rupee-sign"></i> GST Calculator</a></li>
+                        <li><a href="#calculators" onclick="scrollToCalculator('currencyCalculator')"><i class="fas fa-money-bill-wave"></i> Currency Converter</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4><i class="fas fa-headset"></i> Support</h4>
+                    <ul>
+                        <li><a href="mailto:support@aitoolstation.com"><i class="fas fa-envelope"></i> Contact Support</a></li>
+                        <li><a href="https://paypal.me/mohd0787" target="_blank"><i class="fab fa-paypal"></i> Donate via PayPal</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 AIToolStation. All rights reserved. | This website uses AdSense to serve relevant advertisements.</p>
+                <p>Disclaimer: All calculators provide approximate values. Consult professionals for accurate advice. For medical issues, consult a doctor.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const navLinks = document.getElementById('navLinks');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (!navLinks.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+
+        // Tool Functions
+        function openTool(toolName) {
+            const toolUrls = {
+                'document-converter': 'https://www.ilovepdf.com',
+                'pdf-editor': 'https://www.adobe.com/acrobat/online/pdf-editor.html',
+                'image-resizer': 'https://www.iloveimg.com/resize-image',
+                'video-downloader': 'https://en.savefrom.net',
+                'reel-downloader': 'https://snapinsta.app',
+                'midjourney': 'https://www.midjourney.com',
+                'elevenlabs': 'https://elevenlabs.io',
+                'runway': 'https://runwayml.com',
+                'copilot': 'https://github.com/features/copilot',
+                'notion-ai': 'https://www.notion.so/product/ai',
+                'grammarly': 'https://www.grammarly.com',
+                'firefly': 'https://www.adobe.com/sensei/generative-ai.html',
+                'synthesia': 'https://www.synthesia.io',
+                'copy-ai': 'https://www.copy.ai'
+            };
+            
+            if(toolUrls[toolName]) {
+                window.open(toolUrls[toolName], '_blank');
+            } else {
+                alert('This tool will open in a new tab. For now, we\'re redirecting to a similar service.');
+                window.open('https://www.aitoolstation.com/tools', '_blank');
+            }
+        }
+
+        // ==================== CALCULATOR FUNCTIONS ====================
+
+        // BMI Calculator
+        function calculateBMI() {
+            const weight = parseFloat(document.getElementById('bmiWeight').value);
+            const feet = parseFloat(document.getElementById('bmiFeet').value);
+            const inches = parseFloat(document.getElementById('bmiInches').value);
+            
+            if(!weight || !feet || weight <= 0 || feet <= 0) {
+                alert('Please enter valid weight and height values');
+                return;
+            }
+            
+            // Convert height to meters
+            const heightInches = (feet * 12) + (inches || 0);
+            const heightMeters = heightInches * 0.0254;
+            
+            // Calculate BMI
+            const bmi = weight / (heightMeters * heightMeters);
+            
+            // Determine category with accurate ranges
+            let category = '';
+            let status = '';
+            let statusClass = '';
+            
+            if (bmi < 18.5) {
+                category = 'Underweight';
+                status = 'Too thin - May indicate malnutrition';
+                statusClass = 'status-danger';
+            } else if (bmi >= 18.5 && bmi < 25) {
+                category = 'Normal weight';
+                status = 'Healthy weight range';
+                statusClass = 'status-success';
+            } else if (bmi >= 25 && bmi < 30) {
+                category = 'Overweight';
+                status = 'Increased health risk';
+                statusClass = 'status-warning';
+            } else if (bmi >= 30 && bmi < 35) {
+                category = 'Obese Class I';
+                status = 'High health risk - Consult doctor';
+                statusClass = 'status-danger';
+            } else if (bmi >= 35 && bmi < 40) {
+                category = 'Obese Class II';
+                status = 'Very high health risk - Need medical advice';
+                statusClass = 'status-danger';
+            } else {
+                category = 'Obese Class III';
+                status = 'Extremely high health risk - Immediate medical attention';
+                statusClass = 'status-danger';
+            }
+            
+            // Display results
+            document.getElementById('bmiValue').textContent = bmi.toFixed(1);
+            document.getElementById('bmiCategory').textContent = category;
+            document.getElementById('bmiStatus').textContent = status;
+            document.getElementById('bmiStatus').className = 'result-value ' + statusClass;
+            
+            // Show results container
+            document.getElementById('bmiResults').classList.add('show');
+        }
+
+        // Body Fat Calculator - FIXED with toggle between feet/inches and cm
+        function toggleHeightInput(type) {
+            const feetBtn = document.querySelector('.height-toggle-btn:nth-child(1)');
+            const cmBtn = document.querySelector('.height-toggle-btn:nth-child(2)');
+            const feetGroup = document.getElementById('heightFeetGroup');
+            const cmGroup = document.getElementById('heightCmGroup');
+            
+            if(type === 'feet') {
+                feetBtn.classList.add('active');
+                cmBtn.classList.remove('active');
+                feetGroup.classList.add('active');
+                cmGroup.classList.remove('active');
+            } else {
+                feetBtn.classList.remove('active');
+                cmBtn.classList.add('active');
+                feetGroup.classList.remove('active');
+                cmGroup.classList.add('active');
+            }
+        }
+
+        // Show/Hide hip input for females
+        document.getElementById('bodyFatGender').addEventListener('change', function() {
+            const hipInput = document.getElementById('hipInput');
+            if(this.value === 'female') {
+                hipInput.style.display = 'block';
+            } else {
+                hipInput.style.display = 'none';
+            }
+        });
+
+        function calculateBodyFat() {
+            const gender = document.getElementById('bodyFatGender').value;
+            const age = parseFloat(document.getElementById('bodyFatAge').value);
+            const weight = parseFloat(document.getElementById('bodyFatWeight').value);
+            
+            // Get height based on selected method
+            let heightCm;
+            const feetBtn = document.querySelector('.height-toggle-btn:nth-child(1)');
+            
+            if(feetBtn.classList.contains('active')) {
+                // Feet and inches
+                const feet = parseFloat(document.getElementById('bodyFatFeet').value);
+                const inches = parseFloat(document.getElementById('bodyFatInches').value);
+                heightCm = (feet * 12 + inches) * 2.54;
+            } else {
+                // Centimeters
+                heightCm = parseFloat(document.getElementById('bodyFatCm').value);
+            }
+            
+            // Get measurements in inches
+            const waistFeet = parseFloat(document.getElementById('bodyFatWaistFeet').value);
+            const waistInches = parseFloat(document.getElementById('bodyFatWaistInches').value);
+            const neckFeet = parseFloat(document.getElementById('bodyFatNeckFeet').value);
+            const neckInches = parseFloat(document.getElementById('bodyFatNeckInches').value);
+            
+            const waistInchesTotal = (waistFeet * 12) + waistInches;
+            const neckInchesTotal = (neckFeet * 12) + neckInches;
+            
+            let hipInchesTotal = 0;
+            if(gender === 'female') {
+                const hipFeet = parseFloat(document.getElementById('bodyFatHipFeet').value);
+                const hipInches = parseFloat(document.getElementById('bodyFatHipInches').value);
+                hipInchesTotal = (hipFeet * 12) + hipInches;
+            }
+            
+            if(!age || !weight || !heightCm || !waistInchesTotal || !neckInchesTotal || 
+               weight <= 0 || heightCm <= 0) {
+                alert('Please enter all required values');
+                return;
+            }
+            
+            let bodyFatPercentage;
+            const heightInches = heightCm / 2.54;
+            
+            // US Navy Body Fat Formula (Accurate)
+            if(gender === 'male') {
+                bodyFatPercentage = 495 / (1.0324 - 0.19077 * Math.log10(waistInchesTotal - neckInchesTotal) + 0.15456 * Math.log10(heightInches)) - 450;
+            } else {
+                bodyFatPercentage = 495 / (1.29579 - 0.35004 * Math.log10(waistInchesTotal + hipInchesTotal - neckInchesTotal) + 0.22100 * Math.log10(heightInches)) - 450;
+            }
+            
+            // Adjust for age (slight adjustment)
+            bodyFatPercentage += (age * 0.01);
+            
+            // Clamp values to realistic range
+            bodyFatPercentage = Math.max(2, Math.min(50, bodyFatPercentage));
+            
+            // Calculate lean and fat mass
+            const leanMass = weight * (1 - bodyFatPercentage/100);
+            const fatMass = weight * (bodyFatPercentage/100);
+            
+            // Determine category with accurate ranges
+            let category = '';
+            
+            if(gender === 'male') {
+                if(bodyFatPercentage < 6) category = 'Essential Fat';
+                else if(bodyFatPercentage < 14) category = 'Athletes';
+                else if(bodyFatPercentage < 18) category = 'Fitness';
+                else if(bodyFatPercentage < 25) category = 'Average';
+                else if(bodyFatPercentage < 30) category = 'Overweight';
+                else category = 'Obese';
+            } else {
+                if(bodyFatPercentage < 14) category = 'Essential Fat';
+                else if(bodyFatPercentage < 21) category = 'Athletes';
+                else if(bodyFatPercentage < 25) category = 'Fitness';
+                else if(bodyFatPercentage < 32) category = 'Average';
+                else if(bodyFatPercentage < 38) category = 'Overweight';
+                else category = 'Obese';
+            }
+            
+            // Display results
+            document.getElementById('bodyFatPercent').textContent = bodyFatPercentage.toFixed(1) + '%';
+            document.getElementById('bodyFatCategory').textContent = category;
+            document.getElementById('bodyFatCategory').className = 'result-value ' + 
+                (category.includes('Athletes') || category.includes('Fitness') ? 'status-success' : 
+                 category.includes('Average') ? 'status-info' : 'status-warning');
+            document.getElementById('bodyFatLean').textContent = leanMass.toFixed(1) + ' kg';
+            document.getElementById('bodyFatMass').textContent = fatMass.toFixed(1) + ' kg';
+            
+            // Show results container
+            document.getElementById('bodyFatResults').classList.add('show');
+        }
+
+        // GST Calculator
+        const gstRates = {
+            'essential': { rate: 0, info: 'Essential food grains, dairy goods - 0% GST' },
+            'household': { rate: 5, info: 'Household items, soap, toothpaste - 5% GST' },
+            'restaurant': { rate: 18, info: 'Restaurant food, hotel stay - 18% GST' },
+            'electronics': { rate: 18, info: 'Electronics, phones, TV - 18% GST' },
+            'clothes': { rate: 12, info: 'Clothes & textiles - 12% GST' },
+            'automobile': { rate: 28, info: 'Cars, bikes, automobiles - 28% GST' },
+            'luxury': { rate: 28, info: 'Luxury items, aerated drinks - 28% GST' },
+            'service': { rate: 18, info: 'Services - 18% GST' }
+        };
+
+        function updateGSTRate() {
+            const category = document.getElementById('gstCategory').value;
+            const rateInfo = gstRates[category];
+            document.getElementById('gstRate').value = rateInfo.rate;
+            document.getElementById('gstRateInfo').textContent = rateInfo.info;
+        }
+
+        function calculateGST() {
+            const amount = parseFloat(document.getElementById('gstAmount').value);
+            const rate = parseFloat(document.getElementById('gstRate').value);
+            
+            if(!amount || amount <= 0) {
+                alert('Please enter a valid amount');
+                return;
+            }
+            
+            // Calculate GST
+            const gstAmount = (amount * rate) / 100;
+            const totalAmount = amount + gstAmount;
+            
+            // Display results
+            document.getElementById('originalAmount').textContent = '₹' + amount.toFixed(2);
+            document.getElementById('gstAmountResult').textContent = '₹' + gstAmount.toFixed(2);
+            document.getElementById('totalWithGST').textContent = '₹' + totalAmount.toFixed(2);
+            
+            // Show results container
+            document.getElementById('gstResults').classList.add('show');
+        }
+
+        // World Tax Calculator - FIXED with more countries
+        const taxRatesByCountry = {
+            'india': {
+                'clothes': { rate: 12, type: 'GST', name: 'Clothes & Apparel' },
+                'electronics': { rate: 18, type: 'GST', name: 'Electronics & Phones' },
+                'car': { rate: 28, type: 'GST + Cess', name: 'Car & Automobiles' },
+                'two-wheeler': { rate: 28, type: 'GST', name: 'Two Wheeler' },
+                'restaurant': { rate: 5, type: 'GST', name: 'Restaurant Food' },
+                'hotel': { rate: 18, type: 'GST', name: 'Hotel Stay' },
+                'dairy': { rate: 0, type: 'No Tax', name: 'Dairy Goods' },
+                'salaried': { rate: 'Progressive', type: 'Income Tax', name: 'Salaried Person' },
+                'business': { rate: 30, type: 'Income Tax', name: 'Business Income' },
+                'rent': { rate: 0, type: 'No Tax (if < ₹50k)', name: 'House Rent' }
+            },
+            'usa': {
+                'clothes': { rate: 0, type: 'Varies by State', name: 'Clothes & Apparel' },
+                'electronics': { rate: 0, type: 'Varies by State', name: 'Electronics' },
+                'car': { rate: 0, type: 'Sales Tax', name: 'Car' },
+                'restaurant': { rate: 0, type: 'Sales Tax', name: 'Restaurant Food' },
+                'salaried': { rate: '10-37%', type: 'Federal + State', name: 'Salaried Person' }
+            },
+            'pakistan': {
+                'clothes': { rate: 17, type: 'Sales Tax', name: 'Clothes' },
+                'electronics': { rate: 17, type: 'Sales Tax', name: 'Electronics' },
+                'salaried': { rate: '0-35%', type: 'Income Tax', name: 'Salaried Person' }
+            },
+            'turkey': {
+                'clothes': { rate: 18, type: 'VAT', name: 'Clothes' },
+                'electronics': { rate: 18, type: 'VAT', name: 'Electronics' },
+                'restaurant': { rate: 8, type: 'VAT', name: 'Restaurant Food' }
+            },
+            'australia': {
+                'clothes': { rate: 10, type: 'GST', name: 'Clothes' },
+                'electronics': { rate: 10, type: 'GST', name: 'Electronics' },
+                'salaried': { rate: '0-45%', type: 'Income Tax', name: 'Salaried Person' }
+            },
+            'uae': {
+                'clothes': { rate: 5, type: 'VAT', name: 'Clothes' },
+                'electronics': { rate: 5, type: 'VAT', name: 'Electronics' },
+                'salaried': { rate: 0, type: 'No Income Tax', name: 'Salaried Person' }
+            },
+            'egypt': {
+                'clothes': { rate: 14, type: 'VAT', name: 'Clothes' },
+                'electronics': { rate: 14, type: 'VAT', name: 'Electronics' }
+            },
+            'gulf': {
+                'clothes': { rate: 5, type: 'VAT', name: 'Clothes' },
+                'electronics': { rate: 5, type: 'VAT', name: 'Electronics' },
+                'salaried': { rate: 0, type: 'No Income Tax', name: 'Salaried Person' }
+            },
+            'iran': {
+                'clothes': { rate: 9, type: 'VAT', name: 'Clothes' },
+                'electronics': { rate: 9, type: 'VAT', name: 'Electronics' }
+            },
+            'newzealand': {
+                'clothes': { rate: 15, type: 'GST', name: 'Clothes' },
+                'electronics': { rate: 15, type: 'GST', name: 'Electronics' }
+            },
+            'china': {
+                'clothes': { rate: 13, type: 'VAT', name: 'Clothes' },
+                'electronics': { rate: 13, type: 'VAT', name: 'Electronics' }
+            },
+            'canada': {
+                'clothes': { rate: 5, type: 'GST + HST', name: 'Clothes' },
+                'electronics': { rate: 5, type: 'GST + HST', name: 'Electronics' }
+            },
+            'germany': {
+                'clothes': { rate: 19, type: 'VAT', name: 'Clothes' },
+                'electronics': { rate: 19, type: 'VAT', name: 'Electronics' }
+            },
+            'france': {
+                'clothes': { rate: 20, type: 'VAT', name: 'Clothes' },
+                'electronics': { rate: 20, type: 'VAT', name: 'Electronics' }
+            },
+            'japan': {
+                'clothes': { rate: 10, type: 'Consumption Tax', name: 'Clothes' },
+                'electronics': { rate: 10, type: 'Consumption Tax', name: 'Electronics' }
+            },
+            'russia': {
+                'clothes': { rate: 20, type: 'VAT', name: 'Clothes' },
+                'electronics': { rate: 20, type: 'VAT', name: 'Electronics' }
+            },
+            'brazil': {
+                'clothes': { rate: 17, type: 'ICMS', name: 'Clothes' },
+                'electronics': { rate: 17, type: 'ICMS', name: 'Electronics' }
+            },
+            'mexico': {
+                'clothes': { rate: 16, type: 'IVA', name: 'Clothes' },
+                'electronics': { rate: 16, type: 'IVA', name: 'Electronics' }
+            },
+            'southafrica': {
+                'clothes': { rate: 15, type: 'VAT', name: 'Clothes' },
+                'electronics': { rate: 15, type: 'VAT', name: 'Electronics' }
+            }
+        };
+
+        function updateTaxRate() {
+            const product = document.getElementById('taxProduct').value;
+            const country = document.getElementById('taxCountry').value;
+            
+            let rateInfo = { type: 'Varies', name: 'Click Calculate' };
+            
+            if(taxRatesByCountry[country] && taxRatesByCountry[country][product]) {
+                rateInfo = taxRatesByCountry[country][product];
+            } else if(taxRatesByCountry['india'] && taxRatesByCountry['india'][product]) {
+                rateInfo = taxRatesByCountry['india'][product];
+            }
+            
+            document.getElementById('taxRateDisplay').value = rateInfo.type;
+            document.getElementById('taxRateInfo').textContent = rateInfo.name + ' - ' + country.toUpperCase();
+        }
+
+        function calculateTax() {
+            const product = document.getElementById('taxProduct').value;
+            const amount = parseFloat(document.getElementById('taxIncome').value);
+            const country = document.getElementById('taxCountry').value;
+            
+            if(!amount || amount <= 0) {
+                alert('Please enter a valid amount');
+                return;
+            }
+            
+            // Get country-specific tax rates or default to India
+            const countryRates = taxRatesByCountry[country] || taxRatesByCountry['india'];
+            const rateInfo = countryRates[product] || { rate: 0, type: 'No Data', name: product };
+            
+            let taxAmount = 0;
+            let taxRate = '';
+            
+            // Calculate tax based on product and country
+            if(product === 'salaried') {
+                // Progressive tax calculation
+                if(country === 'india') {
+                    if(amount <= 300000) {
+                        taxAmount = 0;
+                        taxRate = '0% (Up to ₹3L)';
+                    } else if(amount <= 600000) {
+                        taxAmount = (amount - 300000) * 0.05;
+                        taxRate = '5% (₹3L-6L)';
+                    } else if(amount <= 900000) {
+                        taxAmount = 15000 + (amount - 600000) * 0.10;
+                        taxRate = '10% (₹6L-9L)';
+                    } else if(amount <= 1200000) {
+                        taxAmount = 45000 + (amount - 900000) * 0.15;
+                        taxRate = '15% (₹9L-12L)';
+                    } else if(amount <= 1500000) {
+                        taxAmount = 90000 + (amount - 1200000) * 0.20;
+                        taxRate = '20% (₹12L-15L)';
+                    } else {
+                        taxAmount = 150000 + (amount - 1500000) * 0.30;
+                        taxRate = '30% (Above ₹15L)';
+                    }
+                } else if(country === 'usa') {
+                    taxAmount = amount * 0.22; // Average US tax rate
+                    taxRate = '22% (Average)';
+                } else if(country === 'uae') {
+                    taxAmount = 0;
+                    taxRate = '0% (No Income Tax)';
+                } else {
+                    taxAmount = amount * 0.20; // Default 20%
+                    taxRate = '20% (Estimated)';
+                }
+            } else if(product === 'business') {
+                taxAmount = amount * 0.30;
+                taxRate = '30% Flat';
+            } else if(product === 'rent') {
+                if(amount > 50000) {
+                    taxAmount = amount * 0.10;
+                    taxRate = '10% TDS (if > ₹50k)';
+                } else {
+                    taxAmount = 0;
+                    taxRate = 'No Tax (if < ₹50k)';
+                }
+            } else {
+                const rate = typeof rateInfo.rate === 'number' ? rateInfo.rate : 0;
+                taxAmount = (amount * rate) / 100;
+                taxRate = rate + '% ' + rateInfo.type;
+            }
+            
+            const totalAmount = amount + taxAmount;
+            
+            // Display results
+            document.getElementById('taxProductName').textContent = rateInfo.name;
+            document.getElementById('taxCountryName').textContent = country.toUpperCase();
+            document.getElementById('taxType').textContent = rateInfo.type;
+            document.getElementById('taxRateResult').textContent = taxRate;
+            document.getElementById('taxAmount').textContent = formatCurrency(taxAmount, country);
+            document.getElementById('totalWithTax').textContent = formatCurrency(totalAmount, country);
+            
+            // Show results container
+            document.getElementById('taxResults').classList.add('show');
+        }
+
+        function formatCurrency(amount, country) {
+            const symbols = {
+                'india': '₹',
+                'usa': '$',
+                'uk': '£',
+                'uae': 'AED ',
+                'pakistan': 'PKR ',
+                'turkey': '₺',
+                'australia': 'A$',
+                'egypt': 'EGP ',
+                'gulf': 'SAR ',
+                'iran': 'IRR ',
+                'newzealand': 'NZ$',
+                'china': '¥',
+                'canada': 'C$',
+                'germany': '€',
+                'france': '€',
+                'japan': '¥',
+                'russia': '₽',
+                'brazil': 'R$',
+                'mexico': 'MX$',
+                'southafrica': 'R'
+            };
+            
+            const symbol = symbols[country] || '$';
+            return symbol + amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+        }
+
+        // Loan Calculator - FIXED with categories
+        const loanRates = {
+            'personal': { min: 10, max: 15, default: 12.5, info: 'Personal Loan: 10-15%' },
+            'home': { min: 7, max: 9, default: 8.0, info: 'Home Loan: 7-9%' },
+            'car': { min: 8, max: 11, default: 9.5, info: 'Car Loan: 8-11%' },
+            'two-wheeler': { min: 10, max: 14, default: 12.0, info: 'Two Wheeler: 10-14%' },
+            'education': { min: 8, max: 12, default: 10.0, info: 'Education Loan: 8-12%' },
+            'business': { min: 12, max: 18, default: 15.0, info: 'Business Loan: 12-18%' },
+            'property': { min: 9, max: 12, default: 10.5, info: 'Loan Against Property: 9-12%' },
+            'gold': { min: 10, max: 16, default: 13.0, info: 'Gold Loan: 10-16%' }
+        };
+
+        function updateLoanRate() {
+            const loanType = document.getElementById('loanType').value;
+            const rateInfo = loanRates[loanType];
+            document.getElementById('loanInterest').value = rateInfo.default;
+            document.getElementById('loanRateInfo').textContent = rateInfo.info;
+        }
+
+        function calculateLoan() {
+            const loanType = document.getElementById('loanType').value;
+            const amount = parseFloat(document.getElementById('loanAmount').value);
+            const interest = parseFloat(document.getElementById('loanInterest').value);
+            const tenure = parseFloat(document.getElementById('loanTenure').value);
+            
+            if(!amount || !interest || !tenure || amount <= 0 || interest <= 0 || tenure <= 0) {
+                alert('Please enter valid loan details');
+                return;
+            }
+            
+            // Convert annual interest to monthly and tenure to months
+            const monthlyInterest = interest / 12 / 100;
+            const months = tenure * 12;
+            
+            // EMI formula: P * r * (1+r)^n / ((1+r)^n - 1)
+            const emi = amount * monthlyInterest * Math.pow(1 + monthlyInterest, months) / 
+                       (Math.pow(1 + monthlyInterest, months) - 1);
+            
+            const totalPayment = emi * months;
+            const totalInterest = totalPayment - amount;
+            const interestPercentage = (totalInterest / amount) * 100;
+            
+            // Display results
+            document.getElementById('loanTypeName').textContent = document.getElementById('loanType').options[document.getElementById('loanType').selectedIndex].text;
+            document.getElementById('monthlyEMI').textContent = '₹' + emi.toFixed(2);
+            document.getElementById('totalInterest').textContent = '₹' + totalInterest.toFixed(2);
+            document.getElementById('totalPayment').textContent = '₹' + totalPayment.toFixed(2);
+            document.getElementById('interestPercentage').textContent = interestPercentage.toFixed(2) + '%';
+            
+            // Show results container
+            document.getElementById('loanResults').classList.add('show');
+        }
+
+        // Lumpsum Calculator
+        function calculateLumpsum() {
+            const amount = parseFloat(document.getElementById('lumpsumAmount').value);
+            const returnRate = parseFloat(document.getElementById('lumpsumReturn').value);
+            const period = parseFloat(document.getElementById('lumpsumPeriod').value);
+            
+            if(!amount || !returnRate || !period || amount <= 0 || returnRate <= 0 || period <= 0) {
+                alert('Please enter valid investment details');
+                return;
+            }
+            
+            // Future value = P * (1 + r)^n
+            const futureValue = amount * Math.pow(1 + returnRate/100, period);
+            const wealthGain = futureValue - amount;
+            const totalReturns = (wealthGain / amount) * 100;
+            const cagr = (Math.pow(futureValue / amount, 1/period) - 1) * 100;
+            
+            // Display results
+            document.getElementById('futureValue').textContent = '₹' + futureValue.toFixed(2);
+            document.getElementById('wealthGain').textContent = '₹' + wealthGain.toFixed(2);
+            document.getElementById('totalReturns').textContent = totalReturns.toFixed(2) + '%';
+            document.getElementById('cagrValue').textContent = cagr.toFixed(2) + '%';
+            
+            // Show results container
+            document.getElementById('lumpsumResults').classList.add('show');
+        }
+
+        // Currency Converter - FIXED with more countries
+        const exchangeRates = {
+            'USD': { 
+                'EUR': 0.92, 'GBP': 0.79, 'INR': 83.15, 'JPY': 148.50, 'CAD': 1.35, 'AUD': 1.52,
+                'CNY': 7.24, 'TRY': 32.15, 'PKR': 277.50, 'AED': 3.67, 'SAR': 3.75, 'EGP': 30.90,
+                'IRR': 42000, 'NZD': 1.67, 'ZAR': 18.95, 'BRL': 4.98, 'RUB': 91.50
+            },
+            'INR': { 
+                'USD': 0.012, 'EUR': 0.011, 'GBP': 0.0095, 'JPY': 1.78, 'CAD': 0.016, 'AUD': 0.018,
+                'CNY': 0.087, 'TRY': 0.39, 'PKR': 3.34, 'AED': 0.044, 'SAR': 0.045, 'EGP': 0.37,
+                'IRR': 505, 'NZD': 0.020, 'ZAR': 0.23, 'BRL': 0.060, 'RUB': 1.10
+            },
+            'EUR': {
+                'USD': 1.09, 'INR': 90.50, 'GBP': 0.86, 'JPY': 161.50, 'TRY': 34.80, 'AED': 4.00
+            },
+            'PKR': {
+                'USD': 0.0036, 'INR': 0.30, 'AED': 0.013, 'SAR': 0.0135
+            },
+            'AED': {
+                'USD': 0.27, 'INR': 22.70, 'PKR': 75.60, 'SAR': 1.02
+            },
+            'TRY': {
+                'USD': 0.031, 'INR': 2.58, 'EUR': 0.029
+            },
+            'EGP': {
+                'USD': 0.032, 'INR': 2.67, 'AED': 0.12
+            },
+            'IRR': {
+                'USD': 0.000024, 'INR': 0.00198
+            },
+            'NZD': {
+                'USD': 0.60, 'INR': 50.00
+            },
+            'ZAR': {
+                'USD': 0.053, 'INR': 4.40
+            },
+            'BRL': {
+                'USD': 0.20, 'INR': 16.67
+            },
+            'RUB': {
+                'USD': 0.011, 'INR': 0.91
+            }
+        };
+
+        function swapCurrencies() {
+            const fromCurrency = document.getElementById('fromCurrency');
+            const toCurrency = document.getElementById('toCurrency');
+            const temp = fromCurrency.value;
+            fromCurrency.value = toCurrency.value;
+            toCurrency.value = temp;
+            calculateCurrency();
+        }
+
+        function calculateCurrency() {
+            const amount = parseFloat(document.getElementById('currencyAmount').value);
+            const fromCurrency = document.getElementById('fromCurrency').value;
+            const toCurrency = document.getElementById('toCurrency').value;
+            
+            if(!amount || amount <= 0) {
+                alert('Please enter a valid amount');
+                return;
+            }
+            
+            let exchangeRate;
+            let convertedAmount;
+            
+            if(fromCurrency === toCurrency) {
+                exchangeRate = 1;
+                convertedAmount = amount;
+            } else if(exchangeRates[fromCurrency] && exchangeRates[fromCurrency][toCurrency]) {
+                exchangeRate = exchangeRates[fromCurrency][toCurrency];
+                convertedAmount = amount * exchangeRate;
+            } else if(exchangeRates[toCurrency] && exchangeRates[toCurrency][fromCurrency]) {
+                exchangeRate = 1 / exchangeRates[toCurrency][fromCurrency];
+                convertedAmount = amount * exchangeRate;
+            } else {
+                // Default fallback through USD
+                if(exchangeRates[fromCurrency] && exchangeRates[fromCurrency]['USD'] && 
+                   exchangeRates['USD'] && exchangeRates['USD'][toCurrency]) {
+                    const toUSD = exchangeRates[fromCurrency]['USD'];
+                    const fromUSD = exchangeRates['USD'][toCurrency];
+                    exchangeRate = toUSD * fromUSD;
+                    convertedAmount = amount * exchangeRate;
+                } else {
+                    exchangeRate = 1;
+                    convertedAmount = amount;
+                }
+            }
+            
+            // Display results
+            document.getElementById('exchangeRate').textContent = `1 ${fromCurrency} = ${exchangeRate.toFixed(4)} ${toCurrency}`;
+            document.getElementById('convertedAmount').textContent = `${convertedAmount.toFixed(2)} ${toCurrency}`;
+            document.getElementById('currencyUpdate').textContent = new Date().toLocaleString();
+            
+            // Show results container
+            document.getElementById('currencyResults').classList.add('show');
+        }
+
+        // Unit Converter - SIMPLIFIED
+        const unitConversions = {
+            'cm': { 'feet': 0.0328084, 'inch': 0.393701, 'meter': 0.01, 'km': 0.00001, 'yard': 0.0109361, 'mile': 0.0000062137 },
+            'feet': { 'cm': 30.48, 'inch': 12, 'meter': 0.3048, 'km': 0.0003048, 'yard': 0.333333, 'mile': 0.000189394 },
+            'inch': { 'cm': 2.54, 'feet': 0.0833333, 'meter': 0.0254, 'km': 0.0000254, 'yard': 0.0277778, 'mile': 0.0000157828 },
+            'meter': { 'cm': 100, 'feet': 3.28084, 'inch': 39.3701, 'km': 0.001, 'yard': 1.09361, 'mile': 0.000621371 },
+            'km': { 'cm': 100000, 'feet': 3280.84, 'inch': 39370.1, 'meter': 1000, 'yard': 1093.61, 'mile': 0.621371 },
+            'yard': { 'cm': 91.44, 'feet': 3, 'inch': 36, 'meter': 0.9144, 'km': 0.0009144, 'mile': 0.000568182 },
+            'mile': { 'cm': 160934, 'feet': 5280, 'inch': 63360, 'meter': 1609.34, 'km': 1.60934, 'yard': 1760 },
+            'gram': { 'kg': 0.001, 'pound': 0.00220462, 'ounce': 0.035274 },
+            'kg': { 'gram': 1000, 'pound': 2.20462, 'ounce': 35.274 },
+            'pound': { 'kg': 0.453592, 'gram': 453.592, 'ounce': 16 },
+            'ounce': { 'kg': 0.0283495, 'gram': 28.3495, 'pound': 0.0625 },
+            'liter': { 'ml': 1000, 'gallon': 0.264172 },
+            'ml': { 'liter': 0.001, 'gallon': 0.000264172 },
+            'gallon': { 'liter': 3.78541, 'ml': 3785.41 },
+            'celsius': { 'fahrenheit': 'val * 9/5 + 32' },
+            'fahrenheit': { 'celsius': '(val - 32) * 5/9' }
+        };
+
+        function swapUnits() {
+            const fromUnit = document.getElementById('fromUnit');
+            const toUnit = document.getElementById('toUnit');
+            const temp = fromUnit.value;
+            fromUnit.value = toUnit.value;
+            toUnit.value = temp;
+        }
+
+        function convertUnits() {
+            const value = parseFloat(document.getElementById('unitValue').value);
+            const fromUnit = document.getElementById('fromUnit').value;
+            const toUnit = document.getElementById('toUnit').value;
+            
+            if(!value && value !== 0) {
+                alert('Please enter a valid value');
+                return;
+            }
+            
+            let convertedValue;
+            let formula = '';
+            
+            if(fromUnit === toUnit) {
+                convertedValue = value;
+                formula = 'Same unit - no conversion needed';
+            } else if(fromUnit === 'celsius' && toUnit === 'fahrenheit') {
+                convertedValue = (value * 9/5) + 32;
+                formula = `${value}°C × 9/5 + 32 = ${convertedValue.toFixed(2)}°F`;
+            } else if(fromUnit === 'fahrenheit' && toUnit === 'celsius') {
+                convertedValue = (value - 32) * 5/9;
+                formula = `(${value}°F - 32) × 5/9 = ${convertedValue.toFixed(2)}°C`;
+            } else if(unitConversions[fromUnit] && unitConversions[fromUnit][toUnit]) {
+                const factor = unitConversions[fromUnit][toUnit];
+                convertedValue = value * factor;
+                formula = `${value} ${fromUnit} × ${factor} = ${convertedValue.toFixed(4)} ${toUnit}`;
+            } else if(unitConversions[toUnit] && unitConversions[toUnit][fromUnit]) {
+                const factor = 1 / unitConversions[toUnit][fromUnit];
+                convertedValue = value * factor;
+                formula = `${value} ${fromUnit} × ${factor} = ${convertedValue.toFixed(4)} ${toUnit}`;
+            } else {
+                convertedValue = value;
+                formula = 'Conversion not available';
+            }
+            
+            // Display results
+            document.getElementById('convertedUnit').textContent = convertedValue.toFixed(4);
+            document.getElementById('unitFormula').textContent = formula;
+            
+            // Show results container
+            document.getElementById('unitResults').classList.add('show');
+        }
+
+        // Age Calculator - WITH LUCKY FACT
+        function calculateAge() {
+            const dob = new Date(document.getElementById('dobDate').value);
+            const tillDate = document.getElementById('tillDate').value ? 
+                new Date(document.getElementById('tillDate').value) : new Date();
+            
+            if(isNaN(dob.getTime())) {
+                alert('Please enter a valid date of birth');
+                return;
+            }
+            
+            if(dob > tillDate) {
+                alert('Date of birth cannot be in the future');
+                return;
+            }
+            
+            let years = tillDate.getFullYear() - dob.getFullYear();
+            let months = tillDate.getMonth() - dob.getMonth();
+            let days = tillDate.getDate() - dob.getDate();
+            
+            if(days < 0) {
+                months--;
+                // Get days in previous month
+                const prevMonth = new Date(tillDate.getFullYear(), tillDate.getMonth(), 0);
+                days += prevMonth.getDate();
+            }
+            
+            if(months < 0) {
+                years--;
+                months += 12;
+            }
+            
+            // Calculate total days
+            const diffTime = Math.abs(tillDate - dob);
+            const totalDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            
+            // Calculate lucky fact
+            const luckyFacts = [
+                "Today is a great day for new beginnings!",
+                "Your lucky number is " + (totalDays % 9 + 1),
+                "This day brings positive energy your way!",
+                "Good things are coming your way soon!",
+                "Today's date adds up to " + (tillDate.getDate() + tillDate.getMonth() + 1) + " - a powerful number!",
+                "The stars are aligned in your favor today!",
+                "This is a perfect day for making important decisions!",
+                "Your positive energy is at its peak today!"
+            ];
+            
+            const randomFact = luckyFacts[Math.floor(Math.random() * luckyFacts.length)];
+            
+            // Display results
+            document.getElementById('totalAge').textContent = `${years} years, ${months} months, ${days} days`;
+            document.getElementById('ageYears').textContent = years + ' years';
+            document.getElementById('ageMonths').textContent = (years * 12 + months) + ' months';
+            document.getElementById('ageDays').textContent = totalDays.toLocaleString() + ' days';
+            document.getElementById('ageLuckyFact').textContent = randomFact;
+            
+            // Show results container
+            document.getElementById('ageResults').classList.add('show');
+        }
+
+        // Profit Calculator
+        function calculateProfit() {
+            const costPrice = parseFloat(document.getElementById('costPrice').value);
+            const sellingPrice = parseFloat(document.getElementById('sellingPrice').value);
+            const quantity = parseFloat(document.getElementById('profitQuantity').value) || 1;
+            
+            if(!costPrice || !sellingPrice || costPrice <= 0 || sellingPrice <= 0) {
+                alert('Please enter valid cost and selling prices');
+                return;
+            }
+            
+            const totalCost = costPrice * quantity;
+            const totalRevenue = sellingPrice * quantity;
+            const profitLoss = totalRevenue - totalCost;
+            const profitMargin = (profitLoss / totalRevenue) * 100;
+            const markupPercent = ((sellingPrice - costPrice) / costPrice) * 100;
+            const roiPercent = (profitLoss / totalCost) * 100;
+            
+            // Display results
+            document.getElementById('totalCost').textContent = '₹' + totalCost.toFixed(2);
+            document.getElementById('totalRevenue').textContent = '₹' + totalRevenue.toFixed(2);
+            document.getElementById('profitLoss').textContent = '₹' + profitLoss.toFixed(2);
+            document.getElementById('profitLoss').className = 'result-value ' + 
+                (profitLoss >= 0 ? 'status-success' : 'status-danger');
+            document.getElementById('profitMargin').textContent = profitMargin.toFixed(2) + '%';
+            document.getElementById('profitMargin').className = 'result-value ' + 
+                (profitMargin >= 0 ? 'status-success' : 'status-danger');
+            document.getElementById('markupPercent').textContent = markupPercent.toFixed(2) + '%';
+            document.getElementById('roiPercent').textContent = roiPercent.toFixed(2) + '%';
+            
+            // Show results container
+            document.getElementById('profitResults').classList.add('show');
+        }
+
+        // Gratuity Calculator - SIMPLIFIED
+        function calculateGratuity() {
+            const salary = parseFloat(document.getElementById('gratuitySalary').value);
+            const years = parseFloat(document.getElementById('serviceYears').value);
+            
+            if(!salary || !years || salary <= 0 || years <= 0) {
+                alert('Please enter valid salary and years of service');
+                return;
+            }
+            
+            const totalService = years;
+            let gratuityAmount = 0;
+            
+            if(totalService >= 5) {
+                // Standard gratuity formula for India
+                gratuityAmount = (salary * 15/26) * years;
+            }
+            
+            // Maximum limit: ₹20 Lakhs
+            const maxGratuity = 2000000;
+            gratuityAmount = Math.min(gratuityAmount, maxGratuity);
+            
+            // Tax free up to ₹20 Lakhs
+            const taxFree = Math.min(gratuityAmount, maxGratuity);
+            
+            // Display results
+            document.getElementById('totalService').textContent = totalService + ' years';
+            document.getElementById('gratuityAmount').textContent = '₹' + gratuityAmount.toFixed(2);
+            document.getElementById('gratuityFormula').textContent = `(₹${salary} × 15/26) × ${years} years`;
+            document.getElementById('gratuityTaxFree').textContent = '₹' + taxFree.toFixed(2) + ' (Tax Free)';
+            
+            // Show results container
+            document.getElementById('gratuityResults').classList.add('show');
+        }
+
+        // Percentage Calculator
+        function togglePercentageFields() {
+            const type = document.getElementById('percentageType').value;
+            const amountDiv = document.getElementById('amountPercentage');
+            const secondAmountDiv = document.getElementById('secondAmount');
+            const label1 = document.getElementById('percentageLabel1');
+            const label2 = document.getElementById('percentageLabel2');
+            
+            switch(type) {
+                case 'amount':
+                    amountDiv.style.display = 'block';
+                    secondAmountDiv.style.display = 'none';
+                    label1.textContent = 'Percentage (%)';
+                    break;
+                case 'increase':
+                case 'decrease':
+                    amountDiv.style.display = 'block';
+                    secondAmountDiv.style.display = 'none';
+                    label1.textContent = 'Percentage (%)';
+                    break;
+                case 'percentage':
+                    amountDiv.style.display = 'block';
+                    secondAmountDiv.style.display = 'block';
+                    label1.textContent = 'First Amount (₹)';
+                    label2.textContent = 'Second Amount (₹)';
+                    break;
+                case 'difference':
+                    amountDiv.style.display = 'block';
+                    secondAmountDiv.style.display = 'block';
+                    label1.textContent = 'First Amount (₹)';
+                    label2.textContent = 'Second Amount (₹)';
+                    break;
+            }
+        }
+
+        function calculatePercentage() {
+            const type = document.getElementById('percentageType').value;
+            const amount = parseFloat(document.getElementById('percentageAmount').value);
+            const percentage = parseFloat(document.getElementById('percentageValue').value);
+            const secondAmount = parseFloat(document.getElementById('secondPercentageAmount').value) || 0;
+            
+            if(!amount || amount <= 0) {
+                alert('Please enter valid amount');
+                return;
+            }
+            
+            let result = 0;
+            let calculation = '';
+            let finalAmount = 0;
+            
+            switch(type) {
+                case 'amount':
+                    result = (amount * percentage) / 100;
+                    calculation = `${percentage}% of ₹${amount} = ₹${result.toFixed(2)}`;
+                    finalAmount = result;
+                    break;
+                    
+                case 'increase':
+                    result = amount + (amount * percentage / 100);
+                    calculation = `₹${amount} + ${percentage}% = ₹${result.toFixed(2)}`;
+                    finalAmount = result;
+                    break;
+                    
+                case 'decrease':
+                    result = amount - (amount * percentage / 100);
+                    calculation = `₹${amount} - ${percentage}% = ₹${result.toFixed(2)}`;
+                    finalAmount = result;
+                    break;
+                    
+                case 'percentage':
+                    if(!secondAmount || secondAmount <= 0) {
+                        alert('Please enter second amount');
+                        return;
+                    }
+                    result = (amount / secondAmount) * 100;
+                    calculation = `₹${amount} is ${result.toFixed(2)}% of ₹${secondAmount}`;
+                    finalAmount = secondAmount;
+                    break;
+                    
+                case 'difference':
+                    if(!secondAmount || secondAmount <= 0) {
+                        alert('Please enter second amount');
+                        return;
+                    }
+                    const difference = Math.abs(secondAmount - amount);
+                    const average = (amount + secondAmount) / 2;
+                    result = (difference / average) * 100;
+                    calculation = `Difference between ₹${amount} and ₹${secondAmount} = ${result.toFixed(2)}%`;
+                    finalAmount = secondAmount;
+                    break;
+            }
+            
+            // Display results
+            document.getElementById('percentageResult').textContent = result.toFixed(2) + (type !== 'percentage' && type !== 'difference' ? '' : '%');
+            document.getElementById('percentageCalculation').textContent = calculation;
+            document.getElementById('percentageFinalAmount').textContent = type === 'percentage' || type === 'difference' ? 
+                `Reference: ₹${finalAmount.toFixed(2)}` : `Final Amount: ₹${finalAmount.toFixed(2)}`;
+            
+            // Show results container
+            document.getElementById('percentageResults').classList.add('show');
+        }
+
+        // Health Calculator
+        function changeHealthMetric() {
+            const metric = document.getElementById('healthMetric').value;
+            const healthInputs = document.getElementById('healthInputs');
+            
+            let html = '';
+            
+            switch(metric) {
+                case 'bp':
+                    html = `
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Systolic (Upper)</label>
+                                <input type="number" class="form-control" id="systolic" value="120" min="50" max="250">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Diastolic (Lower)</label>
+                                <input type="number" class="form-control" id="diastolic" value="80" min="30" max="150">
+                            </div>
+                        </div>
+                    `;
+                    break;
+                    
+                case 'sugar':
+                    html = `
+                        <div class="form-group">
+                            <label class="form-label">Blood Sugar (mg/dL)</label>
+                            <input type="number" class="form-control" id="bloodSugar" value="100" min="20" max="500">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Measurement Type</label>
+                            <select class="form-control" id="sugarType">
+                                <option value="fasting">Fasting</option>
+                                <option value="postmeal">Post Meal</option>
+                                <option value="random">Random</option>
+                            </select>
+                        </div>
+                    `;
+                    break;
+                    
+                case 'fever':
+                    html = `
+                        <div class="form-group">
+                            <label class="form-label">Temperature</label>
+                            <div class="form-row">
+                                <input type="number" class="form-control" id="temperature" value="98.6" step="0.1" min="90" max="110">
+                                <select class="form-control" id="tempUnit">
+                                    <option value="fahrenheit">°F</option>
+                                    <option value="celsius">°C</option>
+                                </select>
+                            </div>
+                        </div>
+                    `;
+                    break;
+                    
+                case 'bmi':
+                    html = `
+                        <div class="form-group">
+                            <label class="form-label">Weight (kg)</label>
+                            <input type="number" class="form-control" id="healthWeight" value="70" min="30" max="200">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Height (cm)</label>
+                            <input type="number" class="form-control" id="healthHeight" value="170" min="100" max="250">
+                        </div>
+                    `;
+                    break;
+            }
+            
+            healthInputs.innerHTML = html;
+        }
+
+        function calculateHealth() {
+            const metric = document.getElementById('healthMetric').value;
+            let reading = '';
+            let category = '';
+            let status = '';
+            let recommendation = '';
+            
+            switch(metric) {
+                case 'bp':
+                    const systolic = parseFloat(document.getElementById('systolic').value);
+                    const diastolic = parseFloat(document.getElementById('diastolic').value);
+                    
+                    reading = `${systolic}/${diastolic} mmHg`;
+                    
+                    if(systolic < 90 || diastolic < 60) {
+                        category = 'Low BP';
+                        status = 'Hypotension';
+                        recommendation = 'Consult doctor if symptomatic';
+                    } else if(systolic < 120 && diastolic < 80) {
+                        category = 'Normal';
+                        status = 'Healthy';
+                        recommendation = 'Maintain healthy lifestyle';
+                    } else if(systolic < 130 && diastolic < 80) {
+                        category = 'Elevated';
+                        status = 'Pre-hypertension';
+                        recommendation = 'Monitor regularly, reduce salt';
+                    } else if(systolic < 140 || diastolic < 90) {
+                        category = 'High BP Stage 1';
+                        status = 'Hypertension';
+                        recommendation = 'Consult doctor, lifestyle changes';
+                    } else if(systolic < 180 || diastolic < 120) {
+                        category = 'High BP Stage 2';
+                        status = 'Severe Hypertension';
+                        recommendation = 'Immediate medical attention';
+                    } else {
+                        category = 'Hypertensive Crisis';
+                        status = 'Emergency';
+                        recommendation = 'Seek emergency care immediately';
+                    }
+                    break;
+                    
+                case 'sugar':
+                    const sugar = parseFloat(document.getElementById('bloodSugar').value);
+                    const sugarType = document.getElementById('sugarType').value;
+                    
+                    reading = `${sugar} mg/dL (${sugarType})`;
+                    
+                    if(sugarType === 'fasting') {
+                        if(sugar < 70) {
+                            category = 'Low';
+                            status = 'Hypoglycemia';
+                            recommendation = 'Have something sweet, consult doctor';
+                        } else if(sugar < 100) {
+                            category = 'Normal';
+                            status = 'Healthy';
+                            recommendation = 'Good control, maintain diet';
+                        } else if(sugar < 126) {
+                            category = 'Prediabetes';
+                            status = 'At Risk';
+                            recommendation = 'Lifestyle changes, monitor sugar';
+                        } else {
+                            category = 'Diabetes';
+                            status = 'High';
+                            recommendation = 'Consult doctor immediately';
+                        }
+                    } else if(sugarType === 'postmeal') {
+                        if(sugar < 140) {
+                            category = 'Normal';
+                            status = 'Healthy';
+                            recommendation = 'Good control';
+                        } else if(sugar < 200) {
+                            category = 'Prediabetes';
+                            status = 'At Risk';
+                            recommendation = 'Monitor after meals';
+                        } else {
+                            category = 'Diabetes';
+                            status = 'High';
+                            recommendation = 'Medical consultation needed';
+                        }
+                    } else {
+                        if(sugar < 140) {
+                            category = 'Normal';
+                            status = 'Healthy';
+                            recommendation = 'Good control';
+                        } else if(sugar < 200) {
+                            category = 'Prediabetes';
+                            status = 'At Risk';
+                            recommendation = 'Monitor regularly';
+                        } else {
+                            category = 'Diabetes';
+                            status = 'High';
+                            recommendation = 'Consult doctor';
+                        }
+                    }
+                    break;
+                    
+                case 'fever':
+                    const temp = parseFloat(document.getElementById('temperature').value);
+                    const unit = document.getElementById('tempUnit').value;
+                    let tempCelsius = unit === 'fahrenheit' ? (temp - 32) * 5/9 : temp;
+                    let tempFahrenheit = unit === 'celsius' ? (temp * 9/5) + 32 : temp;
+                    
+                    reading = `${tempFahrenheit.toFixed(1)}°F / ${tempCelsius.toFixed(1)}°C`;
+                    
+                    if(tempCelsius < 36.1) {
+                        category = 'Low';
+                        status = 'Hypothermia';
+                        recommendation = 'Warm up, consult if persists';
+                    } else if(tempCelsius < 37.2) {
+                        category = 'Normal';
+                        status = 'Healthy';
+                        recommendation = 'Normal body temperature';
+                    } else if(tempCelsius < 38.3) {
+                        category = 'Mild Fever';
+                        status = 'Low Grade';
+                        recommendation = 'Rest, hydrate, monitor';
+                    } else if(tempCelsius < 39.4) {
+                        category = 'Moderate Fever';
+                        status = 'Fever';
+                        recommendation = 'Take fever reducer, rest';
+                    } else if(tempCelsius < 40.6) {
+                        category = 'High Fever';
+                        status = 'High';
+                        recommendation = 'Consult doctor, medication';
+                    } else {
+                        category = 'Very High Fever';
+                        status = 'Emergency';
+                        recommendation = 'Seek medical attention immediately';
+                    }
+                    break;
+                    
+                case 'bmi':
+                    const weight = parseFloat(document.getElementById('healthWeight').value);
+                    const height = parseFloat(document.getElementById('healthHeight').value) / 100; // Convert cm to meters
+                    
+                    const bmi = weight / (height * height);
+                    reading = bmi.toFixed(1);
+                    
+                    if(bmi < 18.5) {
+                        category = 'Underweight';
+                        status = 'Too thin';
+                        recommendation = 'Increase calorie intake, consult nutritionist';
+                    } else if(bmi < 25) {
+                        category = 'Normal';
+                        status = 'Healthy';
+                        recommendation = 'Maintain current weight, exercise regularly';
+                    } else if(bmi < 30) {
+                        category = 'Overweight';
+                        status = 'At Risk';
+                        recommendation = 'Diet control, regular exercise';
+                    } else if(bmi < 35) {
+                        category = 'Obese I';
+                        status = 'High Risk';
+                        recommendation = 'Consult doctor, lifestyle changes';
+                    } else if(bmi < 40) {
+                        category = 'Obese II';
+                        status = 'Very High Risk';
+                        recommendation = 'Medical supervision needed';
+                    } else {
+                        category = 'Obese III';
+                        status = 'Extreme Risk';
+                        recommendation = 'Immediate medical consultation';
+                    }
+                    break;
+            }
+            
+            // Display results
+            document.getElementById('healthReading').textContent = reading;
+            document.getElementById('healthCategory').textContent = category;
+            document.getElementById('healthStatus').textContent = status;
+            document.getElementById('healthRecommendation').textContent = recommendation;
+            
+            // Show results container
+            document.getElementById('healthResults').classList.add('show');
+        }
+
+        // Initialize calculators
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize tax calculator
+            updateTaxRate();
+            
+            // Initialize GST calculator
+            updateGSTRate();
+            
+            // Initialize loan calculator
+            updateLoanRate();
+            
+            // Initialize health calculator
+            changeHealthMetric();
+            
+            // Initialize percentage calculator
+            togglePercentageFields();
+        });
+
+        // Scroll to specific calculator
+        function scrollToCalculator(calcId) {
+            const calculator = document.getElementById(calcId);
+            if(calculator) {
+                calculator.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
+</html>
