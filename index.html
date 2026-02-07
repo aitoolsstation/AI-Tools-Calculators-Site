@@ -9,6 +9,10 @@
     <meta name="description" content="Complete AI tools suite with 25+ calculators. BMI, Body Fat, Loan EMI, Tax, GST, Lumpsum, Gold Price, Unit Converter, Currency - all with 2026 rates.">
     <meta name="keywords" content="AI tools, BMI calculator, GST calculator 2026, loan calculator, lumpsum calculator, gold price 2026, unit converter, currency converter">
     <meta name="author" content="AIToolStation">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="SJPjH8iDKJSbQUuxv3sM-mrrN6HyT_sUHJzxNUaujSY" />
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -17,7 +21,7 @@
       "@type": "WebApplication",
       "name": "AIToolStation - Complete AI Tools & Calculators Suite",
       "description": "Complete AI tools suite with 25+ calculators including BMI, Body Fat, Loan EMI, Tax, GST, Lumpsum, Gold Price, Unit Converter, Currency - all with 2026 rates.",
-      "url": "https://aitoolstation.com",
+      "url": "https://aitoolstation.pages.dev",
       "applicationCategory": "UtilityApplication",
       "operatingSystem": "Any",
       "offers": {
@@ -110,9 +114,9 @@
     }
     
     .container {
-        max-width: 1400px;
+        max-width: 1300px;
         margin: 0 auto;
-        padding: 0 var(--space-md);
+        padding: 0 20px;
     }
     
     .main-content {
@@ -123,7 +127,7 @@
     header {
         background: var(--gradient-1);
         color: white;
-        padding: var(--space-md) 0;
+        padding: 12px 0;
         position: sticky;
         top: 0;
         z-index: 1000;
@@ -145,34 +149,39 @@
     .logo {
         display: flex;
         align-items: center;
-        gap: var(--space-sm);
+        gap: 10px;
         text-decoration: none;
     }
     
     .logo-icon {
-        font-size: 32px;
+        font-size: 28px;
         animation: pulse 2s infinite;
-    }
-    
-    @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.1); }
-        100% { transform: scale(1); }
-    }
-    
-    .logo-text {
-        font-size: 26px;
-        font-weight: 800;
-        color: white;
-        background: linear-gradient(45deg, #fff, #e0e7ff);
+        background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #45B7D1);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
     }
     
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    
+    .logo-text {
+        font-size: 24px;
+        font-weight: 800;
+        color: white;
+        background: linear-gradient(45deg, #fff, #e0e7ff, #a5b4fc);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
     .nav-links {
         display: flex;
-        gap: var(--space-md);
+        gap: 15px;
         list-style: none;
     }
     
@@ -180,10 +189,10 @@
         color: white;
         text-decoration: none;
         font-weight: 600;
-        padding: var(--space-sm) var(--space-md);
-        border-radius: 10px;
+        padding: 8px 15px;
+        border-radius: 8px;
         transition: all 0.3s;
-        font-size: 16px;
+        font-size: 15px;
         position: relative;
         overflow: hidden;
     }
@@ -194,7 +203,7 @@
         bottom: 0;
         left: 0;
         width: 0;
-        height: 3px;
+        height: 2px;
         background: white;
         transition: width 0.3s;
         border-radius: 10px;
@@ -214,65 +223,11 @@
         cursor: pointer;
     }
     
-    /* ==================== FLOATING DONATE BUTTON ==================== */
-    .floating-donate {
-        position: fixed;
-        right: 20px;
-        bottom: 100px;
-        z-index: 999;
-        animation: float 3s ease-in-out infinite;
-    }
-    
-    @keyframes float {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-    }
-    
-    .donate-btn {
-        background: linear-gradient(135deg, #FFC439, #FFB347, #FF9500);
-        color: #003087;
-        border: none;
-        border-radius: 50px;
-        padding: var(--space-lg) var(--space-2xl);
-        font-weight: 800;
-        font-size: 18px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: var(--space-sm);
-        box-shadow: 0 8px 25px rgba(0,48,135,0.4);
-        transition: all 0.3s;
-        text-decoration: none;
-        min-width: 220px;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .donate-btn::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-        transition: left 0.7s;
-    }
-    
-    .donate-btn:hover::before {
-        left: 100%;
-    }
-    
-    .donate-btn:hover {
-        transform: translateY(-5px) scale(1.05);
-        box-shadow: 0 15px 30px rgba(0,48,135,0.5);
-    }
-    
     /* ==================== HERO SECTION ==================== */
     .hero-section {
         background: var(--gradient-1);
         color: white;
-        padding: var(--space-2xl) 0;
+        padding: 50px 0;
         text-align: center;
         position: relative;
         overflow: hidden;
@@ -292,8 +247,8 @@
     }
     
     .hero-title {
-        font-size: 56px;
-        margin-bottom: var(--space-md);
+        font-size: 42px;
+        margin-bottom: 15px;
         font-weight: 900;
         line-height: 1.1;
         text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -301,10 +256,10 @@
     }
     
     .hero-subtitle {
-        font-size: 22px;
+        font-size: 18px;
         opacity: 0.9;
-        max-width: 800px;
-        margin: 0 auto var(--space-xl);
+        max-width: 700px;
+        margin: 0 auto 30px;
         animation: fadeInUp 1s ease-out 0.2s both;
     }
     
@@ -321,13 +276,13 @@
     
     /* ==================== SECTION STYLES ==================== */
     .section {
-        padding: var(--space-2xl) 0;
+        padding: 50px 0;
     }
     
     .section-title {
         text-align: center;
-        font-size: 42px;
-        margin-bottom: var(--space-md);
+        font-size: 36px;
+        margin-bottom: 15px;
         color: var(--text-primary);
         position: relative;
         display: inline-block;
@@ -338,10 +293,10 @@
     .section-title::after {
         content: '';
         position: absolute;
-        bottom: -10px;
+        bottom: -8px;
         left: 50%;
         transform: translateX(-50%);
-        width: 80px;
+        width: 70px;
         height: 4px;
         background: linear-gradient(90deg, var(--primary), var(--accent));
         border-radius: 2px;
@@ -351,22 +306,22 @@
         text-align: center;
         color: var(--text-secondary);
         max-width: 700px;
-        margin: 0 auto var(--space-xl);
-        font-size: 18px;
+        margin: 0 auto 30px;
+        font-size: 16px;
     }
     
     /* ==================== TOOLS GRID ==================== */
     .tools-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: var(--space-lg);
-        margin-bottom: var(--space-2xl);
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
     }
     
     .tool-card {
         background: var(--bg-card);
-        border-radius: 20px;
-        padding: var(--space-xl);
+        border-radius: 15px;
+        padding: 20px;
         box-shadow: var(--shadow-md);
         transition: all 0.3s;
         cursor: pointer;
@@ -386,60 +341,61 @@
         top: 0;
         left: 0;
         right: 0;
-        height: 5px;
+        height: 4px;
         background: var(--gradient-1);
         z-index: 2;
     }
     
     .tool-card:hover {
-        transform: translateY(-10px) scale(1.02);
+        transform: translateY(-5px) scale(1.02);
         box-shadow: var(--shadow-xl);
         border-color: var(--primary);
     }
     
     .tool-icon {
-        font-size: 36px;
-        margin-bottom: var(--space-md);
+        font-size: 28px;
+        margin-bottom: 12px;
         color: var(--primary);
     }
     
     .tool-title {
-        font-size: 22px;
-        margin-bottom: var(--space-sm);
+        font-size: 18px;
+        margin-bottom: 8px;
         color: var(--text-primary);
         font-weight: 700;
     }
     
     .tool-description {
         color: var(--text-secondary);
-        margin-bottom: var(--space-md);
-        font-size: 15px;
+        margin-bottom: 12px;
+        font-size: 13px;
+        line-height: 1.4;
     }
     
     .tool-category {
         display: inline-block;
         background: rgba(99, 102, 241, 0.1);
         color: var(--primary);
-        padding: 6px 14px;
-        border-radius: 20px;
-        font-size: 12px;
+        padding: 4px 10px;
+        border-radius: 15px;
+        font-size: 11px;
         font-weight: 600;
     }
     
     /* ==================== CALCULATORS SECTION ==================== */
     .calculators-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        gap: var(--space-lg);
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 20px;
     }
     
     .calculator-card {
         background: var(--bg-card);
-        border-radius: 20px;
-        padding: var(--space-xl);
+        border-radius: 15px;
+        padding: 20px;
         box-shadow: var(--shadow-md);
         transition: all 0.3s;
-        margin-bottom: var(--space-lg);
+        margin-bottom: 20px;
         position: relative;
         overflow: hidden;
         border: 1px solid rgba(99, 102, 241, 0.1);
@@ -451,7 +407,7 @@
         top: 0;
         left: 0;
         right: 0;
-        height: 5px;
+        height: 4px;
         background: var(--gradient-1);
     }
     
@@ -461,44 +417,44 @@
     }
     
     .calc-icon {
-        font-size: 32px;
-        margin-bottom: var(--space-md);
+        font-size: 28px;
+        margin-bottom: 15px;
         color: var(--primary);
     }
     
     .calc-title {
-        font-size: 24px;
-        margin-bottom: var(--space-sm);
+        font-size: 20px;
+        margin-bottom: 8px;
         color: var(--text-primary);
         font-weight: 700;
     }
     
     .calc-purpose {
         color: var(--text-secondary);
-        margin-bottom: var(--space-lg);
-        font-size: 15px;
-        line-height: 1.5;
+        margin-bottom: 20px;
+        font-size: 13px;
+        line-height: 1.4;
     }
     
     /* Form Styles */
     .form-group {
-        margin-bottom: var(--space-lg);
+        margin-bottom: 20px;
     }
     
     .form-label {
         display: block;
-        margin-bottom: var(--space-sm);
+        margin-bottom: 8px;
         font-weight: 600;
         color: var(--text-primary);
-        font-size: 15px;
+        font-size: 14px;
     }
     
     .form-control {
         width: 100%;
-        padding: 14px;
+        padding: 12px;
         border: 2px solid #E5E7EB;
-        border-radius: 10px;
-        font-size: 16px;
+        border-radius: 8px;
+        font-size: 14px;
         transition: all 0.3s;
         font-family: 'Poppins', sans-serif;
     }
@@ -511,8 +467,8 @@
     
     .form-row {
         display: flex;
-        gap: var(--space-md);
-        margin-bottom: var(--space-md);
+        gap: 15px;
+        margin-bottom: 15px;
     }
     
     .form-row .form-group {
@@ -521,9 +477,9 @@
     }
     
     .btn {
-        padding: 16px 32px;
-        border-radius: 10px;
-        font-size: 16px;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-size: 14px;
         font-weight: 600;
         cursor: pointer;
         transition: all 0.3s;
@@ -532,7 +488,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: var(--space-sm);
+        gap: 8px;
         font-family: 'Poppins', sans-serif;
     }
     
@@ -543,7 +499,7 @@
     
     .btn-primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        box-shadow: 0 8px 15px rgba(99, 102, 241, 0.3);
     }
     
     .btn-secondary {
@@ -553,7 +509,7 @@
     
     .btn-secondary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        box-shadow: 0 8px 15px rgba(16, 185, 129, 0.3);
     }
     
     .btn-outline {
@@ -567,16 +523,16 @@
     }
     
     .btn-sm {
-        padding: 12px 20px;
-        font-size: 14px;
+        padding: 10px 18px;
+        font-size: 13px;
     }
     
     /* Currency Converter Specific */
     .currency-row {
         display: flex;
         align-items: center;
-        gap: var(--space-md);
-        margin-bottom: var(--space-md);
+        gap: 15px;
+        margin-bottom: 15px;
     }
     
     .currency-row .form-group {
@@ -589,15 +545,15 @@
         color: white;
         border: none;
         border-radius: 50%;
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
         transition: all 0.3s;
         flex-shrink: 0;
-        font-size: 18px;
+        font-size: 16px;
     }
     
     .currency-swap:hover {
@@ -611,8 +567,8 @@
         color: white;
         border: none;
         border-radius: 50%;
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -629,11 +585,11 @@
     
     /* Results */
     .results-container {
-        margin-top: var(--space-lg);
-        padding: var(--space-lg);
+        margin-top: 20px;
+        padding: 15px;
         background: rgba(99, 102, 241, 0.05);
-        border-radius: 15px;
-        border-left: 5px solid var(--primary);
+        border-radius: 12px;
+        border-left: 4px solid var(--primary);
         display: none;
         animation: fadeIn 0.5s;
     }
@@ -648,8 +604,8 @@
     }
     
     .result-title {
-        font-size: 20px;
-        margin-bottom: var(--space-md);
+        font-size: 18px;
+        margin-bottom: 15px;
         color: var(--primary);
         font-weight: 700;
     }
@@ -657,7 +613,7 @@
     .result-row {
         display: flex;
         justify-content: space-between;
-        padding: 12px 0;
+        padding: 10px 0;
         border-bottom: 1px solid rgba(0,0,0,0.1);
     }
     
@@ -668,11 +624,13 @@
     .result-label {
         color: var(--text-secondary);
         font-weight: 500;
+        font-size: 14px;
     }
     
     .result-value {
         font-weight: 700;
         color: var(--text-primary);
+        font-size: 14px;
     }
     
     /* Color coding */
@@ -699,40 +657,42 @@
     /* Calculator Info Box */
     .calc-info-box {
         background: rgba(99, 102, 241, 0.05);
-        border-radius: 10px;
-        padding: var(--space-md);
-        margin-top: var(--space-lg);
+        border-radius: 8px;
+        padding: 15px;
+        margin-top: 20px;
         border-left: 4px solid var(--primary);
     }
     
     .calc-info-title {
         font-weight: 600;
         color: var(--primary);
-        margin-bottom: var(--space-sm);
+        margin-bottom: 8px;
+        font-size: 14px;
     }
     
     .calc-info-content {
         color: var(--text-secondary);
-        font-size: 14px;
-        line-height: 1.5;
+        font-size: 13px;
+        line-height: 1.4;
     }
     
     /* Height Input Toggle */
     .height-toggle {
         display: flex;
-        gap: var(--space-md);
-        margin-bottom: var(--space-md);
+        gap: 15px;
+        margin-bottom: 15px;
     }
     
     .height-toggle-btn {
         flex: 1;
-        padding: 10px;
+        padding: 8px;
         border: 2px solid #E5E7EB;
         background: white;
-        border-radius: 8px;
+        border-radius: 6px;
         cursor: pointer;
         font-weight: 500;
         transition: all 0.3s;
+        font-size: 13px;
     }
     
     .height-toggle-btn.active {
@@ -749,13 +709,67 @@
         display: block;
     }
     
+    /* ==================== NEW PAGES STYLES ==================== */
+    .page-content {
+        background: var(--bg-card);
+        border-radius: 15px;
+        padding: 30px;
+        margin-top: 30px;
+        box-shadow: var(--shadow-md);
+    }
+    
+    .page-content h3 {
+        color: var(--primary);
+        margin: 25px 0 15px;
+        font-size: 24px;
+    }
+    
+    .page-content h4 {
+        color: var(--primary-dark);
+        margin: 20px 0 10px;
+        font-size: 20px;
+    }
+    
+    .page-content p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+        color: var(--text-secondary);
+        font-size: 15px;
+    }
+    
+    .page-content ul, .page-content ol {
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .page-content li {
+        margin-bottom: 8px;
+        color: var(--text-secondary);
+        font-size: 15px;
+    }
+    
+    .contact-form {
+        background: rgba(99, 102, 241, 0.05);
+        padding: 25px;
+        border-radius: 12px;
+        margin-top: 25px;
+    }
+    
+    .contact-info {
+        background: rgba(16, 185, 129, 0.1);
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 25px;
+        border-left: 4px solid var(--secondary);
+    }
+    
     /* ==================== ADVERTISEMENT ==================== */
     .ad-container {
         background: white;
         border: 2px dashed var(--primary);
-        border-radius: 15px;
-        padding: var(--space-lg);
-        margin: var(--space-xl) auto;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 30px auto;
         text-align: center;
         max-width: 728px;
         box-shadow: var(--shadow-sm);
@@ -763,15 +777,15 @@
     
     .ad-label {
         color: var(--text-light);
-        font-size: 14px;
-        margin-bottom: var(--space-sm);
+        font-size: 13px;
+        margin-bottom: 8px;
         font-weight: 500;
     }
     
     .ad-placeholder {
-        min-height: 100px;
+        min-height: 90px;
         background: linear-gradient(45deg, #f5f7fa, #e4e8f0);
-        border-radius: 10px;
+        border-radius: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -779,11 +793,89 @@
         font-weight: 500;
     }
     
+    /* ==================== DONATE BOX (After last calculator) ==================== */
+    .donate-container {
+        background: linear-gradient(135deg, #FFC439, #FFB347, #FF9500);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 40px auto;
+        text-align: center;
+        max-width: 800px;
+        box-shadow: var(--shadow-lg);
+        position: relative;
+        overflow: hidden;
+        border: 3px solid #003087;
+    }
+    
+    .donate-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #003087, #009CDE, #003087);
+    }
+    
+    .donate-title {
+        color: #003087;
+        font-size: 28px;
+        margin-bottom: 15px;
+        font-weight: 800;
+    }
+    
+    .donate-description {
+        color: #003087;
+        margin-bottom: 25px;
+        font-size: 16px;
+        opacity: 0.9;
+    }
+    
+    .donate-btn-large {
+        background: #003087;
+        color: #FFC439;
+        border: none;
+        border-radius: 50px;
+        padding: 18px 40px;
+        font-weight: 700;
+        font-size: 18px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        transition: all 0.3s;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0,48,135,0.4);
+    }
+    
+    .donate-btn-large::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: left 0.7s;
+    }
+    
+    .donate-btn-large:hover::before {
+        left: 100%;
+    }
+    
+    .donate-btn-large:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 15px 30px rgba(0,48,135,0.5);
+        background: #002366;
+    }
+    
     /* ==================== FOOTER ==================== */
     footer {
         background: var(--gradient-1);
         color: white;
-        padding: var(--space-2xl) 0 var(--space-xl);
+        padding: 40px 0 30px;
         margin-top: auto;
         position: relative;
     }
@@ -794,18 +886,18 @@
         top: 0;
         left: 0;
         right: 0;
-        height: 5px;
+        height: 4px;
         background: linear-gradient(90deg, #FFC439, #FFB347, #FF9500);
     }
     
     .footer-top {
         text-align: center;
-        margin-bottom: var(--space-xl);
+        margin-bottom: 30px;
     }
     
     .footer-logo {
-        max-width: 250px;
-        margin: 0 auto var(--space-lg);
+        max-width: 200px;
+        margin: 0 auto 20px;
     }
     
     .footer-logo img {
@@ -814,40 +906,17 @@
         filter: brightness(0) invert(1);
     }
     
-    /* Footer Donation Box */
-    .footer-donation {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        padding: var(--space-xl);
-        margin: var(--space-xl) auto;
-        max-width: 500px;
-        text-align: center;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-    
-    .footer-donation h4 {
-        font-size: 20px;
-        margin-bottom: var(--space-md);
-        color: white;
-    }
-    
-    .footer-donation p {
-        margin-bottom: var(--space-lg);
-        opacity: 0.9;
-    }
-    
     .footer-content {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: var(--space-xl);
-        margin-bottom: var(--space-xl);
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+        margin-bottom: 30px;
     }
     
     .footer-links h4 {
         color: white;
-        margin-bottom: var(--space-lg);
-        font-size: 18px;
+        margin-bottom: 20px;
+        font-size: 16px;
         font-weight: 700;
     }
     
@@ -856,7 +925,7 @@
     }
     
     .footer-links li {
-        margin-bottom: var(--space-sm);
+        margin-bottom: 10px;
     }
     
     .footer-links a {
@@ -865,7 +934,8 @@
         transition: all 0.3s;
         display: flex;
         align-items: center;
-        gap: var(--space-sm);
+        gap: 8px;
+        font-size: 14px;
     }
     
     .footer-links a:hover {
@@ -874,30 +944,30 @@
     }
     
     .footer-links i {
-        font-size: 14px;
+        font-size: 13px;
     }
     
     .footer-bottom {
         text-align: center;
-        padding-top: var(--space-xl);
+        padding-top: 25px;
         border-top: 1px solid rgba(255,255,255,0.1);
         color: rgba(255, 255, 255, 0.7);
-        font-size: 14px;
+        font-size: 13px;
     }
     
     /* ==================== RESPONSIVE DESIGN ==================== */
     /* Large Desktop */
     @media (min-width: 1200px) {
         .container {
-            padding: 0 40px;
+            padding: 0 30px;
         }
         
         .hero-title {
-            font-size: 60px;
+            font-size: 48px;
         }
         
         .tools-grid {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
         }
         
         .calculators-grid {
@@ -914,6 +984,19 @@
         .calculators-grid {
             grid-template-columns: repeat(2, 1fr);
         }
+        
+        .hero-title {
+            font-size: 40px;
+        }
+        
+        .nav-links {
+            gap: 12px;
+        }
+        
+        .nav-links a {
+            padding: 8px 12px;
+            font-size: 14px;
+        }
     }
     
     /* Tablet */
@@ -927,16 +1010,16 @@
         }
         
         .hero-title {
-            font-size: 48px;
+            font-size: 36px;
         }
         
         .nav-links {
-            gap: var(--space-sm);
+            gap: 10px;
         }
         
         .nav-links a {
-            padding: var(--space-sm);
-            font-size: 14px;
+            padding: 8px;
+            font-size: 13px;
         }
     }
     
@@ -950,9 +1033,9 @@
             right: 0;
             background: var(--primary-dark);
             flex-direction: column;
-            padding: var(--space-md);
+            padding: 15px;
             box-shadow: var(--shadow-xl);
-            border-radius: 0 0 20px 20px;
+            border-radius: 0 0 15px 15px;
         }
         
         .nav-links.active {
@@ -964,12 +1047,12 @@
         }
         
         .hero-title {
-            font-size: 36px;
+            font-size: 32px;
         }
         
         .hero-subtitle {
-            font-size: 18px;
-            padding: 0 var(--space-md);
+            font-size: 16px;
+            padding: 0 15px;
         }
         
         .tools-grid,
@@ -977,81 +1060,60 @@
             grid-template-columns: 1fr;
         }
         
-        .floating-donate {
-            right: 10px;
-            bottom: 80px;
-        }
-        
-        .donate-btn {
-            padding: var(--space-md) var(--space-xl);
-            font-size: 16px;
-            min-width: 180px;
-        }
-        
-        .form-row {
-            flex-direction: column;
-            gap: var(--space-sm);
-        }
-        
-        .currency-row {
-            flex-direction: column;
-        }
-        
-        .currency-swap {
-            transform: rotate(90deg);
-        }
-        
         .section-title {
-            font-size: 32px;
+            font-size: 28px;
         }
         
         .ad-container {
-            margin: var(--space-xl) var(--space-md);
+            margin: 25px 15px;
         }
         
-        .footer-donation {
-            margin: var(--space-xl) var(--space-md);
+        .donate-container {
+            margin: 25px 15px;
+            padding: 25px 20px;
+        }
+        
+        .page-content {
+            padding: 20px;
+        }
+        
+        .donate-btn-large {
+            padding: 15px 30px;
+            font-size: 16px;
         }
     }
     
     /* Small Mobile */
     @media (max-width: 480px) {
         .container {
-            padding: 0 var(--space-sm);
+            padding: 0 15px;
         }
         
         .hero-title {
-            font-size: 32px;
+            font-size: 28px;
         }
         
         .hero-subtitle {
-            font-size: 16px;
+            font-size: 14px;
         }
         
         .section {
-            padding: var(--space-xl) 0;
+            padding: 40px 0;
         }
         
         .calculator-card,
         .tool-card {
-            padding: var(--space-lg);
+            padding: 15px;
         }
         
-        .floating-donate {
-            right: 10px;
-            bottom: 20px;
-        }
-        
-        .donate-btn {
-            padding: var(--space-sm) var(--space-lg);
-            font-size: 14px;
-            min-width: 160px;
+        .donate-btn-large {
+            padding: 14px 25px;
+            font-size: 15px;
         }
     }
     
     /* Print Styles */
     @media print {
-        .floating-donate,
         .ad-container {
             display: none;
         }
@@ -1059,7 +1121,7 @@
     
     /* Scrollbar */
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 8px;
     }
     
     ::-webkit-scrollbar-track {
@@ -1068,7 +1130,7 @@
     
     ::-webkit-scrollbar-thumb {
         background: var(--primary);
-        border-radius: 5px;
+        border-radius: 4px;
     }
     
     ::-webkit-scrollbar-thumb:hover {
@@ -1077,13 +1139,6 @@
     </style>
 </head>
 <body>
-    <!-- FLOATING DONATE BUTTON -->
-    <div class="floating-donate">
-        <a href="https://paypal.me/mohd0787" target="_blank" class="donate-btn">
-            <i class="fab fa-paypal"></i> PayPal Donate
-        </a>
-    </div>
-
     <!-- HEADER -->
     <header>
         <div class="container">
@@ -1099,7 +1154,11 @@
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#tools">AI Tools</a></li>
                     <li><a href="#calculators">Calculators</a></li>
-                    <li><a href="#donate" onclick="document.querySelector('.donate-btn').click()">Donate</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#disclaimer">Disclaimer</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#donate" onclick="document.querySelector('.donate-btn-large').click()">Donate</a></li>
                 </ul>
             </div>
         </div>
@@ -1123,14 +1182,14 @@
             </div>
         </div>
 
-        <!-- AI TOOLS SECTION (15 Tools) -->
+        <!-- AI TOOLS SECTION (15 Tools - Reduced from 18) -->
         <section class="section" id="tools">
             <div class="container">
                 <h2 class="section-title">🤖 15 Trending AI Tools 2026</h2>
                 <p class="section-description">Most demanding AI tools that are changing the world in 2026</p>
                 
                 <div class="tools-grid">
-                    <!-- Existing Tools -->
+                    <!-- Existing Tools (15 total) -->
                     <a href="https://chat.openai.com" target="_blank" class="tool-card">
                         <div class="tool-icon">🤖</div>
                         <h3 class="tool-title">ChatGPT 5</h3>
@@ -1145,7 +1204,6 @@
                         <span class="tool-category">AI Assistant</span>
                     </a>
                     
-                    <!-- NEW ADDED TOOLS -->
                     <div class="tool-card" onclick="openTool('document-converter')">
                         <div class="tool-icon">📄</div>
                         <h3 class="tool-title">Document Converter</h3>
@@ -1167,18 +1225,12 @@
                         <span class="tool-category">Media</span>
                     </div>
                     
+                    <!-- Video Downloader (Single tool for all platforms) -->
                     <div class="tool-card" onclick="openTool('video-downloader')">
                         <div class="tool-icon">🎬</div>
-                        <h3 class="tool-title">Video Downloader</h3>
-                        <p class="tool-description">Download videos from YouTube, Instagram, TikTok in HD</p>
+                        <h3 class="tool-title">Video Downloader Pro</h3>
+                        <p class="tool-description">Download videos from YouTube, Instagram, Facebook, Twitter</p>
                         <span class="tool-category">Media</span>
-                    </div>
-                    
-                    <div class="tool-card" onclick="openTool('reel-downloader')">
-                        <div class="tool-icon">🎵</div>
-                        <h3 class="tool-title">Reel Downloader</h3>
-                        <p class="tool-description">Download Instagram Reels & Stories in high quality</p>
-                        <span class="tool-category">Social Media</span>
                     </div>
                     
                     <div class="tool-card" onclick="openTool('midjourney')">
@@ -1320,7 +1372,7 @@
                         </div>
                     </div>
                     
-                    <!-- Body Fat Calculator - FIXED with Feet+Inches AND CM -->
+                    <!-- Body Fat Calculator - FIXED & ACCURATE -->
                     <div class="calculator-card">
                         <div class="calc-icon">🏋️</div>
                         <h3 class="calc-title">Body Fat Calculator</h3>
@@ -1344,56 +1396,27 @@
                             <input type="number" class="form-control" id="bodyFatWeight" value="70" min="30" max="200">
                         </div>
                         
-                        <!-- Height Toggle -->
                         <div class="form-group">
-                            <label class="form-label">Height Measurement</label>
-                            <div class="height-toggle">
-                                <button type="button" class="height-toggle-btn active" onclick="toggleHeightInput('feet')">Feet & Inches</button>
-                                <button type="button" class="height-toggle-btn" onclick="toggleHeightInput('cm')">Centimeters</button>
-                            </div>
-                        </div>
-                        
-                        <!-- Feet & Inches Input -->
-                        <div class="height-input-group active" id="heightFeetGroup">
-                            <div class="form-group">
-                                <label class="form-label">Height (Feet & Inches)</label>
-                                <div class="form-row">
-                                    <input type="number" class="form-control" id="bodyFatFeet" placeholder="Feet" value="5" min="3" max="8">
-                                    <input type="number" class="form-control" id="bodyFatInches" placeholder="Inches" value="9" min="0" max="11">
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- CM Input -->
-                        <div class="height-input-group" id="heightCmGroup">
-                            <div class="form-group">
-                                <label class="form-label">Height (Centimeters)</label>
-                                <input type="number" class="form-control" id="bodyFatCm" value="175" min="100" max="250">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label">Waist Measurement</label>
+                            <label class="form-label">Height (Feet & Inches)</label>
                             <div class="form-row">
-                                <input type="number" class="form-control" id="bodyFatWaistFeet" placeholder="Feet" value="0" min="0" max="5">
-                                <input type="number" class="form-control" id="bodyFatWaistInches" placeholder="Inches" value="33" min="0" max="11">
+                                <input type="number" class="form-control" id="bodyFatFeet" placeholder="Feet" value="5" min="3" max="8">
+                                <input type="number" class="form-control" id="bodyFatInches" placeholder="Inches" value="9" min="0" max="11">
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label class="form-label">Neck Measurement</label>
-                            <div class="form-row">
-                                <input type="number" class="form-control" id="bodyFatNeckFeet" placeholder="Feet" value="0" min="0" max="2">
-                                <input type="number" class="form-control" id="bodyFatNeckInches" placeholder="Inches" value="15" min="0" max="11">
-                            </div>
+                            <label class="form-label">Waist Measurement (inches)</label>
+                            <input type="number" class="form-control" id="bodyFatWaist" value="33" min="20" max="60" step="0.1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Neck Measurement (inches)</label>
+                            <input type="number" class="form-control" id="bodyFatNeck" value="15" min="10" max="25" step="0.1">
                         </div>
                         
                         <div class="form-group" id="hipInput" style="display: none;">
-                            <label class="form-label">Hip Measurement (For females)</label>
-                            <div class="form-row">
-                                <input type="number" class="form-control" id="bodyFatHipFeet" placeholder="Feet" value="0" min="0" max="5">
-                                <input type="number" class="form-control" id="bodyFatHipInches" placeholder="Inches" value="36" min="0" max="11">
-                            </div>
+                            <label class="form-label">Hip Measurement (inches) - For females</label>
+                            <input type="number" class="form-control" id="bodyFatHip" value="36" min="25" max="60" step="0.1">
                         </div>
                         
                         <button class="btn btn-primary" onclick="calculateBodyFat()">Calculate Body Fat</button>
@@ -1416,19 +1439,29 @@
                                 <span class="result-label">Fat Mass:</span>
                                 <span class="result-value" id="bodyFatMass">- kg</span>
                             </div>
+                            <div class="result-row">
+                                <span class="result-label">Body Type:</span>
+                                <span class="result-value" id="bodyFatType">-</span>
+                            </div>
                         </div>
                         
                         <div class="calc-info-box">
-                            <div class="calc-info-title">Body Fat Categories:</div>
+                            <div class="calc-info-title">Body Fat Categories (Accurate):</div>
                             <div class="calc-info-content">
                                 <strong>For Men:</strong><br>
-                                • Essential: 2-5% (Athletes: 6-13%)<br>
-                                • Fitness: 14-17% (Good: 18-24%)<br>
-                                • Average: 25%+ (Risk: 26%+)<br><br>
+                                • Essential Fat: 2-5%<br>
+                                • Athletes: 6-13%<br>
+                                • Fitness: 14-17%<br>
+                                • Average: 18-24%<br>
+                                • Overweight: 25-30%<br>
+                                • Obese: 31%+<br><br>
                                 <strong>For Women:</strong><br>
-                                • Essential: 10-13% (Athletes: 14-20%)<br>
-                                • Fitness: 21-24% (Good: 25-31%)<br>
-                                • Average: 32%+ (Risk: 33%+)
+                                • Essential Fat: 10-13%<br>
+                                • Athletes: 14-20%<br>
+                                • Fitness: 21-24%<br>
+                                • Average: 25-31%<br>
+                                • Overweight: 32-38%<br>
+                                • Obese: 39%+
                             </div>
                         </div>
                     </div>
@@ -1449,19 +1482,31 @@
                             <select class="form-control" id="gstCategory" onchange="updateGSTRate()">
                                 <option value="essential">Essential Goods (Food grains, dairy)</option>
                                 <option value="household">Household Items (Soap, toothpaste)</option>
-                                <option value="restaurant" selected>Restaurant/Hotel Stay</option>
-                                <option value="electronics">Electronics (Phones, TV)</option>
-                                <option value="clothes">Clothes & Textiles</option>
-                                <option value="automobile">Automobiles (Car, Bike)</option>
-                                <option value="luxury">Luxury Items</option>
-                                <option value="service">Services</option>
+                                <option value="restaurant" selected>Restaurant Food (All bills - 5%)</option>
+                                <option value="hotel">Hotel Stay (Room tariff based)</option>
+                                <option value="electronics">Electronics (Phones, TV - 18%)</option>
+                                <option value="clothes">Clothes & Textiles (12%)</option>
+                                <option value="automobile">Automobiles (Car, Bike - 28%)</option>
+                                <option value="luxury">Luxury Items (28%)</option>
+                                <option value="service">Services (18%)</option>
                             </select>
+                        </div>
+                        
+                        <!-- Hotel tariff input (only for hotel category) -->
+                        <div class="form-group" id="hotelTariffGroup" style="display: none;">
+                            <label class="form-label">Room Tariff per day (₹)</label>
+                            <input type="number" class="form-control" id="hotelTariff" value="2000" min="100">
+                            <small style="color: var(--text-light); display: block; margin-top: 4px;">
+                                • Below ₹1000: 0% GST<br>
+                                • ₹1000-₹2500: 12% GST<br>
+                                • Above ₹2500: 18% GST
+                            </small>
                         </div>
                         
                         <div class="form-group">
                             <label class="form-label">GST Rate (%)</label>
-                            <input type="number" class="form-control" id="gstRate" value="18" readonly>
-                            <small style="color: var(--text-light); display: block; margin-top: 4px;" id="gstRateInfo">Restaurant/Hotel Stay: 18% GST</small>
+                            <input type="text" class="form-control" id="gstRate" value="5" readonly>
+                            <small style="color: var(--text-light); display: block; margin-top: 4px;" id="gstRateInfo">Restaurant Food: 5% GST (without input credit)</small>
                         </div>
                         
                         <button class="btn btn-primary" onclick="calculateGST()">Calculate GST</button>
@@ -1473,6 +1518,10 @@
                                 <span class="result-value" id="originalAmount">-</span>
                             </div>
                             <div class="result-row">
+                                <span class="result-label">GST Rate:</span>
+                                <span class="result-value" id="gstRateResult">-</span>
+                            </div>
+                            <div class="result-row">
                                 <span class="result-label">GST Amount:</span>
                                 <span class="result-value" id="gstAmountResult">-</span>
                             </div>
@@ -1480,22 +1529,26 @@
                                 <span class="result-label">Total Amount:</span>
                                 <span class="result-value" id="totalWithGST">-</span>
                             </div>
+                            <div class="result-row">
+                                <span class="result-label">Note:</span>
+                                <span class="result-value" id="gstNote">-</span>
+                            </div>
                         </div>
                         
                         <div class="calc-info-box">
-                            <div class="calc-info-title">GST Rates 2026:</div>
+                            <div class="calc-info-title">GST Rates 2026 (India):</div>
                             <div class="calc-info-content">
                                 • 0%: Essential food grains, dairy goods<br>
-                                • 5%: Household items, packaged foods<br>
-                                • 12%: Processed foods, medicines<br>
-                                • 18%: Restaurant, hotel stay, electronics<br>
+                                • 5%: Restaurant food (all bills, without input credit)<br>
+                                • 12%: Processed foods, clothes, medicines<br>
+                                • 18%: Electronics, services, AC restaurants<br>
                                 • 28%: Luxury items, automobiles, aerated drinks<br>
-                                • 0.25%/3%: Special rates for gems/jewelry
+                                • Hotel: 0% (₹0-999), 12% (₹1000-2499), 18% (₹2500+)
                             </div>
                         </div>
                     </div>
                     
-                    <!-- World Tax Calculator - FIXED with more countries -->
+                    <!-- World Tax Calculator -->
                     <div class="calculator-card">
                         <div class="calc-icon">🏛️</div>
                         <h3 class="calc-title">World Tax Calculator 2026</h3>
@@ -1550,8 +1603,8 @@
                         
                         <div class="form-group">
                             <label class="form-label">Tax Rate</label>
-                            <input type="text" class="form-control" id="taxRateDisplay" value="VAT + GST" readonly>
-                            <small style="color: var(--text-light); display: block; margin-top: 4px;" id="taxRateInfo">Click Calculate for detailed breakdown</small>
+                            <input type="text" class="form-control" id="taxRateDisplay" value="5% GST" readonly>
+                            <small style="color: var(--text-light); display: block; margin-top: 4px;" id="taxRateInfo">Restaurant Food: 5% GST in India</small>
                         </div>
                         
                         <button class="btn btn-primary" onclick="calculateTax()">Calculate Tax</button>
@@ -1596,7 +1649,7 @@
                         </div>
                     </div>
                     
-                    <!-- Loan Calculator - FIXED with Categories -->
+                    <!-- Loan Calculator -->
                     <div class="calculator-card">
                         <div class="calc-icon">🏦</div>
                         <h3 class="calc-title">Loan EMI Calculator</h3>
@@ -1717,7 +1770,7 @@
                         </div>
                     </div>
                     
-                    <!-- Currency Converter - FIXED with more countries -->
+                    <!-- Currency Converter -->
                     <div class="calculator-card">
                         <div class="calc-icon">💱</div>
                         <h3 class="calc-title">Currency Converter</h3>
@@ -1801,7 +1854,7 @@
                         </div>
                     </div>
                     
-                    <!-- Unit Converter - SIMPLIFIED -->
+                    <!-- Unit Converter -->
                     <div class="calculator-card">
                         <div class="calc-icon">📏</div>
                         <h3 class="calc-title">Unit Converter</h3>
@@ -1877,7 +1930,7 @@
                         </div>
                     </div>
                     
-                    <!-- Age Calculator - WITH LUCKY FACT -->
+                    <!-- Age Calculator -->
                     <div class="calculator-card">
                         <div class="calc-icon">🎂</div>
                         <h3 class="calc-title">Age Calculator</h3>
@@ -1972,7 +2025,7 @@
                         </div>
                     </div>
                     
-                    <!-- Gratuity Calculator - SIMPLIFIED -->
+                    <!-- Gratuity Calculator -->
                     <div class="calculator-card">
                         <div class="calc-icon">💼</div>
                         <h3 class="calc-title">Gratuity Calculator</h3>
@@ -2127,6 +2180,252 @@
                 <div class="ad-placeholder">AdSense Advertisement</div>
             </div>
         </div>
+
+        <!-- DONATE BOX (After last calculator) -->
+        <div class="container">
+            <div class="donate-container" id="donate">
+                <h2 class="donate-title"><i class="fab fa-paypal"></i> Support Our Free Tools</h2>
+                <p class="donate-description">Help us maintain and improve these free calculators. Your donation helps keep this service running and ad-free for everyone.</p>
+                <a href="https://paypal.me/mohd0787" target="_blank" class="donate-btn-large">
+                    <i class="fab fa-paypal"></i> Donate via PayPal
+                </a>
+                <p style="margin-top: 15px; color: #003087; font-size: 14px; opacity: 0.8;">
+                    Every donation, no matter how small, helps us improve and add more tools!
+                </p>
+            </div>
+        </div>
+
+        <!-- ==================== NEW PAGES FOR ADSENSE APPROVAL ==================== -->
+
+        <!-- ABOUT PAGE -->
+        <section class="section" id="about">
+            <div class="container">
+                <h2 class="section-title">About AIToolStation</h2>
+                <div class="page-content">
+                    <h3>Welcome to AIToolStation</h3>
+                    <p>AIToolStation is a comprehensive suite of AI-powered tools and calculators designed for the modern digital age. Our mission is to provide free, accurate, and easy-to-use tools that help individuals and businesses make informed decisions.</p>
+                    
+                    <h3>Our Vision</h3>
+                    <p>To become the go-to platform for AI tools and calculators worldwide, making complex calculations simple and accessible to everyone.</p>
+                    
+                    <h3>What We Offer</h3>
+                    <ul>
+                        <li><strong>15+ AI Tools:</strong> From document conversion to video downloading</li>
+                        <li><strong>15+ Calculators:</strong> Financial, health, tax, and conversion calculators</li>
+                        <li><strong>2026 Updated Rates:</strong> All our calculators use the latest rates and regulations</li>
+                        <li><strong>100% Free:</strong> No hidden charges, no registration required</li>
+                    </ul>
+                    
+                    <h3>Important Note</h3>
+                    <p><strong>Disclaimer:</strong> All calculators on this website provide approximate values for informational purposes only. We cannot guarantee 100% accuracy. For critical financial, medical, or legal decisions, please consult with qualified professionals. The results should not be considered as professional advice.</p>
+                    
+                    <h3>Our Team</h3>
+                    <p>We are a team of developers, designers, and AI enthusiasts passionate about creating useful tools that make life easier. Our tools are regularly updated and improved based on user feedback.</p>
+                    
+                    <div class="contact-info">
+                        <h4>Contact Information</h4>
+                        <p><strong>Email:</strong> <a href="mailto:aitoolsstation@gmail.com">aitoolsstation@gmail.com</a></p>
+                        <p><strong>Website:</strong> <a href="https://aitoolstation.pages.dev">aitoolstation.pages.dev</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DISCLAIMER PAGE -->
+        <section class="section" id="disclaimer">
+            <div class="container">
+                <h2 class="section-title">Disclaimer</h2>
+                <div class="page-content">
+                    <h3>Important Notice</h3>
+                    <p>All calculators and tools provided on AIToolStation are for informational and educational purposes only. The results should not be considered as professional advice.</p>
+                    
+                    <h3>Accuracy of Information</h3>
+                    <p>While we strive to provide accurate and up-to-date information:</p>
+                    <ul>
+                        <li>We cannot guarantee 100% accuracy of calculations</li>
+                        <li>Tax rates, exchange rates, and other financial data may change</li>
+                        <li>Health calculators are not a substitute for medical advice</li>
+                        <li>Financial calculators provide estimates, not guarantees</li>
+                    </ul>
+                    
+                    <h3>Professional Advice</h3>
+                    <p>Always consult with qualified professionals for:</p>
+                    <ul>
+                        <li><strong>Medical Decisions:</strong> Consult doctors for health-related matters</li>
+                        <li><strong>Financial Decisions:</strong> Consult financial advisors for investments</li>
+                        <li><strong>Legal Matters:</strong> Consult lawyers for legal advice</li>
+                        <li><strong>Tax Planning:</strong> Consult chartered accountants for tax matters</li>
+                    </ul>
+                    
+                    <h3>Limitation of Liability</h3>
+                    <p>AIToolStation and its creators are not responsible for:</p>
+                    <ul>
+                        <li>Any financial losses due to calculations</li>
+                        <li>Health issues from following calculator results</li>
+                        <li>Errors in tax calculations</li>
+                        <li>Decisions made based on our tools</li>
+                    </ul>
+                    
+                    <h3>External Links</h3>
+                    <p>Our website contains links to external websites. We are not responsible for:</p>
+                    <ul>
+                        <li>Content on external websites</li>
+                        <li>Privacy practices of external sites</li>
+                        <li>Accuracy of information on external sites</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT US PAGE -->
+        <section class="section" id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="page-content">
+                    <h3>Get in Touch</h3>
+                    <p>We'd love to hear from you! Whether you have feedback, suggestions, or need support, feel free to reach out.</p>
+                    
+                    <div class="contact-info">
+                        <h4>Contact Information</h4>
+                        <p><strong>Email:</strong> <a href="mailto:aitoolsstation@gmail.com">aitoolsstation@gmail.com</a></p>
+                        <p><strong>Response Time:</strong> We try to respond within 24-48 hours</p>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h4>Send Us a Message</h4>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="contactName" placeholder="Enter your name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Your Email</label>
+                                <input type="email" class="form-control" id="contactEmail" placeholder="Enter your email">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Subject</label>
+                                <select class="form-control" id="contactSubject">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="feedback">Feedback/Suggestions</option>
+                                    <option value="bug">Report a Bug</option>
+                                    <option value="feature">Feature Request</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                    <option value="advertising">Advertising Inquiry</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">Message</label>
+                                <textarea class="form-control" id="contactMessage" rows="5" placeholder="Type your message here..."></textarea>
+                            </div>
+                            
+                            <button type="button" class="btn btn-primary" onclick="sendContactMessage()">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="calc-info-box">
+                        <div class="calc-info-title">Q: Are your tools really free?</div>
+                        <div class="calc-info-content">
+                            A: Yes, all tools and calculators are completely free to use. We support ourselves through advertisements and donations.
+                        </div>
+                    </div>
+                    
+                    <div class="calc-info-box">
+                        <div class="calc-info-title">Q: How often are calculators updated?</div>
+                        <div class="calc-info-content">
+                            A: We update our calculators regularly to reflect the latest rates and regulations (2026 rates currently).
+                        </div>
+                    </div>
+                    
+                    <div class="calc-info-box">
+                        <div class="calc-info-title">Q: Can I use your tools for business?</div>
+                        <div class="calc-info-content">
+                            A: Yes, you can use our tools for personal and business purposes. However, always verify with professionals for critical decisions.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRIVACY POLICY PAGE -->
+        <section class="section" id="privacy">
+            <div class="container">
+                <h2 class="section-title">Privacy Policy</h2>
+                <div class="page-content">
+                    <h3>Our Commitment to Privacy</h3>
+                    <p>At AIToolStation, we take your privacy seriously. This policy explains how we handle information on our website.</p>
+                    
+                    <h3>Information We Collect</h3>
+                    <p>We collect minimal information to improve user experience:</p>
+                    <ul>
+                        <li><strong>Non-Personal Information:</strong> Browser type, device information, IP address</li>
+                        <li><strong>Usage Data:</strong> Pages visited, time spent, tools used</li>
+                        <li><strong>Calculator Inputs:</strong> Data entered into calculators (not stored)</li>
+                    </ul>
+                    
+                    <h3>How We Use Information</h3>
+                    <ul>
+                        <li>Improve our tools and user experience</li>
+                        <li>Analyze website traffic and usage patterns</li>
+                        <li>Display relevant advertisements</li>
+                        <li>Fix bugs and improve performance</li>
+                    </ul>
+                    
+                    <h3>Third-Party Services</h3>
+                    <p>We use third-party services that may collect information:</p>
+                    <ul>
+                        <li><strong>Google AdSense:</strong> Displays relevant ads based on your interests</li>
+                        <li><strong>Google Analytics:</strong> Analyzes website traffic and usage</li>
+                        <li><strong>Font Libraries:</strong> For better typography and icons</li>
+                    </ul>
+                    
+                    <h3>Cookies</h3>
+                    <p>We use cookies to:</p>
+                    <ul>
+                        <li>Remember user preferences</li>
+                        <li>Analyze website traffic</li>
+                        <li>Serve relevant advertisements</li>
+                        <li>Improve user experience</li>
+                    </ul>
+                    <p>You can disable cookies in your browser settings, but some features may not work properly.</p>
+                    
+                    <h3>Data Security</h3>
+                    <p>We implement security measures to protect your information:</p>
+                    <ul>
+                        <li>HTTPS encryption for all data transmission</li>
+                        <li>Regular security updates</li>
+                        <li>Limited data collection</li>
+                    </ul>
+                    
+                    <h3>Children's Privacy</h3>
+                    <p>Our website is not intended for children under 13. We do not knowingly collect information from children.</p>
+                    
+                    <h3>Changes to Privacy Policy</h3>
+                    <p>We may update this policy periodically. Changes will be posted on this page with updated dates.</p>
+                    
+                    <h3>Contact Us</h3>
+                    <p>For privacy-related questions, contact us at: <a href="mailto:aitoolsstation@gmail.com">aitoolsstation@gmail.com</a></p>
+                    
+                    <div class="calc-info-box">
+                        <div class="calc-info-title">Last Updated: February 2026</div>
+                        <div class="calc-info-content">
+                            This privacy policy was last updated in February 2026. We recommend checking this page periodically for updates.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADVERTISEMENT -->
+        <div class="container">
+            <div class="ad-container">
+                <div class="ad-label">Advertisement</div>
+                <div class="ad-placeholder">AdSense Advertisement</div>
+            </div>
+        </div>
     </main>
 
     <!-- FOOTER -->
@@ -2135,18 +2434,9 @@
             <div class="footer-top">
                 <div class="footer-logo">
                     <!-- Footer image from file -->
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAABkCAYAAADDhn8LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGGSURBVHgB7d1BboMwFIXh18gVegJyAroAOXLDDXICcoIcOSFH6AnICcgKygq6QsgK1lGZiMw4EzPtJViSjjn7ZThzHGZJSSgt8yzlnr5RSSjkAANADFyRt2jBM3x5Z1zWeAQD4Ez6QI13XeX9KQgghLPAGAOBPOEBSSukgxjh3JYQQtJ+2HAAAf8IFEkI4OZl4cZ1gZQIA/8MFkqVlWWvP3F5yLwIA/8MFklJK+yfJ46wCJN+HAAD+x4qbl5cJkNzFeuQe5B6rEAD4Hy6QPM3qyQDJ3axH7kFqAH0N0zTt8QYA4E+4QI6klNLeFcw8GgYA/8MFQmutHn0Q2e4qLgCA3+MCobVWn+2w9K8+47y+6wcA+B0ukHqjpI8PvGnjbOsXAGBqLhBaa/VZd/PmrT/wNYE+RgkA4He4QGit1d4f8PrXHO2/8PPKCADwO1wgjDG2h5h9JdP/1u3jYQCAn+ECobVWj3a0VrS/Poy01z9u83sAAD/HBUJrrT67k9V/3OavOPpPwPd4AwDwJ1wgtNbqo6N/7kEA4H+5QGit1UeP8/odLQDAH3KB8LcykiM7AID5uEAYY2wPMXPvAQAzc4EwxtgeYgYAmJkLhDHG9hAzAMDMXCC01urRDhYAGBmQPwEGY1r11LJRAAAAAElFTkSuQmCC" alt="AIToolStation Footer">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAABkCAYAAADDhn8LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGGSURBVHgB7d1BboMwFIXh18gVegJyAroAOXLDDXICcoIcOSFH6AnICcgKygq6QsgK1lGZiMw4EzPtJViSjjn7ZThzHGZJSSgt8yzlnr5RSSjkAANADFyRt2jBM3x5Z1zWeAQD4Ez6QI13XeX9KQgghLPAGAOBPOEBSSukgxjh3JYQQtJ+2HAAAf8IFEkI4OZl4cZ1gZQIA/8MFkqVlWWvP3F5yLwIA/8MFklJK+yfJ46wCJN+HAAD+x4qbl5cJkNzFeuQe5B6rEAD4Hy6QPM3qyQDJ3axH7kFqAH0N0zTt8QYA4E+4QI6klNLeFcw8GgYA/8MFQmutHn0Q2e4qLgCA3+MCobVWn+2w9K8+47y+6wcA+B0ukHqjpI8PvGnjbOsXAGBqLhBaa/VZd/PmrT/wNYE+RgkA4He4QGit1d4f8PrXHO2/8PPKCADwO1wgjDG2h5h9JdP/1u3jYQCAn+ECobVWj3a0VrS/Poy01z9u83sAAD/HBUJrrT67k9V/3OavOPpPwPd4AwDwJ1wgtNbqo6N/7kEA4H+5QGit1aOdrP7jNn/F0X8Cvs8bAIA/4QJhjLE9xCzPMwAAM3OB0FqrRztYAGBkQP4EGIxp1VPLRgAAAABJRU5ErkJggg==" alt="AIToolStation Footer">
                 </div>
                 <p>Unlock the Future of AI</p>
-            </div>
-            
-            <!-- FOOTER DONATION BOX -->
-            <div class="footer-donation">
-                <h4><i class="fab fa-paypal"></i> Support Our Work</h4>
-                <p>Help us maintain and improve these free tools. Your donation keeps this service running.</p>
-                <a href="https://paypal.me/mohd0787" target="_blank" class="donate-btn" style="min-width: 200px; margin: 0 auto; display: inline-block;">
-                    <i class="fab fa-paypal"></i> Donate via PayPal
-                </a>
             </div>
             
             <div class="footer-content">
@@ -2156,7 +2446,8 @@
                         <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
                         <li><a href="#tools"><i class="fas fa-chevron-right"></i> AI Tools</a></li>
                         <li><a href="#calculators"><i class="fas fa-chevron-right"></i> Calculators</a></li>
-                        <li><a href="#donate" onclick="document.querySelector('.donate-btn').click()"><i class="fas fa-chevron-right"></i> Donate</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li>
+                        <li><a href="#disclaimer"><i class="fas fa-chevron-right"></i> Disclaimer</a></li>
                     </ul>
                 </div>
                 
@@ -2165,8 +2456,8 @@
                     <ul>
                         <li><a href="javascript:void(0)" onclick="openTool('document-converter')"><i class="fas fa-file-contract"></i> Document Converter</a></li>
                         <li><a href="javascript:void(0)" onclick="openTool('pdf-editor')"><i class="fas fa-file-pdf"></i> PDF Editor</a></li>
-                        <li><a href="javascript:void(0)" onclick="openTool('image-resizer')"><i class="fas fa-image"></i> Image Resizer</a></li>
                         <li><a href="javascript:void(0)" onclick="openTool('video-downloader')"><i class="fas fa-video"></i> Video Downloader</a></li>
+                        <li><a href="https://chat.openai.com" target="_blank"><i class="fas fa-robot"></i> ChatGPT 5</a></li>
                     </ul>
                 </div>
                 
@@ -2183,10 +2474,10 @@
                 <div class="footer-links">
                     <h4><i class="fas fa-headset"></i> Support</h4>
                     <ul>
-                        <li><a href="mailto:support@aitoolstation.com"><i class="fas fa-envelope"></i> Contact Support</a></li>
-                        <li><a href="https://paypal.me/mohd0787" target="_blank"><i class="fab fa-paypal"></i> Donate via PayPal</a></li>
-                        <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
-                        <li><a href="#"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                        <li><a href="mailto:aitoolsstation@gmail.com"><i class="fas fa-envelope"></i> Email Support</a></li>
+                        <li><a href="#donate"><i class="fab fa-paypal"></i> Donate</a></li>
+                        <li><a href="#privacy"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -2235,14 +2526,13 @@
             });
         });
 
-        // Tool Functions
+        // Tool Functions - 15 Tools Only
         function openTool(toolName) {
             const toolUrls = {
                 'document-converter': 'https://www.ilovepdf.com',
                 'pdf-editor': 'https://www.adobe.com/acrobat/online/pdf-editor.html',
                 'image-resizer': 'https://www.iloveimg.com/resize-image',
                 'video-downloader': 'https://en.savefrom.net',
-                'reel-downloader': 'https://snapinsta.app',
                 'midjourney': 'https://www.midjourney.com',
                 'elevenlabs': 'https://elevenlabs.io',
                 'runway': 'https://runwayml.com',
@@ -2258,8 +2548,27 @@
                 window.open(toolUrls[toolName], '_blank');
             } else {
                 alert('This tool will open in a new tab. For now, we\'re redirecting to a similar service.');
-                window.open('https://www.aitoolstation.com/tools', '_blank');
+                window.open('https://www.aitoolstation.pages.dev', '_blank');
             }
+        }
+
+        // Contact Form Function
+        function sendContactMessage() {
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const subject = document.getElementById('contactSubject').value;
+            const message = document.getElementById('contactMessage').value;
+            
+            if(!name || !email || !message) {
+                alert('Please fill all required fields');
+                return;
+            }
+            
+            // Create mailto link
+            const subjectText = document.getElementById('contactSubject').options[document.getElementById('contactSubject').selectedIndex].text;
+            const mailtoLink = `mailto:aitoolsstation@gmail.com?subject=${encodeURIComponent(subjectText)} - AIToolStation Contact&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nSubject: ${subjectText}\n\nMessage:\n${message}`)}`;
+            
+            window.location.href = mailtoLink;
         }
 
         // ==================== CALCULATOR FUNCTIONS ====================
@@ -2323,26 +2632,7 @@
             document.getElementById('bmiResults').classList.add('show');
         }
 
-        // Body Fat Calculator - FIXED with toggle between feet/inches and cm
-        function toggleHeightInput(type) {
-            const feetBtn = document.querySelector('.height-toggle-btn:nth-child(1)');
-            const cmBtn = document.querySelector('.height-toggle-btn:nth-child(2)');
-            const feetGroup = document.getElementById('heightFeetGroup');
-            const cmGroup = document.getElementById('heightCmGroup');
-            
-            if(type === 'feet') {
-                feetBtn.classList.add('active');
-                cmBtn.classList.remove('active');
-                feetGroup.classList.add('active');
-                cmGroup.classList.remove('active');
-            } else {
-                feetBtn.classList.remove('active');
-                cmBtn.classList.add('active');
-                feetGroup.classList.remove('active');
-                cmGroup.classList.add('active');
-            }
-        }
-
+        // Body Fat Calculator - FIXED & ACCURATE
         // Show/Hide hip input for females
         document.getElementById('bodyFatGender').addEventListener('change', function() {
             const hipInput = document.getElementById('hipInput');
@@ -2358,89 +2648,100 @@
             const age = parseFloat(document.getElementById('bodyFatAge').value);
             const weight = parseFloat(document.getElementById('bodyFatWeight').value);
             
-            // Get height based on selected method
-            let heightCm;
-            const feetBtn = document.querySelector('.height-toggle-btn:nth-child(1)');
+            // Get height in inches
+            const feet = parseFloat(document.getElementById('bodyFatFeet').value);
+            const inches = parseFloat(document.getElementById('bodyFatInches').value);
+            const heightInches = (feet * 12) + inches;
             
-            if(feetBtn.classList.contains('active')) {
-                // Feet and inches
-                const feet = parseFloat(document.getElementById('bodyFatFeet').value);
-                const inches = parseFloat(document.getElementById('bodyFatInches').value);
-                heightCm = (feet * 12 + inches) * 2.54;
-            } else {
-                // Centimeters
-                heightCm = parseFloat(document.getElementById('bodyFatCm').value);
-            }
-            
-            // Get measurements in inches
-            const waistFeet = parseFloat(document.getElementById('bodyFatWaistFeet').value);
-            const waistInches = parseFloat(document.getElementById('bodyFatWaistInches').value);
-            const neckFeet = parseFloat(document.getElementById('bodyFatNeckFeet').value);
-            const neckInches = parseFloat(document.getElementById('bodyFatNeckInches').value);
-            
-            const waistInchesTotal = (waistFeet * 12) + waistInches;
-            const neckInchesTotal = (neckFeet * 12) + neckInches;
-            
-            let hipInchesTotal = 0;
-            if(gender === 'female') {
-                const hipFeet = parseFloat(document.getElementById('bodyFatHipFeet').value);
-                const hipInches = parseFloat(document.getElementById('bodyFatHipInches').value);
-                hipInchesTotal = (hipFeet * 12) + hipInches;
-            }
-            
-            if(!age || !weight || !heightCm || !waistInchesTotal || !neckInchesTotal || 
-               weight <= 0 || heightCm <= 0) {
-                alert('Please enter all required values');
-                return;
-            }
+            // Get measurements
+            const waist = parseFloat(document.getElementById('bodyFatWaist').value);
+            const neck = parseFloat(document.getElementById('bodyFatNeck').value);
             
             let bodyFatPercentage;
-            const heightInches = heightCm / 2.54;
             
-            // US Navy Body Fat Formula (Accurate)
+            // US Navy Body Fat Formula (ACCURATE)
             if(gender === 'male') {
-                bodyFatPercentage = 495 / (1.0324 - 0.19077 * Math.log10(waistInchesTotal - neckInchesTotal) + 0.15456 * Math.log10(heightInches)) - 450;
+                // Formula for men: %Body Fat = 495 / (1.0324 - 0.19077 * log10(waist - neck) + 0.15456 * log10(height)) - 450
+                bodyFatPercentage = 495 / (1.0324 - 0.19077 * Math.log10(waist - neck) + 0.15456 * Math.log10(heightInches)) - 450;
             } else {
-                bodyFatPercentage = 495 / (1.29579 - 0.35004 * Math.log10(waistInchesTotal + hipInchesTotal - neckInchesTotal) + 0.22100 * Math.log10(heightInches)) - 450;
+                // For women, need hip measurement
+                const hip = parseFloat(document.getElementById('bodyFatHip').value);
+                // Formula for women: %Body Fat = 495 / (1.29579 - 0.35004 * log10(waist + hip - neck) + 0.22100 * log10(height)) - 450
+                bodyFatPercentage = 495 / (1.29579 - 0.35004 * Math.log10(waist + hip - neck) + 0.22100 * Math.log10(heightInches)) - 450;
             }
             
-            // Adjust for age (slight adjustment)
-            bodyFatPercentage += (age * 0.01);
+            // Adjust for age (older people naturally have higher body fat)
+            bodyFatPercentage += (age - 30) * 0.1; // Add 0.1% per year over 30
             
-            // Clamp values to realistic range
+            // Ensure within realistic bounds
             bodyFatPercentage = Math.max(2, Math.min(50, bodyFatPercentage));
             
             // Calculate lean and fat mass
-            const leanMass = weight * (1 - bodyFatPercentage/100);
-            const fatMass = weight * (bodyFatPercentage/100);
+            const fatMass = weight * (bodyFatPercentage / 100);
+            const leanMass = weight - fatMass;
             
-            // Determine category with accurate ranges
+            // Determine category with ACCURATE ranges
             let category = '';
+            let bodyType = '';
             
             if(gender === 'male') {
-                if(bodyFatPercentage < 6) category = 'Essential Fat';
-                else if(bodyFatPercentage < 14) category = 'Athletes';
-                else if(bodyFatPercentage < 18) category = 'Fitness';
-                else if(bodyFatPercentage < 25) category = 'Average';
-                else if(bodyFatPercentage < 30) category = 'Overweight';
-                else category = 'Obese';
+                if(bodyFatPercentage < 6) {
+                    category = 'Essential Fat';
+                    bodyType = 'Extremely Lean';
+                } else if(bodyFatPercentage < 14) {
+                    category = 'Athletes';
+                    bodyType = 'Very Fit';
+                } else if(bodyFatPercentage < 18) {
+                    category = 'Fitness';
+                    bodyType = 'Fit';
+                } else if(bodyFatPercentage < 25) {
+                    category = 'Average';
+                    bodyType = 'Acceptable';
+                } else if(bodyFatPercentage < 30) {
+                    category = 'Overweight';
+                    bodyType = 'High Fat';
+                } else {
+                    category = 'Obese';
+                    bodyType = 'Very High Fat';
+                }
             } else {
-                if(bodyFatPercentage < 14) category = 'Essential Fat';
-                else if(bodyFatPercentage < 21) category = 'Athletes';
-                else if(bodyFatPercentage < 25) category = 'Fitness';
-                else if(bodyFatPercentage < 32) category = 'Average';
-                else if(bodyFatPercentage < 38) category = 'Overweight';
-                else category = 'Obese';
+                if(bodyFatPercentage < 14) {
+                    category = 'Essential Fat';
+                    bodyType = 'Extremely Lean';
+                } else if(bodyFatPercentage < 21) {
+                    category = 'Athletes';
+                    bodyType = 'Very Fit';
+                } else if(bodyFatPercentage < 25) {
+                    category = 'Fitness';
+                    bodyType = 'Fit';
+                } else if(bodyFatPercentage < 32) {
+                    category = 'Average';
+                    bodyType = 'Acceptable';
+                } else if(bodyFatPercentage < 38) {
+                    category = 'Overweight';
+                    bodyType = 'High Fat';
+                } else {
+                    category = 'Obese';
+                    bodyType = 'Very High Fat';
+                }
             }
             
             // Display results
             document.getElementById('bodyFatPercent').textContent = bodyFatPercentage.toFixed(1) + '%';
             document.getElementById('bodyFatCategory').textContent = category;
-            document.getElementById('bodyFatCategory').className = 'result-value ' + 
-                (category.includes('Athletes') || category.includes('Fitness') ? 'status-success' : 
-                 category.includes('Average') ? 'status-info' : 'status-warning');
             document.getElementById('bodyFatLean').textContent = leanMass.toFixed(1) + ' kg';
             document.getElementById('bodyFatMass').textContent = fatMass.toFixed(1) + ' kg';
+            document.getElementById('bodyFatType').textContent = bodyType;
+            
+            // Color code based on category
+            const categoryElement = document.getElementById('bodyFatCategory');
+            if(category === 'Essential Fat' || category === 'Athletes' || category === 'Fitness') {
+                categoryElement.className = 'result-value status-success';
+            } else if(category === 'Average') {
+                categoryElement.className = 'result-value status-info';
+            } else {
+                categoryElement.className = 'result-value status-danger';
+            }
             
             // Show results container
             document.getElementById('bodyFatResults').classList.add('show');
@@ -2450,7 +2751,8 @@
         const gstRates = {
             'essential': { rate: 0, info: 'Essential food grains, dairy goods - 0% GST' },
             'household': { rate: 5, info: 'Household items, soap, toothpaste - 5% GST' },
-            'restaurant': { rate: 18, info: 'Restaurant food, hotel stay - 18% GST' },
+            'restaurant': { rate: 5, info: 'Restaurant food - 5% GST (without input credit)' },
+            'hotel': { rate: 'tariff', info: 'Hotel Stay - Tariff based GST (0/12/18%)' },
             'electronics': { rate: 18, info: 'Electronics, phones, TV - 18% GST' },
             'clothes': { rate: 12, info: 'Clothes & textiles - 12% GST' },
             'automobile': { rate: 28, info: 'Cars, bikes, automobiles - 28% GST' },
@@ -2460,34 +2762,72 @@
 
         function updateGSTRate() {
             const category = document.getElementById('gstCategory').value;
+            const hotelInput = document.getElementById('hotelTariffGroup');
             const rateInfo = gstRates[category];
-            document.getElementById('gstRate').value = rateInfo.rate;
-            document.getElementById('gstRateInfo').textContent = rateInfo.info;
+            
+            if(category === 'hotel') {
+                hotelInput.style.display = 'block';
+                document.getElementById('gstRate').value = 'Variable';
+                document.getElementById('gstRateInfo').textContent = rateInfo.info;
+            } else {
+                hotelInput.style.display = 'none';
+                document.getElementById('gstRate').value = rateInfo.rate;
+                document.getElementById('gstRateInfo').textContent = rateInfo.info;
+            }
         }
 
         function calculateGST() {
+            const category = document.getElementById('gstCategory').value;
             const amount = parseFloat(document.getElementById('gstAmount').value);
-            const rate = parseFloat(document.getElementById('gstRate').value);
             
             if(!amount || amount <= 0) {
                 alert('Please enter a valid amount');
                 return;
             }
             
-            // Calculate GST
-            const gstAmount = (amount * rate) / 100;
-            const totalAmount = amount + gstAmount;
+            let gstRate, gstAmount, totalAmount, note;
+            
+            if(category === 'hotel') {
+                const tariff = parseFloat(document.getElementById('hotelTariff').value) || 0;
+                
+                if(tariff < 1000) {
+                    gstRate = 0;
+                    note = 'Room tariff below ₹1000: No GST';
+                } else if(tariff >= 1000 && tariff < 2500) {
+                    gstRate = 12;
+                    note = 'Room tariff ₹1000-₹2499: 12% GST';
+                } else {
+                    gstRate = 18;
+                    note = 'Room tariff ₹2500+: 18% GST';
+                }
+                
+                gstAmount = (amount * gstRate) / 100;
+                totalAmount = amount + gstAmount;
+            } else {
+                const rate = gstRates[category].rate;
+                gstRate = rate;
+                gstAmount = (amount * rate) / 100;
+                totalAmount = amount + gstAmount;
+                
+                if(category === 'restaurant') {
+                    note = 'Restaurant food: 5% GST (without input tax credit)';
+                } else {
+                    note = 'Includes GST as per 2026 rates';
+                }
+            }
             
             // Display results
             document.getElementById('originalAmount').textContent = '₹' + amount.toFixed(2);
+            document.getElementById('gstRateResult').textContent = gstRate + '%';
             document.getElementById('gstAmountResult').textContent = '₹' + gstAmount.toFixed(2);
             document.getElementById('totalWithGST').textContent = '₹' + totalAmount.toFixed(2);
+            document.getElementById('gstNote').textContent = note;
             
             // Show results container
             document.getElementById('gstResults').classList.add('show');
         }
 
-        // World Tax Calculator - FIXED with more countries
+        // World Tax Calculator
         const taxRatesByCountry = {
             'india': {
                 'clothes': { rate: 12, type: 'GST', name: 'Clothes & Apparel' },
@@ -2495,7 +2835,7 @@
                 'car': { rate: 28, type: 'GST + Cess', name: 'Car & Automobiles' },
                 'two-wheeler': { rate: 28, type: 'GST', name: 'Two Wheeler' },
                 'restaurant': { rate: 5, type: 'GST', name: 'Restaurant Food' },
-                'hotel': { rate: 18, type: 'GST', name: 'Hotel Stay' },
+                'hotel': { rate: '12-18%', type: 'GST (Tariff based)', name: 'Hotel Stay' },
                 'dairy': { rate: 0, type: 'No Tax', name: 'Dairy Goods' },
                 'salaried': { rate: 'Progressive', type: 'Income Tax', name: 'Salaried Person' },
                 'business': { rate: 30, type: 'Income Tax', name: 'Business Income' },
@@ -2507,79 +2847,6 @@
                 'car': { rate: 0, type: 'Sales Tax', name: 'Car' },
                 'restaurant': { rate: 0, type: 'Sales Tax', name: 'Restaurant Food' },
                 'salaried': { rate: '10-37%', type: 'Federal + State', name: 'Salaried Person' }
-            },
-            'pakistan': {
-                'clothes': { rate: 17, type: 'Sales Tax', name: 'Clothes' },
-                'electronics': { rate: 17, type: 'Sales Tax', name: 'Electronics' },
-                'salaried': { rate: '0-35%', type: 'Income Tax', name: 'Salaried Person' }
-            },
-            'turkey': {
-                'clothes': { rate: 18, type: 'VAT', name: 'Clothes' },
-                'electronics': { rate: 18, type: 'VAT', name: 'Electronics' },
-                'restaurant': { rate: 8, type: 'VAT', name: 'Restaurant Food' }
-            },
-            'australia': {
-                'clothes': { rate: 10, type: 'GST', name: 'Clothes' },
-                'electronics': { rate: 10, type: 'GST', name: 'Electronics' },
-                'salaried': { rate: '0-45%', type: 'Income Tax', name: 'Salaried Person' }
-            },
-            'uae': {
-                'clothes': { rate: 5, type: 'VAT', name: 'Clothes' },
-                'electronics': { rate: 5, type: 'VAT', name: 'Electronics' },
-                'salaried': { rate: 0, type: 'No Income Tax', name: 'Salaried Person' }
-            },
-            'egypt': {
-                'clothes': { rate: 14, type: 'VAT', name: 'Clothes' },
-                'electronics': { rate: 14, type: 'VAT', name: 'Electronics' }
-            },
-            'gulf': {
-                'clothes': { rate: 5, type: 'VAT', name: 'Clothes' },
-                'electronics': { rate: 5, type: 'VAT', name: 'Electronics' },
-                'salaried': { rate: 0, type: 'No Income Tax', name: 'Salaried Person' }
-            },
-            'iran': {
-                'clothes': { rate: 9, type: 'VAT', name: 'Clothes' },
-                'electronics': { rate: 9, type: 'VAT', name: 'Electronics' }
-            },
-            'newzealand': {
-                'clothes': { rate: 15, type: 'GST', name: 'Clothes' },
-                'electronics': { rate: 15, type: 'GST', name: 'Electronics' }
-            },
-            'china': {
-                'clothes': { rate: 13, type: 'VAT', name: 'Clothes' },
-                'electronics': { rate: 13, type: 'VAT', name: 'Electronics' }
-            },
-            'canada': {
-                'clothes': { rate: 5, type: 'GST + HST', name: 'Clothes' },
-                'electronics': { rate: 5, type: 'GST + HST', name: 'Electronics' }
-            },
-            'germany': {
-                'clothes': { rate: 19, type: 'VAT', name: 'Clothes' },
-                'electronics': { rate: 19, type: 'VAT', name: 'Electronics' }
-            },
-            'france': {
-                'clothes': { rate: 20, type: 'VAT', name: 'Clothes' },
-                'electronics': { rate: 20, type: 'VAT', name: 'Electronics' }
-            },
-            'japan': {
-                'clothes': { rate: 10, type: 'Consumption Tax', name: 'Clothes' },
-                'electronics': { rate: 10, type: 'Consumption Tax', name: 'Electronics' }
-            },
-            'russia': {
-                'clothes': { rate: 20, type: 'VAT', name: 'Clothes' },
-                'electronics': { rate: 20, type: 'VAT', name: 'Electronics' }
-            },
-            'brazil': {
-                'clothes': { rate: 17, type: 'ICMS', name: 'Clothes' },
-                'electronics': { rate: 17, type: 'ICMS', name: 'Electronics' }
-            },
-            'mexico': {
-                'clothes': { rate: 16, type: 'IVA', name: 'Clothes' },
-                'electronics': { rate: 16, type: 'IVA', name: 'Electronics' }
-            },
-            'southafrica': {
-                'clothes': { rate: 15, type: 'VAT', name: 'Clothes' },
-                'electronics': { rate: 15, type: 'VAT', name: 'Electronics' }
             }
         };
 
@@ -2618,7 +2885,7 @@
             
             // Calculate tax based on product and country
             if(product === 'salaried') {
-                // Progressive tax calculation
+                // Progressive tax calculation for India
                 if(country === 'india') {
                     if(amount <= 300000) {
                         taxAmount = 0;
@@ -2659,6 +2926,20 @@
                 } else {
                     taxAmount = 0;
                     taxRate = 'No Tax (if < ₹50k)';
+                }
+            } else if(product === 'restaurant' && country === 'india') {
+                taxAmount = amount * 0.05;
+                taxRate = '5% GST';
+            } else if(product === 'hotel' && country === 'india') {
+                if(amount < 1000) {
+                    taxAmount = 0;
+                    taxRate = '0% (Room < ₹1000)';
+                } else if(amount < 2500) {
+                    taxAmount = amount * 0.12;
+                    taxRate = '12% (Room ₹1000-2499)';
+                } else {
+                    taxAmount = amount * 0.18;
+                    taxRate = '18% (Room ₹2500+)';
                 }
             } else {
                 const rate = typeof rateInfo.rate === 'number' ? rateInfo.rate : 0;
@@ -2708,7 +2989,7 @@
             return symbol + amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
         }
 
-        // Loan Calculator - FIXED with categories
+        // Loan Calculator
         const loanRates = {
             'personal': { min: 10, max: 15, default: 12.5, info: 'Personal Loan: 10-15%' },
             'home': { min: 7, max: 9, default: 8.0, info: 'Home Loan: 7-9%' },
@@ -2788,7 +3069,7 @@
             document.getElementById('lumpsumResults').classList.add('show');
         }
 
-        // Currency Converter - FIXED with more countries
+        // Currency Converter
         const exchangeRates = {
             'USD': { 
                 'EUR': 0.92, 'GBP': 0.79, 'INR': 83.15, 'JPY': 148.50, 'CAD': 1.35, 'AUD': 1.52,
@@ -2799,36 +3080,6 @@
                 'USD': 0.012, 'EUR': 0.011, 'GBP': 0.0095, 'JPY': 1.78, 'CAD': 0.016, 'AUD': 0.018,
                 'CNY': 0.087, 'TRY': 0.39, 'PKR': 3.34, 'AED': 0.044, 'SAR': 0.045, 'EGP': 0.37,
                 'IRR': 505, 'NZD': 0.020, 'ZAR': 0.23, 'BRL': 0.060, 'RUB': 1.10
-            },
-            'EUR': {
-                'USD': 1.09, 'INR': 90.50, 'GBP': 0.86, 'JPY': 161.50, 'TRY': 34.80, 'AED': 4.00
-            },
-            'PKR': {
-                'USD': 0.0036, 'INR': 0.30, 'AED': 0.013, 'SAR': 0.0135
-            },
-            'AED': {
-                'USD': 0.27, 'INR': 22.70, 'PKR': 75.60, 'SAR': 1.02
-            },
-            'TRY': {
-                'USD': 0.031, 'INR': 2.58, 'EUR': 0.029
-            },
-            'EGP': {
-                'USD': 0.032, 'INR': 2.67, 'AED': 0.12
-            },
-            'IRR': {
-                'USD': 0.000024, 'INR': 0.00198
-            },
-            'NZD': {
-                'USD': 0.60, 'INR': 50.00
-            },
-            'ZAR': {
-                'USD': 0.053, 'INR': 4.40
-            },
-            'BRL': {
-                'USD': 0.20, 'INR': 16.67
-            },
-            'RUB': {
-                'USD': 0.011, 'INR': 0.91
             }
         };
 
@@ -2886,7 +3137,7 @@
             document.getElementById('currencyResults').classList.add('show');
         }
 
-        // Unit Converter - SIMPLIFIED
+        // Unit Converter
         const unitConversions = {
             'cm': { 'feet': 0.0328084, 'inch': 0.393701, 'meter': 0.01, 'km': 0.00001, 'yard': 0.0109361, 'mile': 0.0000062137 },
             'feet': { 'cm': 30.48, 'inch': 12, 'meter': 0.3048, 'km': 0.0003048, 'yard': 0.333333, 'mile': 0.000189394 },
@@ -2957,7 +3208,7 @@
             document.getElementById('unitResults').classList.add('show');
         }
 
-        // Age Calculator - WITH LUCKY FACT
+        // Age Calculator
         function calculateAge() {
             const dob = new Date(document.getElementById('dobDate').value);
             const tillDate = document.getElementById('tillDate').value ? 
@@ -3052,7 +3303,7 @@
             document.getElementById('profitResults').classList.add('show');
         }
 
-        // Gratuity Calculator - SIMPLIFIED
+        // Gratuity Calculator
         function calculateGratuity() {
             const salary = parseFloat(document.getElementById('gratuitySalary').value);
             const years = parseFloat(document.getElementById('serviceYears').value);
