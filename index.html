@@ -181,20 +181,23 @@
     
     .nav-links {
         display: flex;
-        gap: 15px;
+        gap: 10px;
         list-style: none;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .nav-links a {
         color: white;
         text-decoration: none;
         font-weight: 600;
-        padding: 8px 15px;
+        padding: 8px 12px;
         border-radius: 8px;
         transition: all 0.3s;
-        font-size: 15px;
+        font-size: 14px;
         position: relative;
         overflow: hidden;
+        white-space: nowrap;
     }
     
     .nav-links a::before {
@@ -310,7 +313,7 @@
         font-size: 16px;
     }
     
-    /* ==================== TOOLS GRID ==================== */
+    /* ==================== TOOLS GRID (14 TOOLS ONLY - Video Downloader REMOVED) ==================== */
     .tools-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -635,22 +638,22 @@
     
     /* Color coding */
     .status-danger {
-        color: var(--danger);
+        color: var(--danger) !important;
         font-weight: 700;
     }
     
     .status-warning {
-        color: var(--warning);
+        color: var(--warning) !important;
         font-weight: 700;
     }
     
     .status-success {
-        color: var(--success);
+        color: var(--success) !important;
         font-weight: 700;
     }
     
     .status-info {
-        color: var(--info);
+        color: var(--info) !important;
         font-weight: 700;
     }
     
@@ -676,37 +679,36 @@
         line-height: 1.4;
     }
     
-    /* Height Input Toggle */
-    .height-toggle {
+    /* ==================== PAYPAL FLOATING BUTTON ==================== */
+    .paypal-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: linear-gradient(135deg, #003087, #009CDE);
+        color: #FFC439;
+        padding: 15px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
         display: flex;
-        gap: 15px;
-        margin-bottom: 15px;
-    }
-    
-    .height-toggle-btn {
-        flex: 1;
-        padding: 8px;
-        border: 2px solid #E5E7EB;
-        background: white;
-        border-radius: 6px;
-        cursor: pointer;
-        font-weight: 500;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 8px 25px rgba(0, 48, 135, 0.4);
+        z-index: 1000;
         transition: all 0.3s;
-        font-size: 13px;
+        border: 2px solid #003087;
     }
     
-    .height-toggle-btn.active {
-        background: var(--primary);
-        color: white;
-        border-color: var(--primary);
+    .paypal-float:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 15px 30px rgba(0, 48, 135, 0.5);
+        background: #002366;
+        color: #FFC439;
     }
     
-    .height-input-group {
-        display: none;
-    }
-    
-    .height-input-group.active {
-        display: block;
+    .paypal-float i {
+        font-size: 20px;
     }
     
     /* ==================== NEW PAGES STYLES ==================== */
@@ -990,12 +992,12 @@
         }
         
         .nav-links {
-            gap: 12px;
+            gap: 8px;
         }
         
         .nav-links a {
-            padding: 8px 12px;
-            font-size: 14px;
+            padding: 8px 10px;
+            font-size: 13px;
         }
     }
     
@@ -1014,12 +1016,12 @@
         }
         
         .nav-links {
-            gap: 10px;
+            gap: 6px;
         }
         
         .nav-links a {
             padding: 8px;
-            font-size: 13px;
+            font-size: 12px;
         }
     }
     
@@ -1081,6 +1083,13 @@
             padding: 15px 30px;
             font-size: 16px;
         }
+        
+        .paypal-float {
+            bottom: 20px;
+            right: 20px;
+            padding: 12px 20px;
+            font-size: 14px;
+        }
     }
     
     /* Small Mobile */
@@ -1110,11 +1119,22 @@
             padding: 14px 25px;
             font-size: 15px;
         }
+        
+        .paypal-float {
+            bottom: 15px;
+            right: 15px;
+            padding: 10px 18px;
+            font-size: 13px;
+        }
     }
     
     /* Print Styles */
     @media print {
         .ad-container {
+            display: none;
+        }
+        
+        .paypal-float {
             display: none;
         }
     }
@@ -1164,6 +1184,11 @@
         </div>
     </header>
 
+    <!-- PAYPAL FLOATING BUTTON -->
+    <a href="https://paypal.me/mohd0787" target="_blank" class="paypal-float">
+        <i class="fab fa-paypal"></i> Donate
+    </a>
+
     <!-- MAIN CONTENT -->
     <main class="main-content">
         <!-- HERO SECTION -->
@@ -1182,14 +1207,14 @@
             </div>
         </div>
 
-        <!-- AI TOOLS SECTION (15 Tools - Reduced from 18) -->
+        <!-- AI TOOLS SECTION (14 Tools Only - Video Downloader REMOVED) -->
         <section class="section" id="tools">
             <div class="container">
-                <h2 class="section-title">🤖 15 Trending AI Tools 2026</h2>
+                <h2 class="section-title">🤖 14 Trending AI Tools 2026</h2>
                 <p class="section-description">Most demanding AI tools that are changing the world in 2026</p>
                 
                 <div class="tools-grid">
-                    <!-- Existing Tools (15 total) -->
+                    <!-- 14 TOOLS ONLY - Video Downloader REMOVED -->
                     <a href="https://chat.openai.com" target="_blank" class="tool-card">
                         <div class="tool-icon">🤖</div>
                         <h3 class="tool-title">ChatGPT 5</h3>
@@ -1225,13 +1250,7 @@
                         <span class="tool-category">Media</span>
                     </div>
                     
-                    <!-- Video Downloader (Single tool for all platforms) -->
-                    <div class="tool-card" onclick="openTool('video-downloader')">
-                        <div class="tool-icon">🎬</div>
-                        <h3 class="tool-title">Video Downloader Pro</h3>
-                        <p class="tool-description">Download videos from YouTube, Instagram, Facebook, Twitter</p>
-                        <span class="tool-category">Media</span>
-                    </div>
+                    <!-- Video Downloader REMOVED from here -->
                     
                     <div class="tool-card" onclick="openTool('midjourney')">
                         <div class="tool-icon">🎨</div>
@@ -1307,7 +1326,7 @@
             </div>
         </div>
 
-        <!-- CALCULATORS SECTION -->
+        <!-- CALCULATORS SECTION (ALL 12 CALCULATORS PRESERVED) -->
         <section class="section" id="calculators">
             <div class="container">
                 <h2 class="section-title">🧮 Complete Calculators Suite</h2>
@@ -1372,7 +1391,7 @@
                         </div>
                     </div>
                     
-                    <!-- Body Fat Calculator - FIXED & ACCURATE -->
+                    <!-- Body Fat Calculator - FIXED & ACCURATE (Works for low weight 30kg) -->
                     <div class="calculator-card">
                         <div class="calc-icon">🏋️</div>
                         <h3 class="calc-title">Body Fat Calculator</h3>
@@ -1442,6 +1461,10 @@
                             <div class="result-row">
                                 <span class="result-label">Body Type:</span>
                                 <span class="result-value" id="bodyFatType">-</span>
+                            </div>
+                            <div class="result-row">
+                                <span class="result-label">Height:</span>
+                                <span class="result-value" id="bodyFatHeightDisplay">-</span>
                             </div>
                         </div>
                         
@@ -1548,11 +1571,11 @@
                         </div>
                     </div>
                     
-                    <!-- World Tax Calculator -->
+                    <!-- World Tax Calculator - FIXED (VAT/GST by country) -->
                     <div class="calculator-card">
                         <div class="calc-icon">🏛️</div>
                         <h3 class="calc-title">World Tax Calculator 2026</h3>
-                        <p class="calc-purpose">Calculate tax for different products & services worldwide</p>
+                        <p class="calc-purpose">Calculate tax for different products & services worldwide with correct tax system</p>
                         
                         <div class="form-group">
                             <label class="form-label">Select Product/Service</label>
@@ -1578,26 +1601,25 @@
                         <div class="form-group">
                             <label class="form-label">Country</label>
                             <select class="form-control" id="taxCountry" onchange="updateTaxRate()">
-                                <option value="india" selected>India</option>
-                                <option value="usa">United States</option>
-                                <option value="uk">United Kingdom</option>
+                                <option value="india" selected>India (GST System)</option>
+                                <option value="usa">United States (Sales Tax)</option>
+                                <option value="uk">United Kingdom (VAT System)</option>
+                                <option value="germany">Germany (VAT System)</option>
+                                <option value="france">France (VAT System)</option>
+                                <option value="canada">Canada (VAT/GST)</option>
+                                <option value="australia">Australia (GST System)</option>
                                 <option value="uae">UAE (No Tax)</option>
-                                <option value="pakistan">Pakistan</option>
-                                <option value="turkey">Turkey</option>
-                                <option value="australia">Australia</option>
-                                <option value="egypt">Egypt</option>
-                                <option value="gulf">Gulf Countries</option>
-                                <option value="iran">Iran</option>
-                                <option value="newzealand">New Zealand</option>
-                                <option value="china">China</option>
-                                <option value="canada">Canada</option>
-                                <option value="germany">Germany</option>
-                                <option value="france">France</option>
-                                <option value="japan">Japan</option>
-                                <option value="russia">Russia</option>
-                                <option value="brazil">Brazil</option>
-                                <option value="mexico">Mexico</option>
-                                <option value="southafrica">South Africa</option>
+                                <option value="pakistan">Pakistan (GST System)</option>
+                                <option value="turkey">Turkey (VAT System)</option>
+                                <option value="egypt">Egypt (VAT System)</option>
+                                <option value="gulf">Gulf Countries (No Tax)</option>
+                                <option value="newzealand">New Zealand (GST System)</option>
+                                <option value="china">China (VAT System)</option>
+                                <option value="japan">Japan (Consumption Tax)</option>
+                                <option value="russia">Russia (VAT System)</option>
+                                <option value="brazil">Brazil (VAT System)</option>
+                                <option value="mexico">Mexico (VAT System)</option>
+                                <option value="southafrica">South Africa (VAT System)</option>
                             </select>
                         </div>
                         
@@ -1620,8 +1642,8 @@
                                 <span class="result-value" id="taxCountryName">-</span>
                             </div>
                             <div class="result-row">
-                                <span class="result-label">Tax Type:</span>
-                                <span class="result-value" id="taxType">-</span>
+                                <span class="result-label">Tax System:</span>
+                                <span class="result-value" id="taxSystem">-</span>
                             </div>
                             <div class="result-row">
                                 <span class="result-label">Tax Rate:</span>
@@ -1638,13 +1660,12 @@
                         </div>
                         
                         <div class="calc-info-box">
-                            <div class="calc-info-title">What this calculator shows:</div>
+                            <div class="calc-info-title">Tax Systems by Country:</div>
                             <div class="calc-info-content">
-                                This calculator shows the total tax charged on different products and services. It includes:<br>
-                                • GST/VAT rates for goods<br>
-                                • Service tax for services<br>
-                                • Income tax for salaried/business<br>
-                                • Country-wise tax variations
+                                <strong>GST System Countries:</strong> India, Australia, Canada, New Zealand, Singapore, Malaysia<br>
+                                <strong>VAT System Countries:</strong> UK, Germany, France, Italy, Spain, Turkey, Egypt, Russia, Brazil<br>
+                                <strong>No Tax Countries:</strong> UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman<br>
+                                <strong>Sales Tax Countries:</strong> USA (varies by state)
                             </div>
                         </div>
                     </div>
@@ -2127,7 +2148,7 @@
                         </div>
                     </div>
                     
-                    <!-- Health Calculator -->
+                    <!-- Health Calculator - FIXED (Danger levels in RED) -->
                     <div class="calculator-card">
                         <div class="calc-icon">❤️</div>
                         <h3 class="calc-title">Health Calculator</h3>
@@ -2168,6 +2189,16 @@
                                 <span class="result-value" id="healthRecommendation">-</span>
                             </div>
                         </div>
+                        
+                        <div class="calc-info-box">
+                            <div class="calc-info-title">Color Coding:</div>
+                            <div class="calc-info-content">
+                                • <span class="status-danger">RED</span>: Danger/Extreme/Emergency levels<br>
+                                • <span class="status-warning">ORANGE</span>: Warning/High risk levels<br>
+                                • <span class="status-success">GREEN</span>: Safe/Normal levels<br>
+                                • <span class="status-info">BLUE</span>: Low risk/Acceptable levels
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2184,7 +2215,7 @@
         <!-- DONATE BOX (After last calculator) -->
         <div class="container">
             <div class="donate-container" id="donate">
-                <h2 class="donate-title"><i class="fab fa-paypal"></i> Support Our Free Tools</h2>
+                <h2 class="donate-title"><i class="fab fa-paypal"></i> Support Our Work</h2>
                 <p class="donate-description">Help us maintain and improve these free calculators. Your donation helps keep this service running and ad-free for everyone.</p>
                 <a href="https://paypal.me/mohd0787" target="_blank" class="donate-btn-large">
                     <i class="fab fa-paypal"></i> Donate via PayPal
@@ -2210,8 +2241,8 @@
                     
                     <h3>What We Offer</h3>
                     <ul>
-                        <li><strong>15+ AI Tools:</strong> From document conversion to video downloading</li>
-                        <li><strong>15+ Calculators:</strong> Financial, health, tax, and conversion calculators</li>
+                        <li><strong>14+ AI Tools:</strong> From document conversion to AI writing assistants</li>
+                        <li><strong>12+ Calculators:</strong> Financial, health, tax, and conversion calculators</li>
                         <li><strong>2026 Updated Rates:</strong> All our calculators use the latest rates and regulations</li>
                         <li><strong>100% Free:</strong> No hidden charges, no registration required</li>
                     </ul>
@@ -2456,7 +2487,7 @@
                     <ul>
                         <li><a href="javascript:void(0)" onclick="openTool('document-converter')"><i class="fas fa-file-contract"></i> Document Converter</a></li>
                         <li><a href="javascript:void(0)" onclick="openTool('pdf-editor')"><i class="fas fa-file-pdf"></i> PDF Editor</a></li>
-                        <li><a href="javascript:void(0)" onclick="openTool('video-downloader')"><i class="fas fa-video"></i> Video Downloader</a></li>
+                        <li><a href="javascript:void(0)" onclick="openTool('image-resizer')"><i class="fas fa-image"></i> Image Resizer</a></li>
                         <li><a href="https://chat.openai.com" target="_blank"><i class="fas fa-robot"></i> ChatGPT 5</a></li>
                     </ul>
                 </div>
@@ -2526,13 +2557,12 @@
             });
         });
 
-        // Tool Functions - 15 Tools Only
+        // Tool Functions - 14 Tools Only (Video Downloader REMOVED)
         function openTool(toolName) {
             const toolUrls = {
                 'document-converter': 'https://www.ilovepdf.com',
                 'pdf-editor': 'https://www.adobe.com/acrobat/online/pdf-editor.html',
                 'image-resizer': 'https://www.iloveimg.com/resize-image',
-                'video-downloader': 'https://en.savefrom.net',
                 'midjourney': 'https://www.midjourney.com',
                 'elevenlabs': 'https://elevenlabs.io',
                 'runway': 'https://runwayml.com',
@@ -2625,6 +2655,7 @@
             // Display results
             document.getElementById('bmiValue').textContent = bmi.toFixed(1);
             document.getElementById('bmiCategory').textContent = category;
+            document.getElementById('bmiCategory').className = 'result-value ' + statusClass;
             document.getElementById('bmiStatus').textContent = status;
             document.getElementById('bmiStatus').className = 'result-value ' + statusClass;
             
@@ -2632,7 +2663,7 @@
             document.getElementById('bmiResults').classList.add('show');
         }
 
-        // Body Fat Calculator - FIXED & ACCURATE
+        // Body Fat Calculator - FIXED & ACCURATE (Works for low weight 30kg)
         // Show/Hide hip input for females
         document.getElementById('bodyFatGender').addEventListener('change', function() {
             const hipInput = document.getElementById('hipInput');
@@ -2653,27 +2684,51 @@
             const inches = parseFloat(document.getElementById('bodyFatInches').value);
             const heightInches = (feet * 12) + inches;
             
+            // Display height in feet/inches
+            document.getElementById('bodyFatHeightDisplay').textContent = feet + " feet " + inches + " inches";
+            
             // Get measurements
             const waist = parseFloat(document.getElementById('bodyFatWaist').value);
             const neck = parseFloat(document.getElementById('bodyFatNeck').value);
             
+            // Validate inputs for low weight
+            if(weight < 30) {
+                alert('Weight should be at least 30kg for accurate body fat calculation');
+                return;
+            }
+            
+            if(waist <= neck) {
+                alert('Waist measurement should be larger than neck measurement');
+                return;
+            }
+            
             let bodyFatPercentage;
             
-            // US Navy Body Fat Formula (ACCURATE)
+            // US Navy Body Fat Formula (ACCURATE) - Fixed for low weight
             if(gender === 'male') {
                 // Formula for men: %Body Fat = 495 / (1.0324 - 0.19077 * log10(waist - neck) + 0.15456 * log10(height)) - 450
-                bodyFatPercentage = 495 / (1.0324 - 0.19077 * Math.log10(waist - neck) + 0.15456 * Math.log10(heightInches)) - 450;
+                const waistNeckDiff = waist - neck;
+                if(waistNeckDiff <= 0) {
+                    alert('Waist must be larger than neck measurement');
+                    return;
+                }
+                bodyFatPercentage = 495 / (1.0324 - 0.19077 * Math.log10(waistNeckDiff) + 0.15456 * Math.log10(heightInches)) - 450;
             } else {
                 // For women, need hip measurement
                 const hip = parseFloat(document.getElementById('bodyFatHip').value);
                 // Formula for women: %Body Fat = 495 / (1.29579 - 0.35004 * log10(waist + hip - neck) + 0.22100 * log10(height)) - 450
-                bodyFatPercentage = 495 / (1.29579 - 0.35004 * Math.log10(waist + hip - neck) + 0.22100 * Math.log10(heightInches)) - 450;
+                const waistHipNeck = waist + hip - neck;
+                if(waistHipNeck <= 0) {
+                    alert('Invalid measurements for female calculation');
+                    return;
+                }
+                bodyFatPercentage = 495 / (1.29579 - 0.35004 * Math.log10(waistHipNeck) + 0.22100 * Math.log10(heightInches)) - 450;
             }
             
             // Adjust for age (older people naturally have higher body fat)
             bodyFatPercentage += (age - 30) * 0.1; // Add 0.1% per year over 30
             
-            // Ensure within realistic bounds
+            // Ensure within realistic bounds (2-50%)
             bodyFatPercentage = Math.max(2, Math.min(50, bodyFatPercentage));
             
             // Calculate lean and fat mass
@@ -2683,65 +2738,69 @@
             // Determine category with ACCURATE ranges
             let category = '';
             let bodyType = '';
+            let statusClass = '';
             
             if(gender === 'male') {
                 if(bodyFatPercentage < 6) {
                     category = 'Essential Fat';
                     bodyType = 'Extremely Lean';
+                    statusClass = 'status-danger';
                 } else if(bodyFatPercentage < 14) {
                     category = 'Athletes';
                     bodyType = 'Very Fit';
+                    statusClass = 'status-success';
                 } else if(bodyFatPercentage < 18) {
                     category = 'Fitness';
                     bodyType = 'Fit';
+                    statusClass = 'status-success';
                 } else if(bodyFatPercentage < 25) {
                     category = 'Average';
                     bodyType = 'Acceptable';
+                    statusClass = 'status-info';
                 } else if(bodyFatPercentage < 30) {
                     category = 'Overweight';
                     bodyType = 'High Fat';
+                    statusClass = 'status-warning';
                 } else {
                     category = 'Obese';
                     bodyType = 'Very High Fat';
+                    statusClass = 'status-danger';
                 }
             } else {
                 if(bodyFatPercentage < 14) {
                     category = 'Essential Fat';
                     bodyType = 'Extremely Lean';
+                    statusClass = 'status-danger';
                 } else if(bodyFatPercentage < 21) {
                     category = 'Athletes';
                     bodyType = 'Very Fit';
+                    statusClass = 'status-success';
                 } else if(bodyFatPercentage < 25) {
                     category = 'Fitness';
                     bodyType = 'Fit';
+                    statusClass = 'status-success';
                 } else if(bodyFatPercentage < 32) {
                     category = 'Average';
                     bodyType = 'Acceptable';
+                    statusClass = 'status-info';
                 } else if(bodyFatPercentage < 38) {
                     category = 'Overweight';
                     bodyType = 'High Fat';
+                    statusClass = 'status-warning';
                 } else {
                     category = 'Obese';
                     bodyType = 'Very High Fat';
+                    statusClass = 'status-danger';
                 }
             }
             
             // Display results
             document.getElementById('bodyFatPercent').textContent = bodyFatPercentage.toFixed(1) + '%';
             document.getElementById('bodyFatCategory').textContent = category;
+            document.getElementById('bodyFatCategory').className = 'result-value ' + statusClass;
             document.getElementById('bodyFatLean').textContent = leanMass.toFixed(1) + ' kg';
             document.getElementById('bodyFatMass').textContent = fatMass.toFixed(1) + ' kg';
             document.getElementById('bodyFatType').textContent = bodyType;
-            
-            // Color code based on category
-            const categoryElement = document.getElementById('bodyFatCategory');
-            if(category === 'Essential Fat' || category === 'Athletes' || category === 'Fitness') {
-                categoryElement.className = 'result-value status-success';
-            } else if(category === 'Average') {
-                categoryElement.className = 'result-value status-info';
-            } else {
-                categoryElement.className = 'result-value status-danger';
-            }
             
             // Show results container
             document.getElementById('bodyFatResults').classList.add('show');
@@ -2827,7 +2886,36 @@
             document.getElementById('gstResults').classList.add('show');
         }
 
-        // World Tax Calculator
+        // World Tax Calculator - FIXED (VAT/GST by country)
+        const taxSystems = {
+            // GST System Countries
+            'india': { system: 'GST', vat: false, gst: true },
+            'australia': { system: 'GST', vat: false, gst: true },
+            'canada': { system: 'GST/HST', vat: false, gst: true },
+            'newzealand': { system: 'GST', vat: false, gst: true },
+            'pakistan': { system: 'GST', vat: false, gst: true },
+            
+            // VAT System Countries
+            'uk': { system: 'VAT', vat: true, gst: false, rate: 20 },
+            'germany': { system: 'VAT', vat: true, gst: false, rate: 19 },
+            'france': { system: 'VAT', vat: true, gst: false, rate: 20 },
+            'turkey': { system: 'VAT', vat: true, gst: false, rate: 18 },
+            'egypt': { system: 'VAT', vat: true, gst: false, rate: 14 },
+            'russia': { system: 'VAT', vat: true, gst: false, rate: 20 },
+            'brazil': { system: 'VAT', vat: true, gst: false, rate: 17 },
+            'mexico': { system: 'VAT', vat: true, gst: false, rate: 16 },
+            'southafrica': { system: 'VAT', vat: true, gst: false, rate: 15 },
+            'china': { system: 'VAT', vat: true, gst: false, rate: 13 },
+            'japan': { system: 'Consumption Tax', vat: true, gst: false, rate: 10 },
+            
+            // No Tax Countries
+            'uae': { system: 'No Tax', vat: false, gst: false, rate: 0 },
+            'gulf': { system: 'No Tax', vat: false, gst: false, rate: 0 },
+            
+            // Sales Tax Countries
+            'usa': { system: 'Sales Tax (State Wise)', vat: false, gst: false, rate: 0 }
+        };
+
         const taxRatesByCountry = {
             'india': {
                 'clothes': { rate: 12, type: 'GST', name: 'Clothes & Apparel' },
@@ -2841,43 +2929,69 @@
                 'business': { rate: 30, type: 'Income Tax', name: 'Business Income' },
                 'rent': { rate: 0, type: 'No Tax (if < ₹50k)', name: 'House Rent' }
             },
-            'usa': {
-                'clothes': { rate: 0, type: 'Varies by State', name: 'Clothes & Apparel' },
-                'electronics': { rate: 0, type: 'Varies by State', name: 'Electronics' },
-                'car': { rate: 0, type: 'Sales Tax', name: 'Car' },
-                'restaurant': { rate: 0, type: 'Sales Tax', name: 'Restaurant Food' },
-                'salaried': { rate: '10-37%', type: 'Federal + State', name: 'Salaried Person' }
+            'uk': {
+                'clothes': { rate: 0, type: 'VAT', name: 'Clothes & Apparel' },
+                'electronics': { rate: 20, type: 'VAT', name: 'Electronics & Phones' },
+                'car': { rate: 20, type: 'VAT', name: 'Car & Automobiles' },
+                'restaurant': { rate: 20, type: 'VAT', name: 'Restaurant Food' },
+                'hotel': { rate: 20, type: 'VAT', name: 'Hotel Stay' },
+                'salaried': { rate: '20-45%', type: 'Income Tax', name: 'Salaried Person' }
+            },
+            'germany': {
+                'clothes': { rate: 19, type: 'VAT', name: 'Clothes & Apparel' },
+                'electronics': { rate: 19, type: 'VAT', name: 'Electronics' },
+                'restaurant': { rate: 19, type: 'VAT', name: 'Restaurant Food' },
+                'salaried': { rate: '14-45%', type: 'Income Tax', name: 'Salaried Person' }
+            },
+            'france': {
+                'clothes': { rate: 20, type: 'VAT', name: 'Clothes & Apparel' },
+                'electronics': { rate: 20, type: 'VAT', name: 'Electronics' },
+                'restaurant': { rate: 10, type: 'VAT', name: 'Restaurant Food' },
+                'salaried': { rate: '11-45%', type: 'Income Tax', name: 'Salaried Person' }
             }
         };
 
         function updateTaxRate() {
             const product = document.getElementById('taxProduct').value;
             const country = document.getElementById('taxCountry').value;
+            const countryKey = country.split(' ')[0].toLowerCase();
             
             let rateInfo = { type: 'Varies', name: 'Click Calculate' };
+            let taxSystem = 'Varies';
             
-            if(taxRatesByCountry[country] && taxRatesByCountry[country][product]) {
-                rateInfo = taxRatesByCountry[country][product];
+            // Get tax system
+            if(taxSystems[countryKey]) {
+                taxSystem = taxSystems[countryKey].system;
+            }
+            
+            // Get rate info
+            if(taxRatesByCountry[countryKey] && taxRatesByCountry[countryKey][product]) {
+                rateInfo = taxRatesByCountry[countryKey][product];
             } else if(taxRatesByCountry['india'] && taxRatesByCountry['india'][product]) {
                 rateInfo = taxRatesByCountry['india'][product];
             }
             
             document.getElementById('taxRateDisplay').value = rateInfo.type;
-            document.getElementById('taxRateInfo').textContent = rateInfo.name + ' - ' + country.toUpperCase();
+            document.getElementById('taxRateInfo').textContent = `${rateInfo.name} - ${taxSystem} System`;
         }
 
         function calculateTax() {
             const product = document.getElementById('taxProduct').value;
             const amount = parseFloat(document.getElementById('taxIncome').value);
             const country = document.getElementById('taxCountry').value;
+            const countryKey = country.split(' ')[0].toLowerCase();
             
             if(!amount || amount <= 0) {
                 alert('Please enter a valid amount');
                 return;
             }
             
+            // Get tax system
+            const taxSystemInfo = taxSystems[countryKey] || { system: 'Varies', vat: false, gst: false, rate: 0 };
+            const taxSystem = taxSystemInfo.system;
+            
             // Get country-specific tax rates or default to India
-            const countryRates = taxRatesByCountry[country] || taxRatesByCountry['india'];
+            const countryRates = taxRatesByCountry[countryKey] || taxRatesByCountry['india'];
             const rateInfo = countryRates[product] || { rate: 0, type: 'No Data', name: product };
             
             let taxAmount = 0;
@@ -2885,8 +2999,8 @@
             
             // Calculate tax based on product and country
             if(product === 'salaried') {
-                // Progressive tax calculation for India
-                if(country === 'india') {
+                // Progressive tax calculation
+                if(countryKey === 'india') {
                     if(amount <= 300000) {
                         taxAmount = 0;
                         taxRate = '0% (Up to ₹3L)';
@@ -2906,14 +3020,26 @@
                         taxAmount = 150000 + (amount - 1500000) * 0.30;
                         taxRate = '30% (Above ₹15L)';
                     }
-                } else if(country === 'usa') {
-                    taxAmount = amount * 0.22; // Average US tax rate
-                    taxRate = '22% (Average)';
-                } else if(country === 'uae') {
+                } else if(countryKey === 'uk') {
+                    if(amount <= 12570) {
+                        taxAmount = 0;
+                        taxRate = '0% (Personal Allowance)';
+                    } else if(amount <= 50270) {
+                        taxAmount = (amount - 12570) * 0.20;
+                        taxRate = '20% Basic Rate';
+                    } else if(amount <= 125140) {
+                        taxAmount = 7540 + (amount - 50270) * 0.40;
+                        taxRate = '40% Higher Rate';
+                    } else {
+                        taxAmount = 29940 + (amount - 125140) * 0.45;
+                        taxRate = '45% Additional Rate';
+                    }
+                } else if(countryKey === 'uae' || countryKey === 'gulf') {
                     taxAmount = 0;
                     taxRate = '0% (No Income Tax)';
                 } else {
-                    taxAmount = amount * 0.20; // Default 20%
+                    // Default 20% for other countries
+                    taxAmount = amount * 0.20;
                     taxRate = '20% (Estimated)';
                 }
             } else if(product === 'business') {
@@ -2927,35 +3053,63 @@
                     taxAmount = 0;
                     taxRate = 'No Tax (if < ₹50k)';
                 }
-            } else if(product === 'restaurant' && country === 'india') {
-                taxAmount = amount * 0.05;
-                taxRate = '5% GST';
-            } else if(product === 'hotel' && country === 'india') {
-                if(amount < 1000) {
-                    taxAmount = 0;
-                    taxRate = '0% (Room < ₹1000)';
-                } else if(amount < 2500) {
-                    taxAmount = amount * 0.12;
-                    taxRate = '12% (Room ₹1000-2499)';
+            } else if(product === 'restaurant') {
+                if(countryKey === 'india') {
+                    taxAmount = amount * 0.05;
+                    taxRate = '5% GST';
+                } else if(countryKey === 'uk') {
+                    taxAmount = amount * 0.20;
+                    taxRate = '20% VAT';
+                } else if(countryKey === 'france') {
+                    taxAmount = amount * 0.10;
+                    taxRate = '10% VAT';
                 } else {
-                    taxAmount = amount * 0.18;
-                    taxRate = '18% (Room ₹2500+)';
+                    taxAmount = amount * 0.10;
+                    taxRate = '10% (Estimated)';
+                }
+            } else if(product === 'hotel') {
+                if(countryKey === 'india') {
+                    if(amount < 1000) {
+                        taxAmount = 0;
+                        taxRate = '0% (Room < ₹1000)';
+                    } else if(amount < 2500) {
+                        taxAmount = amount * 0.12;
+                        taxRate = '12% (Room ₹1000-2499)';
+                    } else {
+                        taxAmount = amount * 0.18;
+                        taxRate = '18% (Room ₹2500+)';
+                    }
+                } else if(countryKey === 'uk') {
+                    taxAmount = amount * 0.20;
+                    taxRate = '20% VAT';
+                } else {
+                    taxAmount = amount * 0.10;
+                    taxRate = '10% (Estimated)';
                 }
             } else {
                 const rate = typeof rateInfo.rate === 'number' ? rateInfo.rate : 0;
                 taxAmount = (amount * rate) / 100;
-                taxRate = rate + '% ' + rateInfo.type;
+                
+                if(taxSystemInfo.gst) {
+                    taxRate = rate + '% GST';
+                } else if(taxSystemInfo.vat) {
+                    taxRate = rate + '% VAT';
+                } else if(countryKey === 'usa') {
+                    taxRate = rate + '% Sales Tax';
+                } else {
+                    taxRate = rate + '% ' + rateInfo.type;
+                }
             }
             
             const totalAmount = amount + taxAmount;
             
             // Display results
             document.getElementById('taxProductName').textContent = rateInfo.name;
-            document.getElementById('taxCountryName').textContent = country.toUpperCase();
-            document.getElementById('taxType').textContent = rateInfo.type;
+            document.getElementById('taxCountryName').textContent = country;
+            document.getElementById('taxSystem').textContent = taxSystem;
             document.getElementById('taxRateResult').textContent = taxRate;
-            document.getElementById('taxAmount').textContent = formatCurrency(taxAmount, country);
-            document.getElementById('totalWithTax').textContent = formatCurrency(totalAmount, country);
+            document.getElementById('taxAmount').textContent = formatCurrency(taxAmount, countryKey);
+            document.getElementById('totalWithTax').textContent = formatCurrency(totalAmount, countryKey);
             
             // Show results container
             document.getElementById('taxResults').classList.add('show');
@@ -2964,20 +3118,19 @@
         function formatCurrency(amount, country) {
             const symbols = {
                 'india': '₹',
-                'usa': '$',
                 'uk': '£',
+                'germany': '€',
+                'france': '€',
+                'usa': '$',
                 'uae': 'AED ',
                 'pakistan': 'PKR ',
                 'turkey': '₺',
                 'australia': 'A$',
                 'egypt': 'EGP ',
                 'gulf': 'SAR ',
-                'iran': 'IRR ',
                 'newzealand': 'NZ$',
                 'china': '¥',
                 'canada': 'C$',
-                'germany': '€',
-                'france': '€',
                 'japan': '¥',
                 'russia': '₽',
                 'brazil': 'R$',
@@ -3287,17 +3440,23 @@
             const markupPercent = ((sellingPrice - costPrice) / costPrice) * 100;
             const roiPercent = (profitLoss / totalCost) * 100;
             
-            // Display results
+            // Display results with color coding
             document.getElementById('totalCost').textContent = '₹' + totalCost.toFixed(2);
             document.getElementById('totalRevenue').textContent = '₹' + totalRevenue.toFixed(2);
-            document.getElementById('profitLoss').textContent = '₹' + profitLoss.toFixed(2);
-            document.getElementById('profitLoss').className = 'result-value ' + 
-                (profitLoss >= 0 ? 'status-success' : 'status-danger');
-            document.getElementById('profitMargin').textContent = profitMargin.toFixed(2) + '%';
-            document.getElementById('profitMargin').className = 'result-value ' + 
-                (profitMargin >= 0 ? 'status-success' : 'status-danger');
+            
+            const profitLossElement = document.getElementById('profitLoss');
+            profitLossElement.textContent = '₹' + profitLoss.toFixed(2);
+            profitLossElement.className = 'result-value ' + (profitLoss >= 0 ? 'status-success' : 'status-danger');
+            
+            const profitMarginElement = document.getElementById('profitMargin');
+            profitMarginElement.textContent = profitMargin.toFixed(2) + '%';
+            profitMarginElement.className = 'result-value ' + (profitMargin >= 0 ? 'status-success' : 'status-danger');
+            
             document.getElementById('markupPercent').textContent = markupPercent.toFixed(2) + '%';
-            document.getElementById('roiPercent').textContent = roiPercent.toFixed(2) + '%';
+            
+            const roiElement = document.getElementById('roiPercent');
+            roiElement.textContent = roiPercent.toFixed(2) + '%';
+            roiElement.className = 'result-value ' + (roiPercent >= 0 ? 'status-success' : 'status-danger');
             
             // Show results container
             document.getElementById('profitResults').classList.add('show');
@@ -3440,7 +3599,7 @@
             document.getElementById('percentageResults').classList.add('show');
         }
 
-        // Health Calculator
+        // Health Calculator - FIXED (Danger levels in RED)
         function changeHealthMetric() {
             const metric = document.getElementById('healthMetric').value;
             const healthInputs = document.getElementById('healthInputs');
@@ -3518,6 +3677,7 @@
             let category = '';
             let status = '';
             let recommendation = '';
+            let statusClass = '';
             
             switch(metric) {
                 case 'bp':
@@ -3530,26 +3690,32 @@
                         category = 'Low BP';
                         status = 'Hypotension';
                         recommendation = 'Consult doctor if symptomatic';
+                        statusClass = 'status-danger';
                     } else if(systolic < 120 && diastolic < 80) {
                         category = 'Normal';
                         status = 'Healthy';
                         recommendation = 'Maintain healthy lifestyle';
+                        statusClass = 'status-success';
                     } else if(systolic < 130 && diastolic < 80) {
                         category = 'Elevated';
                         status = 'Pre-hypertension';
                         recommendation = 'Monitor regularly, reduce salt';
+                        statusClass = 'status-warning';
                     } else if(systolic < 140 || diastolic < 90) {
                         category = 'High BP Stage 1';
                         status = 'Hypertension';
                         recommendation = 'Consult doctor, lifestyle changes';
+                        statusClass = 'status-danger';
                     } else if(systolic < 180 || diastolic < 120) {
                         category = 'High BP Stage 2';
                         status = 'Severe Hypertension';
                         recommendation = 'Immediate medical attention';
+                        statusClass = 'status-danger';
                     } else {
                         category = 'Hypertensive Crisis';
                         status = 'Emergency';
                         recommendation = 'Seek emergency care immediately';
+                        statusClass = 'status-danger';
                     }
                     break;
                     
@@ -3564,46 +3730,56 @@
                             category = 'Low';
                             status = 'Hypoglycemia';
                             recommendation = 'Have something sweet, consult doctor';
+                            statusClass = 'status-danger';
                         } else if(sugar < 100) {
                             category = 'Normal';
                             status = 'Healthy';
                             recommendation = 'Good control, maintain diet';
+                            statusClass = 'status-success';
                         } else if(sugar < 126) {
                             category = 'Prediabetes';
                             status = 'At Risk';
                             recommendation = 'Lifestyle changes, monitor sugar';
+                            statusClass = 'status-warning';
                         } else {
                             category = 'Diabetes';
                             status = 'High';
                             recommendation = 'Consult doctor immediately';
+                            statusClass = 'status-danger';
                         }
                     } else if(sugarType === 'postmeal') {
                         if(sugar < 140) {
                             category = 'Normal';
                             status = 'Healthy';
                             recommendation = 'Good control';
+                            statusClass = 'status-success';
                         } else if(sugar < 200) {
                             category = 'Prediabetes';
                             status = 'At Risk';
                             recommendation = 'Monitor after meals';
+                            statusClass = 'status-warning';
                         } else {
                             category = 'Diabetes';
                             status = 'High';
                             recommendation = 'Medical consultation needed';
+                            statusClass = 'status-danger';
                         }
                     } else {
                         if(sugar < 140) {
                             category = 'Normal';
                             status = 'Healthy';
                             recommendation = 'Good control';
+                            statusClass = 'status-success';
                         } else if(sugar < 200) {
                             category = 'Prediabetes';
                             status = 'At Risk';
                             recommendation = 'Monitor regularly';
+                            statusClass = 'status-warning';
                         } else {
                             category = 'Diabetes';
                             status = 'High';
                             recommendation = 'Consult doctor';
+                            statusClass = 'status-danger';
                         }
                     }
                     break;
@@ -3620,26 +3796,32 @@
                         category = 'Low';
                         status = 'Hypothermia';
                         recommendation = 'Warm up, consult if persists';
+                        statusClass = 'status-danger';
                     } else if(tempCelsius < 37.2) {
                         category = 'Normal';
                         status = 'Healthy';
                         recommendation = 'Normal body temperature';
+                        statusClass = 'status-success';
                     } else if(tempCelsius < 38.3) {
                         category = 'Mild Fever';
                         status = 'Low Grade';
                         recommendation = 'Rest, hydrate, monitor';
+                        statusClass = 'status-warning';
                     } else if(tempCelsius < 39.4) {
                         category = 'Moderate Fever';
                         status = 'Fever';
                         recommendation = 'Take fever reducer, rest';
+                        statusClass = 'status-danger';
                     } else if(tempCelsius < 40.6) {
                         category = 'High Fever';
                         status = 'High';
                         recommendation = 'Consult doctor, medication';
+                        statusClass = 'status-danger';
                     } else {
                         category = 'Very High Fever';
                         status = 'Emergency';
                         recommendation = 'Seek medical attention immediately';
+                        statusClass = 'status-danger';
                     }
                     break;
                     
@@ -3654,34 +3836,47 @@
                         category = 'Underweight';
                         status = 'Too thin';
                         recommendation = 'Increase calorie intake, consult nutritionist';
+                        statusClass = 'status-danger';
                     } else if(bmi < 25) {
                         category = 'Normal';
                         status = 'Healthy';
                         recommendation = 'Maintain current weight, exercise regularly';
+                        statusClass = 'status-success';
                     } else if(bmi < 30) {
                         category = 'Overweight';
                         status = 'At Risk';
                         recommendation = 'Diet control, regular exercise';
+                        statusClass = 'status-warning';
                     } else if(bmi < 35) {
                         category = 'Obese I';
                         status = 'High Risk';
                         recommendation = 'Consult doctor, lifestyle changes';
+                        statusClass = 'status-danger';
                     } else if(bmi < 40) {
                         category = 'Obese II';
                         status = 'Very High Risk';
                         recommendation = 'Medical supervision needed';
+                        statusClass = 'status-danger';
                     } else {
                         category = 'Obese III';
                         status = 'Extreme Risk';
                         recommendation = 'Immediate medical consultation';
+                        statusClass = 'status-danger';
                     }
                     break;
             }
             
-            // Display results
+            // Display results with color coding
             document.getElementById('healthReading').textContent = reading;
-            document.getElementById('healthCategory').textContent = category;
-            document.getElementById('healthStatus').textContent = status;
+            
+            const categoryElement = document.getElementById('healthCategory');
+            categoryElement.textContent = category;
+            categoryElement.className = 'result-value ' + statusClass;
+            
+            const statusElement = document.getElementById('healthStatus');
+            statusElement.textContent = status;
+            statusElement.className = 'result-value ' + statusClass;
+            
             document.getElementById('healthRecommendation').textContent = recommendation;
             
             // Show results container
@@ -3713,6 +3908,16 @@
                 calculator.scrollIntoView({ behavior: 'smooth' });
             }
         }
+    </script>
+
+    <!-- Google Analytics Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5C9G1CGT7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-H5C9G1CGT7');
     </script>
 </body>
 </html>
