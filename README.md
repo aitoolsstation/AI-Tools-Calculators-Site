@@ -1,2 +1,6 @@
-# AI-Tools-Calculators-Site
-A single page website built with html,CSS,J's fully responsive design and a collection of AI powered tools and smart calculator designed to automate repetitive tasks and save time 
+# AIToolSpace
+
+A single‑page website with HTML, CSS, and JavaScript – fully responsive.  
+It offers a collection of AI‑powered tools and 25+ smart calculators for health, finance, tax, and conversions, all with 2026 rates.
+
+Live at: [https://aitoolspace.netlify.app](https://aitoolspace.netlify.app)
